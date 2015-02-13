@@ -14,17 +14,17 @@ Context:
 ;
 
 Selector:
-	Sum ('>' Sum)*
+	Sum ('>' Sum)* // TODO: work out which has the higher precedence between this and the Term
 ;
 
 Sum: Product (',' Product)*;
 
 Product: Term+;
 
-Term: Step ('>' Step)*;
+Term: Step (=> '>' Step)*;
 
 Step:
-	SingleStep // | '(' Sum ')'
+	SingleStep | '(' Sum ')'
 ;
 
 Rule:
@@ -46,7 +46,9 @@ terminal HEXINT returns ecore::EInt: '0x'('0'..'9'|'a'..'f'|'A'..'F')+;
 Value:
 	HEXINT
 	| INT
-	| 'true' | 'false'
+	| STRING
+	| 'true'
+	| 'false'
 ;
 
 Constraint:
@@ -54,10 +56,12 @@ Constraint:
 ;
 
 SingleStep:
-	ID Vals? StepSuffix?
+	Ident Vals? StepSuffix?
 ;
 
-Vals: '.' ID Vals*;
+Ident: ID | STRING;
+
+Vals: '.' Ident Vals*;
 
 StepSuffix: '/' SingleStep;
 

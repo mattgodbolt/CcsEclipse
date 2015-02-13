@@ -87,10 +87,11 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSumParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
 		
 		//Selector:
-		//	Sum (">" Sum)*;
+		//	Sum (">" Sum)* // TODO: work out which has the higher precedence
+		//;
 		public ParserRule getRule() { return rule; }
 
-		//Sum (">" Sum)*
+		//Sum (">" Sum)* // TODO: work out which has the higher precedence
 		public Group getGroup() { return cGroup; }
 
 		//Sum
@@ -164,10 +165,10 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		//Step
 		public RuleCall getStepParserRuleCall_0() { return cStepParserRuleCall_0; }
 
-		//(">" Step)*
+		//(=> ">" Step)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//">"
+		//=> ">"
 		public Keyword getGreaterThanSignKeyword_1_0() { return cGreaterThanSignKeyword_1_0; }
 
 		//Step
@@ -176,15 +177,34 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class StepElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Step");
-		private final RuleCall cSingleStepParserRuleCall = (RuleCall)rule.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cSingleStepParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cSumParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
-		//Step: // | '(' Sum ')'
-		//	SingleStep;
+		//Step:
+		//	SingleStep | "(" Sum ")";
 		public ParserRule getRule() { return rule; }
 
-		//// | '(' Sum ')'
+		//SingleStep | "(" Sum ")"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
 		//SingleStep
-		public RuleCall getSingleStepParserRuleCall() { return cSingleStepParserRuleCall; }
+		public RuleCall getSingleStepParserRuleCall_0() { return cSingleStepParserRuleCall_0; }
+
+		//"(" Sum ")"
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_1_0() { return cLeftParenthesisKeyword_1_0; }
+
+		//Sum
+		public RuleCall getSumParserRuleCall_1_1() { return cSumParserRuleCall_1_1; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_1_2() { return cRightParenthesisKeyword_1_2; }
 	}
 
 	public class RuleElements extends AbstractParserRuleElementFinder {
@@ -304,14 +324,15 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cHEXINTTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final Keyword cTrueKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
-		private final Keyword cFalseKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final RuleCall cSTRINGTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final Keyword cTrueKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final Keyword cFalseKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
 		
 		//Value:
-		//	HEXINT | INT | "true" | "false";
+		//	HEXINT | INT | STRING | "true" | "false";
 		public ParserRule getRule() { return rule; }
 
-		//HEXINT | INT | "true" | "false"
+		//HEXINT | INT | STRING | "true" | "false"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//HEXINT
@@ -320,11 +341,14 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
 
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_2() { return cSTRINGTerminalRuleCall_2; }
+
 		//"true"
-		public Keyword getTrueKeyword_2() { return cTrueKeyword_2; }
+		public Keyword getTrueKeyword_3() { return cTrueKeyword_3; }
 
 		//"false"
-		public Keyword getFalseKeyword_3() { return cFalseKeyword_3; }
+		public Keyword getFalseKeyword_4() { return cFalseKeyword_4; }
 	}
 
 	public class ConstraintElements extends AbstractParserRuleElementFinder {
@@ -350,19 +374,19 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 	public class SingleStepElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SingleStep");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final RuleCall cIdentParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final RuleCall cValsParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final RuleCall cStepSuffixParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		
 		//SingleStep:
-		//	ID Vals? StepSuffix?;
+		//	Ident Vals? StepSuffix?;
 		public ParserRule getRule() { return rule; }
 
-		//ID Vals? StepSuffix?
+		//Ident Vals? StepSuffix?
 		public Group getGroup() { return cGroup; }
 
-		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+		//Ident
+		public RuleCall getIdentParserRuleCall_0() { return cIdentParserRuleCall_0; }
 
 		//Vals?
 		public RuleCall getValsParserRuleCall_1() { return cValsParserRuleCall_1; }
@@ -371,25 +395,45 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getStepSuffixParserRuleCall_2() { return cStepSuffixParserRuleCall_2; }
 	}
 
+	public class IdentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Ident");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Ident:
+		//	ID | STRING;
+		public ParserRule getRule() { return rule; }
+
+		//ID | STRING
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//ID
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+	}
+
 	public class ValsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Vals");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFullStopKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final RuleCall cIdentParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		private final RuleCall cValsParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		
 		//Vals:
-		//	"." ID Vals*;
+		//	"." Ident Vals*;
 		public ParserRule getRule() { return rule; }
 
-		//"." ID Vals*
+		//"." Ident Vals*
 		public Group getGroup() { return cGroup; }
 
 		//"."
 		public Keyword getFullStopKeyword_0() { return cFullStopKeyword_0; }
 
-		//ID
-		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
+		//Ident
+		public RuleCall getIdentParserRuleCall_1() { return cIdentParserRuleCall_1; }
 
 		//Vals*
 		public RuleCall getValsParserRuleCall_2() { return cValsParserRuleCall_2; }
@@ -450,6 +494,7 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 	private final ValueElements pValue;
 	private final ConstraintElements pConstraint;
 	private final SingleStepElements pSingleStep;
+	private final IdentElements pIdent;
 	private final ValsElements pVals;
 	private final StepSuffixElements pStepSuffix;
 	private final ImportElements pImport;
@@ -477,6 +522,7 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		this.pValue = new ValueElements();
 		this.pConstraint = new ConstraintElements();
 		this.pSingleStep = new SingleStepElements();
+		this.pIdent = new IdentElements();
 		this.pVals = new ValsElements();
 		this.pStepSuffix = new StepSuffixElements();
 		this.pImport = new ImportElements();
@@ -530,7 +576,8 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Selector:
-	//	Sum (">" Sum)*;
+	//	Sum (">" Sum)* // TODO: work out which has the higher precedence
+	//;
 	public SelectorElements getSelectorAccess() {
 		return pSelector;
 	}
@@ -569,8 +616,8 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		return getTermAccess().getRule();
 	}
 
-	//Step: // | '(' Sum ')'
-	//	SingleStep;
+	//Step:
+	//	SingleStep | "(" Sum ")";
 	public StepElements getStepAccess() {
 		return pStep;
 	}
@@ -616,7 +663,7 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 	} 
 
 	//Value:
-	//	HEXINT | INT | "true" | "false";
+	//	HEXINT | INT | STRING | "true" | "false";
 	public ValueElements getValueAccess() {
 		return pValue;
 	}
@@ -636,7 +683,7 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//SingleStep:
-	//	ID Vals? StepSuffix?;
+	//	Ident Vals? StepSuffix?;
 	public SingleStepElements getSingleStepAccess() {
 		return pSingleStep;
 	}
@@ -645,8 +692,18 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		return getSingleStepAccess().getRule();
 	}
 
+	//Ident:
+	//	ID | STRING;
+	public IdentElements getIdentAccess() {
+		return pIdent;
+	}
+	
+	public ParserRule getIdentRule() {
+		return getIdentAccess().getRule();
+	}
+
 	//Vals:
-	//	"." ID Vals*;
+	//	"." Ident Vals*;
 	public ValsElements getValsAccess() {
 		return pVals;
 	}

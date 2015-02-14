@@ -8,8 +8,11 @@
   <genPackages prefix="CcsEclipse" basePackage="net.immute.ccs" disposableProviderFactory="true"
       fileExtensions="ccs" ecorePackage="CcsEclipse.ecore#/">
     <genClasses ecoreClass="CcsEclipse.ecore#//RuleSet">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//RuleSet/context"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CcsEclipse.ecore#//RuleSet/context"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//RuleSet/rules"/>
+    </genClasses>
+    <genClasses ecoreClass="CcsEclipse.ecore#//Context">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//Context/selector"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

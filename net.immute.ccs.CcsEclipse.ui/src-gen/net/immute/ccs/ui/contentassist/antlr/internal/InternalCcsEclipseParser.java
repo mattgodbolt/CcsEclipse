@@ -18,38 +18,38 @@ import org.antlr.runtime.*;
 import java.util.Stack;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
+
 @SuppressWarnings("all")
 public class InternalCcsEclipseParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_HEXINT", "RULE_INT", "RULE_STRING", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'true'", "'false'", "'@context'", "'('", "')'", "';'", "'>'", "','", "':'", "'{'", "'}'", "'='", "'@constrain'", "'.'", "'/'", "'@import'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_HEXINT", "RULE_NUMBER", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'true'", "'false'", "'@context'", "'('", "')'", "';'", "'>'", "','", "':'", "'{'", "'}'", "'='", "'@constrain'", "'.'", "'/'", "'@import'"
     };
     public static final int RULE_ID=7;
+    public static final int T__28=28;
     public static final int T__27=27;
     public static final int T__26=26;
     public static final int T__25=25;
     public static final int T__24=24;
     public static final int T__23=23;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=11;
+    public static final int RULE_ANY_OTHER=12;
     public static final int T__21=21;
     public static final int T__20=20;
-    public static final int RULE_SL_COMMENT=9;
+    public static final int RULE_SL_COMMENT=10;
     public static final int EOF=-1;
     public static final int RULE_HEXINT=4;
-    public static final int RULE_ML_COMMENT=8;
+    public static final int RULE_ML_COMMENT=9;
     public static final int T__19=19;
     public static final int RULE_STRING=6;
     public static final int T__16=16;
     public static final int T__15=15;
     public static final int T__18=18;
     public static final int T__17=17;
-    public static final int T__12=12;
+    public static final int RULE_NUMBER=5;
     public static final int T__14=14;
     public static final int T__13=13;
-    public static final int RULE_INT=5;
-    public static final int RULE_WS=10;
+    public static final int RULE_INT=8;
+    public static final int RULE_WS=11;
 
     // delegates
     // delegators
@@ -89,24 +89,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleRuleSet"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:61:1: entryRuleRuleSet : ruleRuleSet EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:60:1: entryRuleRuleSet : ruleRuleSet EOF ;
     public final void entryRuleRuleSet() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:62:1: ( ruleRuleSet EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:63:1: ruleRuleSet EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:61:1: ( ruleRuleSet EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:62:1: ruleRuleSet EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRuleSetRule()); 
-            }
-            pushFollow(FOLLOW_ruleRuleSet_in_entryRuleRuleSet67);
+             before(grammarAccess.getRuleSetRule()); 
+            pushFollow(FOLLOW_ruleRuleSet_in_entryRuleRuleSet61);
             ruleRuleSet();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRuleSetRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRuleSet74); if (state.failed) return ;
+
+             after(grammarAccess.getRuleSetRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRuleSet68); 
 
             }
 
@@ -123,35 +119,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleRuleSet"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:70:1: ruleRuleSet : ( ( rule__RuleSet__Group__0 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:69:1: ruleRuleSet : ( ( rule__RuleSet__Group__0 ) ) ;
     public final void ruleRuleSet() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:74:2: ( ( ( rule__RuleSet__Group__0 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:75:1: ( ( rule__RuleSet__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:73:2: ( ( ( rule__RuleSet__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:74:1: ( ( rule__RuleSet__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:75:1: ( ( rule__RuleSet__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:74:1: ( ( rule__RuleSet__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:75:1: ( rule__RuleSet__Group__0 )
+            {
+             before(grammarAccess.getRuleSetAccess().getGroup()); 
             // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:76:1: ( rule__RuleSet__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:76:2: rule__RuleSet__Group__0
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRuleSetAccess().getGroup()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:77:1: ( rule__RuleSet__Group__0 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:77:2: rule__RuleSet__Group__0
-            {
-            pushFollow(FOLLOW_rule__RuleSet__Group__0_in_ruleRuleSet100);
+            pushFollow(FOLLOW_rule__RuleSet__Group__0_in_ruleRuleSet94);
             rule__RuleSet__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRuleSetAccess().getGroup()); 
-            }
+             after(grammarAccess.getRuleSetAccess().getGroup()); 
 
             }
 
@@ -174,24 +166,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleContext"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:89:1: entryRuleContext : ruleContext EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:88:1: entryRuleContext : ruleContext EOF ;
     public final void entryRuleContext() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:90:1: ( ruleContext EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:91:1: ruleContext EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:89:1: ( ruleContext EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:90:1: ruleContext EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getContextRule()); 
-            }
-            pushFollow(FOLLOW_ruleContext_in_entryRuleContext127);
+             before(grammarAccess.getContextRule()); 
+            pushFollow(FOLLOW_ruleContext_in_entryRuleContext121);
             ruleContext();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getContextRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContext134); if (state.failed) return ;
+
+             after(grammarAccess.getContextRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleContext128); 
 
             }
 
@@ -208,35 +196,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleContext"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:98:1: ruleContext : ( ( rule__Context__Group__0 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:97:1: ruleContext : ( ( rule__Context__Group__0 ) ) ;
     public final void ruleContext() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:102:2: ( ( ( rule__Context__Group__0 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:103:1: ( ( rule__Context__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:101:2: ( ( ( rule__Context__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:102:1: ( ( rule__Context__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:103:1: ( ( rule__Context__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:102:1: ( ( rule__Context__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:103:1: ( rule__Context__Group__0 )
+            {
+             before(grammarAccess.getContextAccess().getGroup()); 
             // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:104:1: ( rule__Context__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:104:2: rule__Context__Group__0
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getContextAccess().getGroup()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:105:1: ( rule__Context__Group__0 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:105:2: rule__Context__Group__0
-            {
-            pushFollow(FOLLOW_rule__Context__Group__0_in_ruleContext160);
+            pushFollow(FOLLOW_rule__Context__Group__0_in_ruleContext154);
             rule__Context__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getContextAccess().getGroup()); 
-            }
+             after(grammarAccess.getContextAccess().getGroup()); 
 
             }
 
@@ -259,24 +243,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleSelector"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:117:1: entryRuleSelector : ruleSelector EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:116:1: entryRuleSelector : ruleSelector EOF ;
     public final void entryRuleSelector() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:118:1: ( ruleSelector EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:119:1: ruleSelector EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:117:1: ( ruleSelector EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:118:1: ruleSelector EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSelectorRule()); 
-            }
-            pushFollow(FOLLOW_ruleSelector_in_entryRuleSelector187);
+             before(grammarAccess.getSelectorRule()); 
+            pushFollow(FOLLOW_ruleSelector_in_entryRuleSelector181);
             ruleSelector();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSelectorRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSelector194); if (state.failed) return ;
+
+             after(grammarAccess.getSelectorRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSelector188); 
 
             }
 
@@ -293,35 +273,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleSelector"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:126:1: ruleSelector : ( ( rule__Selector__Group__0 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:125:1: ruleSelector : ( ( rule__Selector__Group__0 ) ) ;
     public final void ruleSelector() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:130:2: ( ( ( rule__Selector__Group__0 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:131:1: ( ( rule__Selector__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:129:2: ( ( ( rule__Selector__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:130:1: ( ( rule__Selector__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:131:1: ( ( rule__Selector__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:130:1: ( ( rule__Selector__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:131:1: ( rule__Selector__Group__0 )
+            {
+             before(grammarAccess.getSelectorAccess().getGroup()); 
             // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:132:1: ( rule__Selector__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:132:2: rule__Selector__Group__0
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSelectorAccess().getGroup()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:133:1: ( rule__Selector__Group__0 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:133:2: rule__Selector__Group__0
-            {
-            pushFollow(FOLLOW_rule__Selector__Group__0_in_ruleSelector220);
+            pushFollow(FOLLOW_rule__Selector__Group__0_in_ruleSelector214);
             rule__Selector__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSelectorAccess().getGroup()); 
-            }
+             after(grammarAccess.getSelectorAccess().getGroup()); 
 
             }
 
@@ -344,24 +320,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleSum"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:145:1: entryRuleSum : ruleSum EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:144:1: entryRuleSum : ruleSum EOF ;
     public final void entryRuleSum() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:146:1: ( ruleSum EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:147:1: ruleSum EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:145:1: ( ruleSum EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:146:1: ruleSum EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSumRule()); 
-            }
-            pushFollow(FOLLOW_ruleSum_in_entryRuleSum247);
+             before(grammarAccess.getSumRule()); 
+            pushFollow(FOLLOW_ruleSum_in_entryRuleSum241);
             ruleSum();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSumRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSum254); if (state.failed) return ;
+
+             after(grammarAccess.getSumRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSum248); 
 
             }
 
@@ -378,35 +350,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleSum"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:154:1: ruleSum : ( ( rule__Sum__Group__0 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:153:1: ruleSum : ( ( rule__Sum__Group__0 ) ) ;
     public final void ruleSum() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:158:2: ( ( ( rule__Sum__Group__0 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:159:1: ( ( rule__Sum__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:157:2: ( ( ( rule__Sum__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:158:1: ( ( rule__Sum__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:159:1: ( ( rule__Sum__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:158:1: ( ( rule__Sum__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:159:1: ( rule__Sum__Group__0 )
+            {
+             before(grammarAccess.getSumAccess().getGroup()); 
             // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:160:1: ( rule__Sum__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:160:2: rule__Sum__Group__0
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSumAccess().getGroup()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:161:1: ( rule__Sum__Group__0 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:161:2: rule__Sum__Group__0
-            {
-            pushFollow(FOLLOW_rule__Sum__Group__0_in_ruleSum280);
+            pushFollow(FOLLOW_rule__Sum__Group__0_in_ruleSum274);
             rule__Sum__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSumAccess().getGroup()); 
-            }
+             after(grammarAccess.getSumAccess().getGroup()); 
 
             }
 
@@ -429,24 +397,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleProduct"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:173:1: entryRuleProduct : ruleProduct EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:172:1: entryRuleProduct : ruleProduct EOF ;
     public final void entryRuleProduct() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:174:1: ( ruleProduct EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:175:1: ruleProduct EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:173:1: ( ruleProduct EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:174:1: ruleProduct EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getProductRule()); 
-            }
-            pushFollow(FOLLOW_ruleProduct_in_entryRuleProduct307);
+             before(grammarAccess.getProductRule()); 
+            pushFollow(FOLLOW_ruleProduct_in_entryRuleProduct301);
             ruleProduct();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getProductRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProduct314); if (state.failed) return ;
+
+             after(grammarAccess.getProductRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleProduct308); 
 
             }
 
@@ -463,67 +427,61 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleProduct"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:182:1: ruleProduct : ( ( ( ruleTerm ) ) ( ( ruleTerm )* ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:181:1: ruleProduct : ( ( ( ruleTerm ) ) ( ( ruleTerm )* ) ) ;
     public final void ruleProduct() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:186:2: ( ( ( ( ruleTerm ) ) ( ( ruleTerm )* ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:187:1: ( ( ( ruleTerm ) ) ( ( ruleTerm )* ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:185:2: ( ( ( ( ruleTerm ) ) ( ( ruleTerm )* ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:186:1: ( ( ( ruleTerm ) ) ( ( ruleTerm )* ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:187:1: ( ( ( ruleTerm ) ) ( ( ruleTerm )* ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:188:1: ( ( ruleTerm ) ) ( ( ruleTerm )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:186:1: ( ( ( ruleTerm ) ) ( ( ruleTerm )* ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:187:1: ( ( ruleTerm ) ) ( ( ruleTerm )* )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:188:1: ( ( ruleTerm ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:187:1: ( ( ruleTerm ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:188:1: ( ruleTerm )
+            {
+             before(grammarAccess.getProductAccess().getTermParserRuleCall()); 
             // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:189:1: ( ruleTerm )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:189:3: ruleTerm
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getProductAccess().getTermParserRuleCall()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:190:1: ( ruleTerm )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:190:3: ruleTerm
-            {
-            pushFollow(FOLLOW_ruleTerm_in_ruleProduct343);
+            pushFollow(FOLLOW_ruleTerm_in_ruleProduct337);
             ruleTerm();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getProductAccess().getTermParserRuleCall()); 
-            }
+             after(grammarAccess.getProductAccess().getTermParserRuleCall()); 
 
             }
 
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:193:1: ( ( ruleTerm )* )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:194:1: ( ruleTerm )*
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:192:1: ( ( ruleTerm )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:193:1: ( ruleTerm )*
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getProductAccess().getTermParserRuleCall()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:195:1: ( ruleTerm )*
+             before(grammarAccess.getProductAccess().getTermParserRuleCall()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:194:1: ( ruleTerm )*
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>=RULE_STRING && LA1_0<=RULE_ID)||LA1_0==15) ) {
+                if ( ((LA1_0>=RULE_STRING && LA1_0<=RULE_ID)||LA1_0==16) ) {
                     alt1=1;
                 }
 
 
                 switch (alt1) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:195:3: ruleTerm
+            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:194:3: ruleTerm
             	    {
-            	    pushFollow(FOLLOW_ruleTerm_in_ruleProduct356);
+            	    pushFollow(FOLLOW_ruleTerm_in_ruleProduct350);
             	    ruleTerm();
 
             	    state._fsp--;
-            	    if (state.failed) return ;
+
 
             	    }
             	    break;
@@ -533,9 +491,7 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                 }
             } while (true);
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getProductAccess().getTermParserRuleCall()); 
-            }
+             after(grammarAccess.getProductAccess().getTermParserRuleCall()); 
 
             }
 
@@ -561,24 +517,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleTerm"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:208:1: entryRuleTerm : ruleTerm EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:207:1: entryRuleTerm : ruleTerm EOF ;
     public final void entryRuleTerm() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:209:1: ( ruleTerm EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:210:1: ruleTerm EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:208:1: ( ruleTerm EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:209:1: ruleTerm EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getTermRule()); 
-            }
-            pushFollow(FOLLOW_ruleTerm_in_entryRuleTerm386);
+             before(grammarAccess.getTermRule()); 
+            pushFollow(FOLLOW_ruleTerm_in_entryRuleTerm380);
             ruleTerm();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getTermRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTerm393); if (state.failed) return ;
+
+             after(grammarAccess.getTermRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTerm387); 
 
             }
 
@@ -595,35 +547,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleTerm"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:217:1: ruleTerm : ( ( rule__Term__Group__0 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:216:1: ruleTerm : ( ( rule__Term__Group__0 ) ) ;
     public final void ruleTerm() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:221:2: ( ( ( rule__Term__Group__0 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:222:1: ( ( rule__Term__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:220:2: ( ( ( rule__Term__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:221:1: ( ( rule__Term__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:222:1: ( ( rule__Term__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:221:1: ( ( rule__Term__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:222:1: ( rule__Term__Group__0 )
+            {
+             before(grammarAccess.getTermAccess().getGroup()); 
             // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:223:1: ( rule__Term__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:223:2: rule__Term__Group__0
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getTermAccess().getGroup()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:224:1: ( rule__Term__Group__0 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:224:2: rule__Term__Group__0
-            {
-            pushFollow(FOLLOW_rule__Term__Group__0_in_ruleTerm419);
+            pushFollow(FOLLOW_rule__Term__Group__0_in_ruleTerm413);
             rule__Term__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getTermAccess().getGroup()); 
-            }
+             after(grammarAccess.getTermAccess().getGroup()); 
 
             }
 
@@ -646,24 +594,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleStep"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:236:1: entryRuleStep : ruleStep EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:235:1: entryRuleStep : ruleStep EOF ;
     public final void entryRuleStep() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:237:1: ( ruleStep EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:238:1: ruleStep EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:236:1: ( ruleStep EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:237:1: ruleStep EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getStepRule()); 
-            }
-            pushFollow(FOLLOW_ruleStep_in_entryRuleStep446);
+             before(grammarAccess.getStepRule()); 
+            pushFollow(FOLLOW_ruleStep_in_entryRuleStep440);
             ruleStep();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getStepRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStep453); if (state.failed) return ;
+
+             after(grammarAccess.getStepRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStep447); 
 
             }
 
@@ -680,35 +624,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleStep"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:245:1: ruleStep : ( ( rule__Step__Alternatives ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:244:1: ruleStep : ( ( rule__Step__Alternatives ) ) ;
     public final void ruleStep() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:249:2: ( ( ( rule__Step__Alternatives ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:250:1: ( ( rule__Step__Alternatives ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:248:2: ( ( ( rule__Step__Alternatives ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:249:1: ( ( rule__Step__Alternatives ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:250:1: ( ( rule__Step__Alternatives ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:249:1: ( ( rule__Step__Alternatives ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:250:1: ( rule__Step__Alternatives )
+            {
+             before(grammarAccess.getStepAccess().getAlternatives()); 
             // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:251:1: ( rule__Step__Alternatives )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:251:2: rule__Step__Alternatives
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getStepAccess().getAlternatives()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:252:1: ( rule__Step__Alternatives )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:252:2: rule__Step__Alternatives
-            {
-            pushFollow(FOLLOW_rule__Step__Alternatives_in_ruleStep479);
+            pushFollow(FOLLOW_rule__Step__Alternatives_in_ruleStep473);
             rule__Step__Alternatives();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getStepAccess().getAlternatives()); 
-            }
+             after(grammarAccess.getStepAccess().getAlternatives()); 
 
             }
 
@@ -731,24 +671,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleRule"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:264:1: entryRuleRule : ruleRule EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:263:1: entryRuleRule : ruleRule EOF ;
     public final void entryRuleRule() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:265:1: ( ruleRule EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:266:1: ruleRule EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:264:1: ( ruleRule EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:265:1: ruleRule EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRuleRule()); 
-            }
-            pushFollow(FOLLOW_ruleRule_in_entryRuleRule506);
+             before(grammarAccess.getRuleRule()); 
+            pushFollow(FOLLOW_ruleRule_in_entryRuleRule500);
             ruleRule();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRuleRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRule513); if (state.failed) return ;
+
+             after(grammarAccess.getRuleRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRule507); 
 
             }
 
@@ -765,35 +701,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleRule"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:273:1: ruleRule : ( ( rule__Rule__Alternatives ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:272:1: ruleRule : ( ( rule__Rule__Group__0 ) ) ;
     public final void ruleRule() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:277:2: ( ( ( rule__Rule__Alternatives ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:278:1: ( ( rule__Rule__Alternatives ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:276:2: ( ( ( rule__Rule__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:277:1: ( ( rule__Rule__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:278:1: ( ( rule__Rule__Alternatives ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:279:1: ( rule__Rule__Alternatives )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:277:1: ( ( rule__Rule__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:278:1: ( rule__Rule__Group__0 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRuleAccess().getAlternatives()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:280:1: ( rule__Rule__Alternatives )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:280:2: rule__Rule__Alternatives
+             before(grammarAccess.getRuleAccess().getGroup()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:279:1: ( rule__Rule__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:279:2: rule__Rule__Group__0
             {
-            pushFollow(FOLLOW_rule__Rule__Alternatives_in_ruleRule539);
-            rule__Rule__Alternatives();
+            pushFollow(FOLLOW_rule__Rule__Group__0_in_ruleRule533);
+            rule__Rule__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRuleAccess().getAlternatives()); 
-            }
+             after(grammarAccess.getRuleAccess().getGroup()); 
 
             }
 
@@ -816,24 +748,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleNested"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:292:1: entryRuleNested : ruleNested EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:291:1: entryRuleNested : ruleNested EOF ;
     public final void entryRuleNested() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:293:1: ( ruleNested EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:294:1: ruleNested EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:292:1: ( ruleNested EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:293:1: ruleNested EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNestedRule()); 
-            }
-            pushFollow(FOLLOW_ruleNested_in_entryRuleNested566);
+             before(grammarAccess.getNestedRule()); 
+            pushFollow(FOLLOW_ruleNested_in_entryRuleNested560);
             ruleNested();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNestedRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNested573); if (state.failed) return ;
+
+             after(grammarAccess.getNestedRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNested567); 
 
             }
 
@@ -850,35 +778,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleNested"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:301:1: ruleNested : ( ( rule__Nested__Group__0 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:300:1: ruleNested : ( ( rule__Nested__Group__0 ) ) ;
     public final void ruleNested() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:305:2: ( ( ( rule__Nested__Group__0 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:306:1: ( ( rule__Nested__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:304:2: ( ( ( rule__Nested__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:305:1: ( ( rule__Nested__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:306:1: ( ( rule__Nested__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:305:1: ( ( rule__Nested__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:306:1: ( rule__Nested__Group__0 )
+            {
+             before(grammarAccess.getNestedAccess().getGroup()); 
             // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:307:1: ( rule__Nested__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:307:2: rule__Nested__Group__0
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNestedAccess().getGroup()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:308:1: ( rule__Nested__Group__0 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:308:2: rule__Nested__Group__0
-            {
-            pushFollow(FOLLOW_rule__Nested__Group__0_in_ruleNested599);
+            pushFollow(FOLLOW_rule__Nested__Group__0_in_ruleNested593);
             rule__Nested__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNestedAccess().getGroup()); 
-            }
+             after(grammarAccess.getNestedAccess().getGroup()); 
 
             }
 
@@ -901,24 +825,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleProperty"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:320:1: entryRuleProperty : ruleProperty EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:319:1: entryRuleProperty : ruleProperty EOF ;
     public final void entryRuleProperty() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:321:1: ( ruleProperty EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:322:1: ruleProperty EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:320:1: ( ruleProperty EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:321:1: ruleProperty EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getPropertyRule()); 
-            }
-            pushFollow(FOLLOW_ruleProperty_in_entryRuleProperty626);
+             before(grammarAccess.getPropertyRule()); 
+            pushFollow(FOLLOW_ruleProperty_in_entryRuleProperty620);
             ruleProperty();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getPropertyRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProperty633); if (state.failed) return ;
+
+             after(grammarAccess.getPropertyRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleProperty627); 
 
             }
 
@@ -935,35 +855,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleProperty"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:329:1: ruleProperty : ( ( rule__Property__Group__0 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:328:1: ruleProperty : ( ( rule__Property__Group__0 ) ) ;
     public final void ruleProperty() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:333:2: ( ( ( rule__Property__Group__0 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:334:1: ( ( rule__Property__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:332:2: ( ( ( rule__Property__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:333:1: ( ( rule__Property__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:334:1: ( ( rule__Property__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:333:1: ( ( rule__Property__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:334:1: ( rule__Property__Group__0 )
+            {
+             before(grammarAccess.getPropertyAccess().getGroup()); 
             // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:335:1: ( rule__Property__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:335:2: rule__Property__Group__0
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getPropertyAccess().getGroup()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:336:1: ( rule__Property__Group__0 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:336:2: rule__Property__Group__0
-            {
-            pushFollow(FOLLOW_rule__Property__Group__0_in_ruleProperty659);
+            pushFollow(FOLLOW_rule__Property__Group__0_in_ruleProperty653);
             rule__Property__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getPropertyAccess().getGroup()); 
-            }
+             after(grammarAccess.getPropertyAccess().getGroup()); 
 
             }
 
@@ -985,25 +901,98 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
     // $ANTLR end "ruleProperty"
 
 
+    // $ANTLR start "entryRulebool"
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:347:1: entryRulebool : rulebool EOF ;
+    public final void entryRulebool() throws RecognitionException {
+        try {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:348:1: ( rulebool EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:349:1: rulebool EOF
+            {
+             before(grammarAccess.getBoolRule()); 
+            pushFollow(FOLLOW_rulebool_in_entryRulebool680);
+            rulebool();
+
+            state._fsp--;
+
+             after(grammarAccess.getBoolRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulebool687); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRulebool"
+
+
+    // $ANTLR start "rulebool"
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:356:1: rulebool : ( ( rule__Bool__Alternatives ) ) ;
+    public final void rulebool() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:360:2: ( ( ( rule__Bool__Alternatives ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:361:1: ( ( rule__Bool__Alternatives ) )
+            {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:361:1: ( ( rule__Bool__Alternatives ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:362:1: ( rule__Bool__Alternatives )
+            {
+             before(grammarAccess.getBoolAccess().getAlternatives()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:363:1: ( rule__Bool__Alternatives )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:363:2: rule__Bool__Alternatives
+            {
+            pushFollow(FOLLOW_rule__Bool__Alternatives_in_rulebool713);
+            rule__Bool__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getBoolAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rulebool"
+
+
     // $ANTLR start "entryRuleValue"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:348:1: entryRuleValue : ruleValue EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:375:1: entryRuleValue : ruleValue EOF ;
     public final void entryRuleValue() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:349:1: ( ruleValue EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:350:1: ruleValue EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:376:1: ( ruleValue EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:377:1: ruleValue EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getValueRule()); 
-            }
-            pushFollow(FOLLOW_ruleValue_in_entryRuleValue686);
+             before(grammarAccess.getValueRule()); 
+            pushFollow(FOLLOW_ruleValue_in_entryRuleValue740);
             ruleValue();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getValueRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleValue693); if (state.failed) return ;
+
+             after(grammarAccess.getValueRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleValue747); 
 
             }
 
@@ -1020,35 +1009,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleValue"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:357:1: ruleValue : ( ( rule__Value__Alternatives ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:384:1: ruleValue : ( ( rule__Value__Alternatives ) ) ;
     public final void ruleValue() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:361:2: ( ( ( rule__Value__Alternatives ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:362:1: ( ( rule__Value__Alternatives ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:388:2: ( ( ( rule__Value__Alternatives ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:389:1: ( ( rule__Value__Alternatives ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:362:1: ( ( rule__Value__Alternatives ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:363:1: ( rule__Value__Alternatives )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:389:1: ( ( rule__Value__Alternatives ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:390:1: ( rule__Value__Alternatives )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getValueAccess().getAlternatives()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:364:1: ( rule__Value__Alternatives )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:364:2: rule__Value__Alternatives
+             before(grammarAccess.getValueAccess().getAlternatives()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:391:1: ( rule__Value__Alternatives )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:391:2: rule__Value__Alternatives
             {
-            pushFollow(FOLLOW_rule__Value__Alternatives_in_ruleValue719);
+            pushFollow(FOLLOW_rule__Value__Alternatives_in_ruleValue773);
             rule__Value__Alternatives();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getValueAccess().getAlternatives()); 
-            }
+             after(grammarAccess.getValueAccess().getAlternatives()); 
 
             }
 
@@ -1071,24 +1056,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleConstraint"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:376:1: entryRuleConstraint : ruleConstraint EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:403:1: entryRuleConstraint : ruleConstraint EOF ;
     public final void entryRuleConstraint() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:377:1: ( ruleConstraint EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:378:1: ruleConstraint EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:404:1: ( ruleConstraint EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:405:1: ruleConstraint EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getConstraintRule()); 
-            }
-            pushFollow(FOLLOW_ruleConstraint_in_entryRuleConstraint746);
+             before(grammarAccess.getConstraintRule()); 
+            pushFollow(FOLLOW_ruleConstraint_in_entryRuleConstraint800);
             ruleConstraint();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getConstraintRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConstraint753); if (state.failed) return ;
+
+             after(grammarAccess.getConstraintRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleConstraint807); 
 
             }
 
@@ -1105,35 +1086,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleConstraint"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:385:1: ruleConstraint : ( ( rule__Constraint__Group__0 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:412:1: ruleConstraint : ( ( rule__Constraint__Group__0 ) ) ;
     public final void ruleConstraint() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:389:2: ( ( ( rule__Constraint__Group__0 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:390:1: ( ( rule__Constraint__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:416:2: ( ( ( rule__Constraint__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:417:1: ( ( rule__Constraint__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:390:1: ( ( rule__Constraint__Group__0 ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:391:1: ( rule__Constraint__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:417:1: ( ( rule__Constraint__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:418:1: ( rule__Constraint__Group__0 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getConstraintAccess().getGroup()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:392:1: ( rule__Constraint__Group__0 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:392:2: rule__Constraint__Group__0
+             before(grammarAccess.getConstraintAccess().getGroup()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:419:1: ( rule__Constraint__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:419:2: rule__Constraint__Group__0
             {
-            pushFollow(FOLLOW_rule__Constraint__Group__0_in_ruleConstraint779);
+            pushFollow(FOLLOW_rule__Constraint__Group__0_in_ruleConstraint833);
             rule__Constraint__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getConstraintAccess().getGroup()); 
-            }
+             after(grammarAccess.getConstraintAccess().getGroup()); 
 
             }
 
@@ -1156,24 +1133,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleSingleStep"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:404:1: entryRuleSingleStep : ruleSingleStep EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:431:1: entryRuleSingleStep : ruleSingleStep EOF ;
     public final void entryRuleSingleStep() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:405:1: ( ruleSingleStep EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:406:1: ruleSingleStep EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:432:1: ( ruleSingleStep EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:433:1: ruleSingleStep EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSingleStepRule()); 
-            }
-            pushFollow(FOLLOW_ruleSingleStep_in_entryRuleSingleStep806);
+             before(grammarAccess.getSingleStepRule()); 
+            pushFollow(FOLLOW_ruleSingleStep_in_entryRuleSingleStep860);
             ruleSingleStep();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSingleStepRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSingleStep813); if (state.failed) return ;
+
+             after(grammarAccess.getSingleStepRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSingleStep867); 
 
             }
 
@@ -1190,35 +1163,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleSingleStep"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:413:1: ruleSingleStep : ( ( rule__SingleStep__Group__0 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:440:1: ruleSingleStep : ( ( rule__SingleStep__Group__0 ) ) ;
     public final void ruleSingleStep() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:417:2: ( ( ( rule__SingleStep__Group__0 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:418:1: ( ( rule__SingleStep__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:444:2: ( ( ( rule__SingleStep__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:445:1: ( ( rule__SingleStep__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:418:1: ( ( rule__SingleStep__Group__0 ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:419:1: ( rule__SingleStep__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:445:1: ( ( rule__SingleStep__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:446:1: ( rule__SingleStep__Group__0 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSingleStepAccess().getGroup()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:420:1: ( rule__SingleStep__Group__0 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:420:2: rule__SingleStep__Group__0
+             before(grammarAccess.getSingleStepAccess().getGroup()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:447:1: ( rule__SingleStep__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:447:2: rule__SingleStep__Group__0
             {
-            pushFollow(FOLLOW_rule__SingleStep__Group__0_in_ruleSingleStep839);
+            pushFollow(FOLLOW_rule__SingleStep__Group__0_in_ruleSingleStep893);
             rule__SingleStep__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSingleStepAccess().getGroup()); 
-            }
+             after(grammarAccess.getSingleStepAccess().getGroup()); 
 
             }
 
@@ -1241,24 +1210,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleIdent"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:432:1: entryRuleIdent : ruleIdent EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:459:1: entryRuleIdent : ruleIdent EOF ;
     public final void entryRuleIdent() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:433:1: ( ruleIdent EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:434:1: ruleIdent EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:460:1: ( ruleIdent EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:461:1: ruleIdent EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIdentRule()); 
-            }
-            pushFollow(FOLLOW_ruleIdent_in_entryRuleIdent866);
+             before(grammarAccess.getIdentRule()); 
+            pushFollow(FOLLOW_ruleIdent_in_entryRuleIdent920);
             ruleIdent();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getIdentRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIdent873); if (state.failed) return ;
+
+             after(grammarAccess.getIdentRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIdent927); 
 
             }
 
@@ -1275,35 +1240,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleIdent"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:441:1: ruleIdent : ( ( rule__Ident__Alternatives ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:468:1: ruleIdent : ( ( rule__Ident__Alternatives ) ) ;
     public final void ruleIdent() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:445:2: ( ( ( rule__Ident__Alternatives ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:446:1: ( ( rule__Ident__Alternatives ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:472:2: ( ( ( rule__Ident__Alternatives ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:473:1: ( ( rule__Ident__Alternatives ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:446:1: ( ( rule__Ident__Alternatives ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:447:1: ( rule__Ident__Alternatives )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:473:1: ( ( rule__Ident__Alternatives ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:474:1: ( rule__Ident__Alternatives )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getIdentAccess().getAlternatives()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:448:1: ( rule__Ident__Alternatives )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:448:2: rule__Ident__Alternatives
+             before(grammarAccess.getIdentAccess().getAlternatives()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:475:1: ( rule__Ident__Alternatives )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:475:2: rule__Ident__Alternatives
             {
-            pushFollow(FOLLOW_rule__Ident__Alternatives_in_ruleIdent899);
+            pushFollow(FOLLOW_rule__Ident__Alternatives_in_ruleIdent953);
             rule__Ident__Alternatives();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getIdentAccess().getAlternatives()); 
-            }
+             after(grammarAccess.getIdentAccess().getAlternatives()); 
 
             }
 
@@ -1326,24 +1287,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleVals"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:460:1: entryRuleVals : ruleVals EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:487:1: entryRuleVals : ruleVals EOF ;
     public final void entryRuleVals() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:461:1: ( ruleVals EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:462:1: ruleVals EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:488:1: ( ruleVals EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:489:1: ruleVals EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getValsRule()); 
-            }
-            pushFollow(FOLLOW_ruleVals_in_entryRuleVals926);
+             before(grammarAccess.getValsRule()); 
+            pushFollow(FOLLOW_ruleVals_in_entryRuleVals980);
             ruleVals();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getValsRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVals933); if (state.failed) return ;
+
+             after(grammarAccess.getValsRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVals987); 
 
             }
 
@@ -1360,35 +1317,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleVals"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:469:1: ruleVals : ( ( rule__Vals__Group__0 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:496:1: ruleVals : ( ( rule__Vals__Group__0 ) ) ;
     public final void ruleVals() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:473:2: ( ( ( rule__Vals__Group__0 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:474:1: ( ( rule__Vals__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:500:2: ( ( ( rule__Vals__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:501:1: ( ( rule__Vals__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:474:1: ( ( rule__Vals__Group__0 ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:475:1: ( rule__Vals__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:501:1: ( ( rule__Vals__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:502:1: ( rule__Vals__Group__0 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getValsAccess().getGroup()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:476:1: ( rule__Vals__Group__0 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:476:2: rule__Vals__Group__0
+             before(grammarAccess.getValsAccess().getGroup()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:503:1: ( rule__Vals__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:503:2: rule__Vals__Group__0
             {
-            pushFollow(FOLLOW_rule__Vals__Group__0_in_ruleVals959);
+            pushFollow(FOLLOW_rule__Vals__Group__0_in_ruleVals1013);
             rule__Vals__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getValsAccess().getGroup()); 
-            }
+             after(grammarAccess.getValsAccess().getGroup()); 
 
             }
 
@@ -1411,24 +1364,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleStepSuffix"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:488:1: entryRuleStepSuffix : ruleStepSuffix EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:515:1: entryRuleStepSuffix : ruleStepSuffix EOF ;
     public final void entryRuleStepSuffix() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:489:1: ( ruleStepSuffix EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:490:1: ruleStepSuffix EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:516:1: ( ruleStepSuffix EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:517:1: ruleStepSuffix EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getStepSuffixRule()); 
-            }
-            pushFollow(FOLLOW_ruleStepSuffix_in_entryRuleStepSuffix986);
+             before(grammarAccess.getStepSuffixRule()); 
+            pushFollow(FOLLOW_ruleStepSuffix_in_entryRuleStepSuffix1040);
             ruleStepSuffix();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getStepSuffixRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStepSuffix993); if (state.failed) return ;
+
+             after(grammarAccess.getStepSuffixRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleStepSuffix1047); 
 
             }
 
@@ -1445,35 +1394,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleStepSuffix"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:497:1: ruleStepSuffix : ( ( rule__StepSuffix__Group__0 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:524:1: ruleStepSuffix : ( ( rule__StepSuffix__Group__0 ) ) ;
     public final void ruleStepSuffix() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:501:2: ( ( ( rule__StepSuffix__Group__0 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:502:1: ( ( rule__StepSuffix__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:528:2: ( ( ( rule__StepSuffix__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:529:1: ( ( rule__StepSuffix__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:502:1: ( ( rule__StepSuffix__Group__0 ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:503:1: ( rule__StepSuffix__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:529:1: ( ( rule__StepSuffix__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:530:1: ( rule__StepSuffix__Group__0 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getStepSuffixAccess().getGroup()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:504:1: ( rule__StepSuffix__Group__0 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:504:2: rule__StepSuffix__Group__0
+             before(grammarAccess.getStepSuffixAccess().getGroup()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:531:1: ( rule__StepSuffix__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:531:2: rule__StepSuffix__Group__0
             {
-            pushFollow(FOLLOW_rule__StepSuffix__Group__0_in_ruleStepSuffix1019);
+            pushFollow(FOLLOW_rule__StepSuffix__Group__0_in_ruleStepSuffix1073);
             rule__StepSuffix__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getStepSuffixAccess().getGroup()); 
-            }
+             after(grammarAccess.getStepSuffixAccess().getGroup()); 
 
             }
 
@@ -1496,24 +1441,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleImport"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:516:1: entryRuleImport : ruleImport EOF ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:543:1: entryRuleImport : ruleImport EOF ;
     public final void entryRuleImport() throws RecognitionException {
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:517:1: ( ruleImport EOF )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:518:1: ruleImport EOF
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:544:1: ( ruleImport EOF )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:545:1: ruleImport EOF
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getImportRule()); 
-            }
-            pushFollow(FOLLOW_ruleImport_in_entryRuleImport1046);
+             before(grammarAccess.getImportRule()); 
+            pushFollow(FOLLOW_ruleImport_in_entryRuleImport1100);
             ruleImport();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getImportRule()); 
-            }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleImport1053); if (state.failed) return ;
+
+             after(grammarAccess.getImportRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleImport1107); 
 
             }
 
@@ -1530,35 +1471,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleImport"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:525:1: ruleImport : ( ( rule__Import__Group__0 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:552:1: ruleImport : ( ( rule__Import__Group__0 ) ) ;
     public final void ruleImport() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:529:2: ( ( ( rule__Import__Group__0 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:530:1: ( ( rule__Import__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:556:2: ( ( ( rule__Import__Group__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:557:1: ( ( rule__Import__Group__0 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:530:1: ( ( rule__Import__Group__0 ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:531:1: ( rule__Import__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:557:1: ( ( rule__Import__Group__0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:558:1: ( rule__Import__Group__0 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getImportAccess().getGroup()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:532:1: ( rule__Import__Group__0 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:532:2: rule__Import__Group__0
+             before(grammarAccess.getImportAccess().getGroup()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:559:1: ( rule__Import__Group__0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:559:2: rule__Import__Group__0
             {
-            pushFollow(FOLLOW_rule__Import__Group__0_in_ruleImport1079);
+            pushFollow(FOLLOW_rule__Import__Group__0_in_ruleImport1133);
             rule__Import__Group__0();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getImportAccess().getGroup()); 
-            }
+             after(grammarAccess.getImportAccess().getGroup()); 
 
             }
 
@@ -1581,24 +1518,23 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Step__Alternatives"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:544:1: rule__Step__Alternatives : ( ( ruleSingleStep ) | ( ( rule__Step__Group_1__0 ) ) );
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:571:1: rule__Step__Alternatives : ( ( ruleSingleStep ) | ( ( rule__Step__Group_1__0 ) ) );
     public final void rule__Step__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:548:1: ( ( ruleSingleStep ) | ( ( rule__Step__Group_1__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:575:1: ( ( ruleSingleStep ) | ( ( rule__Step__Group_1__0 ) ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
             if ( ((LA2_0>=RULE_STRING && LA2_0<=RULE_ID)) ) {
                 alt2=1;
             }
-            else if ( (LA2_0==15) ) {
+            else if ( (LA2_0==16) ) {
                 alt2=2;
             }
             else {
-                if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 2, 0, input);
 
@@ -1606,22 +1542,18 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
             }
             switch (alt2) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:549:1: ( ruleSingleStep )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:576:1: ( ruleSingleStep )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:549:1: ( ruleSingleStep )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:550:1: ruleSingleStep
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:576:1: ( ruleSingleStep )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:577:1: ruleSingleStep
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getStepAccess().getSingleStepParserRuleCall_0()); 
-                    }
-                    pushFollow(FOLLOW_ruleSingleStep_in_rule__Step__Alternatives1115);
+                     before(grammarAccess.getStepAccess().getSingleStepParserRuleCall_0()); 
+                    pushFollow(FOLLOW_ruleSingleStep_in_rule__Step__Alternatives1169);
                     ruleSingleStep();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getStepAccess().getSingleStepParserRuleCall_0()); 
-                    }
+
+                     after(grammarAccess.getStepAccess().getSingleStepParserRuleCall_0()); 
 
                     }
 
@@ -1629,28 +1561,24 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:555:6: ( ( rule__Step__Group_1__0 ) )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:582:6: ( ( rule__Step__Group_1__0 ) )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:555:6: ( ( rule__Step__Group_1__0 ) )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:556:1: ( rule__Step__Group_1__0 )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:582:6: ( ( rule__Step__Group_1__0 ) )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:583:1: ( rule__Step__Group_1__0 )
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getStepAccess().getGroup_1()); 
-                    }
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:557:1: ( rule__Step__Group_1__0 )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:557:2: rule__Step__Group_1__0
+                     before(grammarAccess.getStepAccess().getGroup_1()); 
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:584:1: ( rule__Step__Group_1__0 )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:584:2: rule__Step__Group_1__0
                     {
-                    pushFollow(FOLLOW_rule__Step__Group_1__0_in_rule__Step__Alternatives1132);
+                    pushFollow(FOLLOW_rule__Step__Group_1__0_in_rule__Step__Alternatives1186);
                     rule__Step__Group_1__0();
 
                     state._fsp--;
-                    if (state.failed) return ;
+
 
                     }
 
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getStepAccess().getGroup_1()); 
-                    }
+                     after(grammarAccess.getStepAccess().getGroup_1()); 
 
                     }
 
@@ -1674,22 +1602,22 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Step__Alternatives"
 
 
-    // $ANTLR start "rule__Rule__Alternatives"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:566:1: rule__Rule__Alternatives : ( ( ruleImport ) | ( ruleConstraint ) | ( ruleProperty ) | ( ruleNested ) );
-    public final void rule__Rule__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__Rule__Alternatives_0"
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:593:1: rule__Rule__Alternatives_0 : ( ( ruleImport ) | ( ruleConstraint ) | ( ruleProperty ) | ( ruleNested ) );
+    public final void rule__Rule__Alternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:570:1: ( ( ruleImport ) | ( ruleConstraint ) | ( ruleProperty ) | ( ruleNested ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:597:1: ( ( ruleImport ) | ( ruleConstraint ) | ( ruleProperty ) | ( ruleNested ) )
             int alt3=4;
             switch ( input.LA(1) ) {
-            case 27:
+            case 28:
                 {
                 alt3=1;
                 }
                 break;
-            case 24:
+            case 25:
                 {
                 alt3=2;
                 }
@@ -1698,14 +1626,13 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                 {
                 int LA3_3 = input.LA(2);
 
-                if ( (LA3_3==23) ) {
+                if ( (LA3_3==24) ) {
                     alt3=3;
                 }
-                else if ( ((LA3_3>=RULE_STRING && LA3_3<=RULE_ID)||LA3_3==15||(LA3_3>=18 && LA3_3<=21)||(LA3_3>=25 && LA3_3<=26)) ) {
+                else if ( ((LA3_3>=RULE_STRING && LA3_3<=RULE_ID)||LA3_3==16||(LA3_3>=19 && LA3_3<=22)||(LA3_3>=26 && LA3_3<=27)) ) {
                     alt3=4;
                 }
                 else {
-                    if (state.backtracking>0) {state.failed=true; return ;}
                     NoViableAltException nvae =
                         new NoViableAltException("", 3, 3, input);
 
@@ -1714,13 +1641,12 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                 }
                 break;
             case RULE_STRING:
-            case 15:
+            case 16:
                 {
                 alt3=4;
                 }
                 break;
             default:
-                if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 3, 0, input);
 
@@ -1729,22 +1655,18 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
             switch (alt3) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:571:1: ( ruleImport )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:598:1: ( ruleImport )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:571:1: ( ruleImport )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:572:1: ruleImport
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:598:1: ( ruleImport )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:599:1: ruleImport
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getRuleAccess().getImportParserRuleCall_0()); 
-                    }
-                    pushFollow(FOLLOW_ruleImport_in_rule__Rule__Alternatives1165);
+                     before(grammarAccess.getRuleAccess().getImportParserRuleCall_0_0()); 
+                    pushFollow(FOLLOW_ruleImport_in_rule__Rule__Alternatives_01219);
                     ruleImport();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getRuleAccess().getImportParserRuleCall_0()); 
-                    }
+
+                     after(grammarAccess.getRuleAccess().getImportParserRuleCall_0_0()); 
 
                     }
 
@@ -1752,22 +1674,18 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:577:6: ( ruleConstraint )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:604:6: ( ruleConstraint )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:577:6: ( ruleConstraint )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:578:1: ruleConstraint
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:604:6: ( ruleConstraint )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:605:1: ruleConstraint
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getRuleAccess().getConstraintParserRuleCall_1()); 
-                    }
-                    pushFollow(FOLLOW_ruleConstraint_in_rule__Rule__Alternatives1182);
+                     before(grammarAccess.getRuleAccess().getConstraintParserRuleCall_0_1()); 
+                    pushFollow(FOLLOW_ruleConstraint_in_rule__Rule__Alternatives_01236);
                     ruleConstraint();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getRuleAccess().getConstraintParserRuleCall_1()); 
-                    }
+
+                     after(grammarAccess.getRuleAccess().getConstraintParserRuleCall_0_1()); 
 
                     }
 
@@ -1775,22 +1693,18 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:583:6: ( ruleProperty )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:610:6: ( ruleProperty )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:583:6: ( ruleProperty )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:584:1: ruleProperty
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:610:6: ( ruleProperty )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:611:1: ruleProperty
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getRuleAccess().getPropertyParserRuleCall_2()); 
-                    }
-                    pushFollow(FOLLOW_ruleProperty_in_rule__Rule__Alternatives1199);
+                     before(grammarAccess.getRuleAccess().getPropertyParserRuleCall_0_2()); 
+                    pushFollow(FOLLOW_ruleProperty_in_rule__Rule__Alternatives_01253);
                     ruleProperty();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getRuleAccess().getPropertyParserRuleCall_2()); 
-                    }
+
+                     after(grammarAccess.getRuleAccess().getPropertyParserRuleCall_0_2()); 
 
                     }
 
@@ -1798,22 +1712,18 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:589:6: ( ruleNested )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:616:6: ( ruleNested )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:589:6: ( ruleNested )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:590:1: ruleNested
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:616:6: ( ruleNested )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:617:1: ruleNested
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getRuleAccess().getNestedParserRuleCall_3()); 
-                    }
-                    pushFollow(FOLLOW_ruleNested_in_rule__Rule__Alternatives1216);
+                     before(grammarAccess.getRuleAccess().getNestedParserRuleCall_0_3()); 
+                    pushFollow(FOLLOW_ruleNested_in_rule__Rule__Alternatives_01270);
                     ruleNested();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getRuleAccess().getNestedParserRuleCall_3()); 
-                    }
+
+                     after(grammarAccess.getRuleAccess().getNestedParserRuleCall_0_3()); 
 
                     }
 
@@ -1834,28 +1744,27 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Rule__Alternatives"
+    // $ANTLR end "rule__Rule__Alternatives_0"
 
 
     // $ANTLR start "rule__Nested__Alternatives_1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:600:1: rule__Nested__Alternatives_1 : ( ( ( rule__Nested__Group_1_0__0 ) ) | ( ( rule__Nested__Group_1_1__0 ) ) );
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:627:1: rule__Nested__Alternatives_1 : ( ( ( rule__Nested__Group_1_0__0 ) ) | ( ( rule__Nested__Group_1_1__0 ) ) );
     public final void rule__Nested__Alternatives_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:604:1: ( ( ( rule__Nested__Group_1_0__0 ) ) | ( ( rule__Nested__Group_1_1__0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:631:1: ( ( ( rule__Nested__Group_1_0__0 ) ) | ( ( rule__Nested__Group_1_1__0 ) ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==20) ) {
+            if ( (LA4_0==21) ) {
                 alt4=1;
             }
-            else if ( (LA4_0==21) ) {
+            else if ( (LA4_0==22) ) {
                 alt4=2;
             }
             else {
-                if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 4, 0, input);
 
@@ -1863,28 +1772,24 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
             }
             switch (alt4) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:605:1: ( ( rule__Nested__Group_1_0__0 ) )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:632:1: ( ( rule__Nested__Group_1_0__0 ) )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:605:1: ( ( rule__Nested__Group_1_0__0 ) )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:606:1: ( rule__Nested__Group_1_0__0 )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:632:1: ( ( rule__Nested__Group_1_0__0 ) )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:633:1: ( rule__Nested__Group_1_0__0 )
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getNestedAccess().getGroup_1_0()); 
-                    }
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:607:1: ( rule__Nested__Group_1_0__0 )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:607:2: rule__Nested__Group_1_0__0
+                     before(grammarAccess.getNestedAccess().getGroup_1_0()); 
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:634:1: ( rule__Nested__Group_1_0__0 )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:634:2: rule__Nested__Group_1_0__0
                     {
-                    pushFollow(FOLLOW_rule__Nested__Group_1_0__0_in_rule__Nested__Alternatives_11248);
+                    pushFollow(FOLLOW_rule__Nested__Group_1_0__0_in_rule__Nested__Alternatives_11302);
                     rule__Nested__Group_1_0__0();
 
                     state._fsp--;
-                    if (state.failed) return ;
+
 
                     }
 
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getNestedAccess().getGroup_1_0()); 
-                    }
+                     after(grammarAccess.getNestedAccess().getGroup_1_0()); 
 
                     }
 
@@ -1892,28 +1797,24 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:611:6: ( ( rule__Nested__Group_1_1__0 ) )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:638:6: ( ( rule__Nested__Group_1_1__0 ) )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:611:6: ( ( rule__Nested__Group_1_1__0 ) )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:612:1: ( rule__Nested__Group_1_1__0 )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:638:6: ( ( rule__Nested__Group_1_1__0 ) )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:639:1: ( rule__Nested__Group_1_1__0 )
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getNestedAccess().getGroup_1_1()); 
-                    }
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:613:1: ( rule__Nested__Group_1_1__0 )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:613:2: rule__Nested__Group_1_1__0
+                     before(grammarAccess.getNestedAccess().getGroup_1_1()); 
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:640:1: ( rule__Nested__Group_1_1__0 )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:640:2: rule__Nested__Group_1_1__0
                     {
-                    pushFollow(FOLLOW_rule__Nested__Group_1_1__0_in_rule__Nested__Alternatives_11266);
+                    pushFollow(FOLLOW_rule__Nested__Group_1_1__0_in_rule__Nested__Alternatives_11320);
                     rule__Nested__Group_1_1__0();
 
                     state._fsp--;
-                    if (state.failed) return ;
+
 
                     }
 
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getNestedAccess().getGroup_1_1()); 
-                    }
+                     after(grammarAccess.getNestedAccess().getGroup_1_1()); 
 
                     }
 
@@ -1938,21 +1839,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Alternatives_1_0_1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:622:1: rule__Nested__Alternatives_1_0_1 : ( ( ruleImport ) | ( ruleConstraint ) | ( ruleProperty ) );
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:649:1: rule__Nested__Alternatives_1_0_1 : ( ( ruleImport ) | ( ruleConstraint ) | ( ruleProperty ) );
     public final void rule__Nested__Alternatives_1_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:626:1: ( ( ruleImport ) | ( ruleConstraint ) | ( ruleProperty ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:653:1: ( ( ruleImport ) | ( ruleConstraint ) | ( ruleProperty ) )
             int alt5=3;
             switch ( input.LA(1) ) {
-            case 27:
+            case 28:
                 {
                 alt5=1;
                 }
                 break;
-            case 24:
+            case 25:
                 {
                 alt5=2;
                 }
@@ -1963,7 +1864,6 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                 }
                 break;
             default:
-                if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 5, 0, input);
 
@@ -1972,22 +1872,18 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
             switch (alt5) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:627:1: ( ruleImport )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:654:1: ( ruleImport )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:627:1: ( ruleImport )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:628:1: ruleImport
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:654:1: ( ruleImport )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:655:1: ruleImport
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getNestedAccess().getImportParserRuleCall_1_0_1_0()); 
-                    }
-                    pushFollow(FOLLOW_ruleImport_in_rule__Nested__Alternatives_1_0_11299);
+                     before(grammarAccess.getNestedAccess().getImportParserRuleCall_1_0_1_0()); 
+                    pushFollow(FOLLOW_ruleImport_in_rule__Nested__Alternatives_1_0_11353);
                     ruleImport();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getNestedAccess().getImportParserRuleCall_1_0_1_0()); 
-                    }
+
+                     after(grammarAccess.getNestedAccess().getImportParserRuleCall_1_0_1_0()); 
 
                     }
 
@@ -1995,22 +1891,18 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:633:6: ( ruleConstraint )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:660:6: ( ruleConstraint )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:633:6: ( ruleConstraint )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:634:1: ruleConstraint
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:660:6: ( ruleConstraint )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:661:1: ruleConstraint
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getNestedAccess().getConstraintParserRuleCall_1_0_1_1()); 
-                    }
-                    pushFollow(FOLLOW_ruleConstraint_in_rule__Nested__Alternatives_1_0_11316);
+                     before(grammarAccess.getNestedAccess().getConstraintParserRuleCall_1_0_1_1()); 
+                    pushFollow(FOLLOW_ruleConstraint_in_rule__Nested__Alternatives_1_0_11370);
                     ruleConstraint();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getNestedAccess().getConstraintParserRuleCall_1_0_1_1()); 
-                    }
+
+                     after(grammarAccess.getNestedAccess().getConstraintParserRuleCall_1_0_1_1()); 
 
                     }
 
@@ -2018,22 +1910,18 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:639:6: ( ruleProperty )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:666:6: ( ruleProperty )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:639:6: ( ruleProperty )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:640:1: ruleProperty
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:666:6: ( ruleProperty )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:667:1: ruleProperty
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getNestedAccess().getPropertyParserRuleCall_1_0_1_2()); 
-                    }
-                    pushFollow(FOLLOW_ruleProperty_in_rule__Nested__Alternatives_1_0_11333);
+                     before(grammarAccess.getNestedAccess().getPropertyParserRuleCall_1_0_1_2()); 
+                    pushFollow(FOLLOW_ruleProperty_in_rule__Nested__Alternatives_1_0_11387);
                     ruleProperty();
 
                     state._fsp--;
-                    if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getNestedAccess().getPropertyParserRuleCall_1_0_1_2()); 
-                    }
+
+                     after(grammarAccess.getNestedAccess().getPropertyParserRuleCall_1_0_1_2()); 
 
                     }
 
@@ -2057,63 +1945,39 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Nested__Alternatives_1_0_1"
 
 
-    // $ANTLR start "rule__Value__Alternatives"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:650:1: rule__Value__Alternatives : ( ( RULE_HEXINT ) | ( RULE_INT ) | ( RULE_STRING ) | ( 'true' ) | ( 'false' ) );
-    public final void rule__Value__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__Bool__Alternatives"
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:677:1: rule__Bool__Alternatives : ( ( 'true' ) | ( 'false' ) );
+    public final void rule__Bool__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:654:1: ( ( RULE_HEXINT ) | ( RULE_INT ) | ( RULE_STRING ) | ( 'true' ) | ( 'false' ) )
-            int alt6=5;
-            switch ( input.LA(1) ) {
-            case RULE_HEXINT:
-                {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:681:1: ( ( 'true' ) | ( 'false' ) )
+            int alt6=2;
+            int LA6_0 = input.LA(1);
+
+            if ( (LA6_0==13) ) {
                 alt6=1;
-                }
-                break;
-            case RULE_INT:
-                {
+            }
+            else if ( (LA6_0==14) ) {
                 alt6=2;
-                }
-                break;
-            case RULE_STRING:
-                {
-                alt6=3;
-                }
-                break;
-            case 12:
-                {
-                alt6=4;
-                }
-                break;
-            case 13:
-                {
-                alt6=5;
-                }
-                break;
-            default:
-                if (state.backtracking>0) {state.failed=true; return ;}
+            }
+            else {
                 NoViableAltException nvae =
                     new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
-
             switch (alt6) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:655:1: ( RULE_HEXINT )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:682:1: ( 'true' )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:655:1: ( RULE_HEXINT )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:656:1: RULE_HEXINT
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:682:1: ( 'true' )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:683:1: 'true'
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getValueAccess().getHEXINTTerminalRuleCall_0()); 
-                    }
-                    match(input,RULE_HEXINT,FOLLOW_RULE_HEXINT_in_rule__Value__Alternatives1365); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getValueAccess().getHEXINTTerminalRuleCall_0()); 
-                    }
+                     before(grammarAccess.getBoolAccess().getTrueKeyword_0()); 
+                    match(input,13,FOLLOW_13_in_rule__Bool__Alternatives1420); 
+                     after(grammarAccess.getBoolAccess().getTrueKeyword_0()); 
 
                     }
 
@@ -2121,18 +1985,100 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:661:6: ( RULE_INT )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:690:6: ( 'false' )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:661:6: ( RULE_INT )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:662:1: RULE_INT
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:690:6: ( 'false' )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:691:1: 'false'
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getValueAccess().getINTTerminalRuleCall_1()); 
+                     before(grammarAccess.getBoolAccess().getFalseKeyword_1()); 
+                    match(input,14,FOLLOW_14_in_rule__Bool__Alternatives1440); 
+                     after(grammarAccess.getBoolAccess().getFalseKeyword_1()); 
+
                     }
-                    match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Value__Alternatives1382); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getValueAccess().getINTTerminalRuleCall_1()); 
+
+
                     }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Bool__Alternatives"
+
+
+    // $ANTLR start "rule__Value__Alternatives"
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:703:1: rule__Value__Alternatives : ( ( RULE_HEXINT ) | ( RULE_NUMBER ) | ( RULE_STRING ) | ( rulebool ) );
+    public final void rule__Value__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:707:1: ( ( RULE_HEXINT ) | ( RULE_NUMBER ) | ( RULE_STRING ) | ( rulebool ) )
+            int alt7=4;
+            switch ( input.LA(1) ) {
+            case RULE_HEXINT:
+                {
+                alt7=1;
+                }
+                break;
+            case RULE_NUMBER:
+                {
+                alt7=2;
+                }
+                break;
+            case RULE_STRING:
+                {
+                alt7=3;
+                }
+                break;
+            case 13:
+            case 14:
+                {
+                alt7=4;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 7, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt7) {
+                case 1 :
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:708:1: ( RULE_HEXINT )
+                    {
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:708:1: ( RULE_HEXINT )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:709:1: RULE_HEXINT
+                    {
+                     before(grammarAccess.getValueAccess().getHEXINTTerminalRuleCall_0()); 
+                    match(input,RULE_HEXINT,FOLLOW_RULE_HEXINT_in_rule__Value__Alternatives1474); 
+                     after(grammarAccess.getValueAccess().getHEXINTTerminalRuleCall_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:714:6: ( RULE_NUMBER )
+                    {
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:714:6: ( RULE_NUMBER )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:715:1: RULE_NUMBER
+                    {
+                     before(grammarAccess.getValueAccess().getNUMBERTerminalRuleCall_1()); 
+                    match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_rule__Value__Alternatives1491); 
+                     after(grammarAccess.getValueAccess().getNUMBERTerminalRuleCall_1()); 
 
                     }
 
@@ -2140,18 +2086,14 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:667:6: ( RULE_STRING )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:720:6: ( RULE_STRING )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:667:6: ( RULE_STRING )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:668:1: RULE_STRING
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:720:6: ( RULE_STRING )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:721:1: RULE_STRING
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getValueAccess().getSTRINGTerminalRuleCall_2()); 
-                    }
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Value__Alternatives1399); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getValueAccess().getSTRINGTerminalRuleCall_2()); 
-                    }
+                     before(grammarAccess.getValueAccess().getSTRINGTerminalRuleCall_2()); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Value__Alternatives1508); 
+                     after(grammarAccess.getValueAccess().getSTRINGTerminalRuleCall_2()); 
 
                     }
 
@@ -2159,37 +2101,18 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:673:6: ( 'true' )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:726:6: ( rulebool )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:673:6: ( 'true' )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:674:1: 'true'
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:726:6: ( rulebool )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:727:1: rulebool
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getValueAccess().getTrueKeyword_3()); 
-                    }
-                    match(input,12,FOLLOW_12_in_rule__Value__Alternatives1417); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getValueAccess().getTrueKeyword_3()); 
-                    }
+                     before(grammarAccess.getValueAccess().getBoolParserRuleCall_3()); 
+                    pushFollow(FOLLOW_rulebool_in_rule__Value__Alternatives1525);
+                    rulebool();
 
-                    }
+                    state._fsp--;
 
-
-                    }
-                    break;
-                case 5 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:681:6: ( 'false' )
-                    {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:681:6: ( 'false' )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:682:1: 'false'
-                    {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getValueAccess().getFalseKeyword_4()); 
-                    }
-                    match(input,13,FOLLOW_13_in_rule__Value__Alternatives1437); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getValueAccess().getFalseKeyword_4()); 
-                    }
+                     after(grammarAccess.getValueAccess().getBoolParserRuleCall_3()); 
 
                     }
 
@@ -2214,43 +2137,38 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Ident__Alternatives"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:694:1: rule__Ident__Alternatives : ( ( RULE_ID ) | ( RULE_STRING ) );
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:737:1: rule__Ident__Alternatives : ( ( RULE_ID ) | ( RULE_STRING ) );
     public final void rule__Ident__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:698:1: ( ( RULE_ID ) | ( RULE_STRING ) )
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:741:1: ( ( RULE_ID ) | ( RULE_STRING ) )
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA7_0==RULE_ID) ) {
-                alt7=1;
+            if ( (LA8_0==RULE_ID) ) {
+                alt8=1;
             }
-            else if ( (LA7_0==RULE_STRING) ) {
-                alt7=2;
+            else if ( (LA8_0==RULE_STRING) ) {
+                alt8=2;
             }
             else {
-                if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
+                    new NoViableAltException("", 8, 0, input);
 
                 throw nvae;
             }
-            switch (alt7) {
+            switch (alt8) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:699:1: ( RULE_ID )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:742:1: ( RULE_ID )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:699:1: ( RULE_ID )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:700:1: RULE_ID
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:742:1: ( RULE_ID )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:743:1: RULE_ID
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getIdentAccess().getIDTerminalRuleCall_0()); 
-                    }
-                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Ident__Alternatives1471); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getIdentAccess().getIDTerminalRuleCall_0()); 
-                    }
+                     before(grammarAccess.getIdentAccess().getIDTerminalRuleCall_0()); 
+                    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Ident__Alternatives1557); 
+                     after(grammarAccess.getIdentAccess().getIDTerminalRuleCall_0()); 
 
                     }
 
@@ -2258,18 +2176,14 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:705:6: ( RULE_STRING )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:748:6: ( RULE_STRING )
                     {
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:705:6: ( RULE_STRING )
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:706:1: RULE_STRING
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:748:6: ( RULE_STRING )
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:749:1: RULE_STRING
                     {
-                    if ( state.backtracking==0 ) {
-                       before(grammarAccess.getIdentAccess().getSTRINGTerminalRuleCall_1()); 
-                    }
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Ident__Alternatives1488); if (state.failed) return ;
-                    if ( state.backtracking==0 ) {
-                       after(grammarAccess.getIdentAccess().getSTRINGTerminalRuleCall_1()); 
-                    }
+                     before(grammarAccess.getIdentAccess().getSTRINGTerminalRuleCall_1()); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Ident__Alternatives1574); 
+                     after(grammarAccess.getIdentAccess().getSTRINGTerminalRuleCall_1()); 
 
                     }
 
@@ -2294,25 +2208,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RuleSet__Group__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:718:1: rule__RuleSet__Group__0 : rule__RuleSet__Group__0__Impl rule__RuleSet__Group__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:761:1: rule__RuleSet__Group__0 : rule__RuleSet__Group__0__Impl rule__RuleSet__Group__1 ;
     public final void rule__RuleSet__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:722:1: ( rule__RuleSet__Group__0__Impl rule__RuleSet__Group__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:723:2: rule__RuleSet__Group__0__Impl rule__RuleSet__Group__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:765:1: ( rule__RuleSet__Group__0__Impl rule__RuleSet__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:766:2: rule__RuleSet__Group__0__Impl rule__RuleSet__Group__1
             {
-            pushFollow(FOLLOW_rule__RuleSet__Group__0__Impl_in_rule__RuleSet__Group__01518);
+            pushFollow(FOLLOW_rule__RuleSet__Group__0__Impl_in_rule__RuleSet__Group__01604);
             rule__RuleSet__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__RuleSet__Group__1_in_rule__RuleSet__Group__01521);
+
+            pushFollow(FOLLOW_rule__RuleSet__Group__1_in_rule__RuleSet__Group__01607);
             rule__RuleSet__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2332,46 +2246,42 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RuleSet__Group__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:730:1: rule__RuleSet__Group__0__Impl : ( ( rule__RuleSet__ContextAssignment_0 )? ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:773:1: rule__RuleSet__Group__0__Impl : ( ( rule__RuleSet__ContextAssignment_0 )? ) ;
     public final void rule__RuleSet__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:734:1: ( ( ( rule__RuleSet__ContextAssignment_0 )? ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:735:1: ( ( rule__RuleSet__ContextAssignment_0 )? )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:777:1: ( ( ( rule__RuleSet__ContextAssignment_0 )? ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:778:1: ( ( rule__RuleSet__ContextAssignment_0 )? )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:735:1: ( ( rule__RuleSet__ContextAssignment_0 )? )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:736:1: ( rule__RuleSet__ContextAssignment_0 )?
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:778:1: ( ( rule__RuleSet__ContextAssignment_0 )? )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:779:1: ( rule__RuleSet__ContextAssignment_0 )?
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRuleSetAccess().getContextAssignment_0()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:737:1: ( rule__RuleSet__ContextAssignment_0 )?
-            int alt8=2;
-            int LA8_0 = input.LA(1);
+             before(grammarAccess.getRuleSetAccess().getContextAssignment_0()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:780:1: ( rule__RuleSet__ContextAssignment_0 )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA8_0==14) ) {
-                alt8=1;
+            if ( (LA9_0==15) ) {
+                alt9=1;
             }
-            switch (alt8) {
+            switch (alt9) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:737:2: rule__RuleSet__ContextAssignment_0
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:780:2: rule__RuleSet__ContextAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__RuleSet__ContextAssignment_0_in_rule__RuleSet__Group__0__Impl1548);
+                    pushFollow(FOLLOW_rule__RuleSet__ContextAssignment_0_in_rule__RuleSet__Group__0__Impl1634);
                     rule__RuleSet__ContextAssignment_0();
 
                     state._fsp--;
-                    if (state.failed) return ;
+
 
                     }
                     break;
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRuleSetAccess().getContextAssignment_0()); 
-            }
+             after(grammarAccess.getRuleSetAccess().getContextAssignment_0()); 
 
             }
 
@@ -2394,20 +2304,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RuleSet__Group__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:747:1: rule__RuleSet__Group__1 : rule__RuleSet__Group__1__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:790:1: rule__RuleSet__Group__1 : rule__RuleSet__Group__1__Impl ;
     public final void rule__RuleSet__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:751:1: ( rule__RuleSet__Group__1__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:752:2: rule__RuleSet__Group__1__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:794:1: ( rule__RuleSet__Group__1__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:795:2: rule__RuleSet__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__RuleSet__Group__1__Impl_in_rule__RuleSet__Group__11579);
+            pushFollow(FOLLOW_rule__RuleSet__Group__1__Impl_in_rule__RuleSet__Group__11665);
             rule__RuleSet__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2427,53 +2337,49 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RuleSet__Group__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:758:1: rule__RuleSet__Group__1__Impl : ( ( rule__RuleSet__RulesAssignment_1 )* ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:801:1: rule__RuleSet__Group__1__Impl : ( ( rule__RuleSet__RulesAssignment_1 )* ) ;
     public final void rule__RuleSet__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:762:1: ( ( ( rule__RuleSet__RulesAssignment_1 )* ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:763:1: ( ( rule__RuleSet__RulesAssignment_1 )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:805:1: ( ( ( rule__RuleSet__RulesAssignment_1 )* ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:806:1: ( ( rule__RuleSet__RulesAssignment_1 )* )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:763:1: ( ( rule__RuleSet__RulesAssignment_1 )* )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:764:1: ( rule__RuleSet__RulesAssignment_1 )*
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:806:1: ( ( rule__RuleSet__RulesAssignment_1 )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:807:1: ( rule__RuleSet__RulesAssignment_1 )*
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRuleSetAccess().getRulesAssignment_1()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:765:1: ( rule__RuleSet__RulesAssignment_1 )*
-            loop9:
+             before(grammarAccess.getRuleSetAccess().getRulesAssignment_1()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:808:1: ( rule__RuleSet__RulesAssignment_1 )*
+            loop10:
             do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( ((LA9_0>=RULE_STRING && LA9_0<=RULE_ID)||LA9_0==15||LA9_0==24||LA9_0==27) ) {
-                    alt9=1;
+                if ( ((LA10_0>=RULE_STRING && LA10_0<=RULE_ID)||LA10_0==16||LA10_0==25||LA10_0==28) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt9) {
+                switch (alt10) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:765:2: rule__RuleSet__RulesAssignment_1
+            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:808:2: rule__RuleSet__RulesAssignment_1
             	    {
-            	    pushFollow(FOLLOW_rule__RuleSet__RulesAssignment_1_in_rule__RuleSet__Group__1__Impl1606);
+            	    pushFollow(FOLLOW_rule__RuleSet__RulesAssignment_1_in_rule__RuleSet__Group__1__Impl1692);
             	    rule__RuleSet__RulesAssignment_1();
 
             	    state._fsp--;
-            	    if (state.failed) return ;
+
 
             	    }
             	    break;
 
             	default :
-            	    break loop9;
+            	    break loop10;
                 }
             } while (true);
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRuleSetAccess().getRulesAssignment_1()); 
-            }
+             after(grammarAccess.getRuleSetAccess().getRulesAssignment_1()); 
 
             }
 
@@ -2496,25 +2402,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Context__Group__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:779:1: rule__Context__Group__0 : rule__Context__Group__0__Impl rule__Context__Group__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:822:1: rule__Context__Group__0 : rule__Context__Group__0__Impl rule__Context__Group__1 ;
     public final void rule__Context__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:783:1: ( rule__Context__Group__0__Impl rule__Context__Group__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:784:2: rule__Context__Group__0__Impl rule__Context__Group__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:826:1: ( rule__Context__Group__0__Impl rule__Context__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:827:2: rule__Context__Group__0__Impl rule__Context__Group__1
             {
-            pushFollow(FOLLOW_rule__Context__Group__0__Impl_in_rule__Context__Group__01641);
+            pushFollow(FOLLOW_rule__Context__Group__0__Impl_in_rule__Context__Group__01727);
             rule__Context__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Context__Group__1_in_rule__Context__Group__01644);
+
+            pushFollow(FOLLOW_rule__Context__Group__1_in_rule__Context__Group__01730);
             rule__Context__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2534,25 +2440,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Context__Group__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:791:1: rule__Context__Group__0__Impl : ( '@context' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:834:1: rule__Context__Group__0__Impl : ( '@context' ) ;
     public final void rule__Context__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:795:1: ( ( '@context' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:796:1: ( '@context' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:838:1: ( ( '@context' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:839:1: ( '@context' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:796:1: ( '@context' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:797:1: '@context'
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:839:1: ( '@context' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:840:1: '@context'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getContextAccess().getContextKeyword_0()); 
-            }
-            match(input,14,FOLLOW_14_in_rule__Context__Group__0__Impl1672); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getContextAccess().getContextKeyword_0()); 
-            }
+             before(grammarAccess.getContextAccess().getContextKeyword_0()); 
+            match(input,15,FOLLOW_15_in_rule__Context__Group__0__Impl1758); 
+             after(grammarAccess.getContextAccess().getContextKeyword_0()); 
 
             }
 
@@ -2575,25 +2477,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Context__Group__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:810:1: rule__Context__Group__1 : rule__Context__Group__1__Impl rule__Context__Group__2 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:853:1: rule__Context__Group__1 : rule__Context__Group__1__Impl rule__Context__Group__2 ;
     public final void rule__Context__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:814:1: ( rule__Context__Group__1__Impl rule__Context__Group__2 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:815:2: rule__Context__Group__1__Impl rule__Context__Group__2
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:857:1: ( rule__Context__Group__1__Impl rule__Context__Group__2 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:858:2: rule__Context__Group__1__Impl rule__Context__Group__2
             {
-            pushFollow(FOLLOW_rule__Context__Group__1__Impl_in_rule__Context__Group__11703);
+            pushFollow(FOLLOW_rule__Context__Group__1__Impl_in_rule__Context__Group__11789);
             rule__Context__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Context__Group__2_in_rule__Context__Group__11706);
+
+            pushFollow(FOLLOW_rule__Context__Group__2_in_rule__Context__Group__11792);
             rule__Context__Group__2();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2613,25 +2515,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Context__Group__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:822:1: rule__Context__Group__1__Impl : ( '(' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:865:1: rule__Context__Group__1__Impl : ( '(' ) ;
     public final void rule__Context__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:826:1: ( ( '(' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:827:1: ( '(' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:869:1: ( ( '(' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:870:1: ( '(' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:827:1: ( '(' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:828:1: '('
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:870:1: ( '(' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:871:1: '('
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getContextAccess().getLeftParenthesisKeyword_1()); 
-            }
-            match(input,15,FOLLOW_15_in_rule__Context__Group__1__Impl1734); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getContextAccess().getLeftParenthesisKeyword_1()); 
-            }
+             before(grammarAccess.getContextAccess().getLeftParenthesisKeyword_1()); 
+            match(input,16,FOLLOW_16_in_rule__Context__Group__1__Impl1820); 
+             after(grammarAccess.getContextAccess().getLeftParenthesisKeyword_1()); 
 
             }
 
@@ -2654,25 +2552,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Context__Group__2"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:841:1: rule__Context__Group__2 : rule__Context__Group__2__Impl rule__Context__Group__3 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:884:1: rule__Context__Group__2 : rule__Context__Group__2__Impl rule__Context__Group__3 ;
     public final void rule__Context__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:845:1: ( rule__Context__Group__2__Impl rule__Context__Group__3 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:846:2: rule__Context__Group__2__Impl rule__Context__Group__3
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:888:1: ( rule__Context__Group__2__Impl rule__Context__Group__3 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:889:2: rule__Context__Group__2__Impl rule__Context__Group__3
             {
-            pushFollow(FOLLOW_rule__Context__Group__2__Impl_in_rule__Context__Group__21765);
+            pushFollow(FOLLOW_rule__Context__Group__2__Impl_in_rule__Context__Group__21851);
             rule__Context__Group__2__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Context__Group__3_in_rule__Context__Group__21768);
+
+            pushFollow(FOLLOW_rule__Context__Group__3_in_rule__Context__Group__21854);
             rule__Context__Group__3();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2692,29 +2590,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Context__Group__2__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:853:1: rule__Context__Group__2__Impl : ( ruleSelector ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:896:1: rule__Context__Group__2__Impl : ( ( rule__Context__SelectorAssignment_2 ) ) ;
     public final void rule__Context__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:857:1: ( ( ruleSelector ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:858:1: ( ruleSelector )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:900:1: ( ( ( rule__Context__SelectorAssignment_2 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:901:1: ( ( rule__Context__SelectorAssignment_2 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:858:1: ( ruleSelector )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:859:1: ruleSelector
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:901:1: ( ( rule__Context__SelectorAssignment_2 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:902:1: ( rule__Context__SelectorAssignment_2 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getContextAccess().getSelectorParserRuleCall_2()); 
-            }
-            pushFollow(FOLLOW_ruleSelector_in_rule__Context__Group__2__Impl1795);
-            ruleSelector();
+             before(grammarAccess.getContextAccess().getSelectorAssignment_2()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:903:1: ( rule__Context__SelectorAssignment_2 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:903:2: rule__Context__SelectorAssignment_2
+            {
+            pushFollow(FOLLOW_rule__Context__SelectorAssignment_2_in_rule__Context__Group__2__Impl1881);
+            rule__Context__SelectorAssignment_2();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getContextAccess().getSelectorParserRuleCall_2()); 
+
+
             }
+
+             after(grammarAccess.getContextAccess().getSelectorAssignment_2()); 
 
             }
 
@@ -2737,25 +2637,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Context__Group__3"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:870:1: rule__Context__Group__3 : rule__Context__Group__3__Impl rule__Context__Group__4 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:913:1: rule__Context__Group__3 : rule__Context__Group__3__Impl rule__Context__Group__4 ;
     public final void rule__Context__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:874:1: ( rule__Context__Group__3__Impl rule__Context__Group__4 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:875:2: rule__Context__Group__3__Impl rule__Context__Group__4
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:917:1: ( rule__Context__Group__3__Impl rule__Context__Group__4 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:918:2: rule__Context__Group__3__Impl rule__Context__Group__4
             {
-            pushFollow(FOLLOW_rule__Context__Group__3__Impl_in_rule__Context__Group__31824);
+            pushFollow(FOLLOW_rule__Context__Group__3__Impl_in_rule__Context__Group__31911);
             rule__Context__Group__3__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Context__Group__4_in_rule__Context__Group__31827);
+
+            pushFollow(FOLLOW_rule__Context__Group__4_in_rule__Context__Group__31914);
             rule__Context__Group__4();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2775,25 +2675,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Context__Group__3__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:882:1: rule__Context__Group__3__Impl : ( ')' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:925:1: rule__Context__Group__3__Impl : ( ')' ) ;
     public final void rule__Context__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:886:1: ( ( ')' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:887:1: ( ')' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:929:1: ( ( ')' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:930:1: ( ')' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:887:1: ( ')' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:888:1: ')'
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:930:1: ( ')' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:931:1: ')'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getContextAccess().getRightParenthesisKeyword_3()); 
-            }
-            match(input,16,FOLLOW_16_in_rule__Context__Group__3__Impl1855); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getContextAccess().getRightParenthesisKeyword_3()); 
-            }
+             before(grammarAccess.getContextAccess().getRightParenthesisKeyword_3()); 
+            match(input,17,FOLLOW_17_in_rule__Context__Group__3__Impl1942); 
+             after(grammarAccess.getContextAccess().getRightParenthesisKeyword_3()); 
 
             }
 
@@ -2816,20 +2712,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Context__Group__4"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:901:1: rule__Context__Group__4 : rule__Context__Group__4__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:944:1: rule__Context__Group__4 : rule__Context__Group__4__Impl ;
     public final void rule__Context__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:905:1: ( rule__Context__Group__4__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:906:2: rule__Context__Group__4__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:948:1: ( rule__Context__Group__4__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:949:2: rule__Context__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Context__Group__4__Impl_in_rule__Context__Group__41886);
+            pushFollow(FOLLOW_rule__Context__Group__4__Impl_in_rule__Context__Group__41973);
             rule__Context__Group__4__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2849,42 +2745,38 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Context__Group__4__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:912:1: rule__Context__Group__4__Impl : ( ( ';' )? ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:955:1: rule__Context__Group__4__Impl : ( ( ';' )? ) ;
     public final void rule__Context__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:916:1: ( ( ( ';' )? ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:917:1: ( ( ';' )? )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:959:1: ( ( ( ';' )? ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:960:1: ( ( ';' )? )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:917:1: ( ( ';' )? )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:918:1: ( ';' )?
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:960:1: ( ( ';' )? )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:961:1: ( ';' )?
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getContextAccess().getSemicolonKeyword_4()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:919:1: ( ';' )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+             before(grammarAccess.getContextAccess().getSemicolonKeyword_4()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:962:1: ( ';' )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA10_0==17) ) {
-                alt10=1;
+            if ( (LA11_0==18) ) {
+                alt11=1;
             }
-            switch (alt10) {
+            switch (alt11) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:920:2: ';'
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:963:2: ';'
                     {
-                    match(input,17,FOLLOW_17_in_rule__Context__Group__4__Impl1915); if (state.failed) return ;
+                    match(input,18,FOLLOW_18_in_rule__Context__Group__4__Impl2002); 
 
                     }
                     break;
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getContextAccess().getSemicolonKeyword_4()); 
-            }
+             after(grammarAccess.getContextAccess().getSemicolonKeyword_4()); 
 
             }
 
@@ -2907,25 +2799,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:941:1: rule__Selector__Group__0 : rule__Selector__Group__0__Impl rule__Selector__Group__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:984:1: rule__Selector__Group__0 : rule__Selector__Group__0__Impl rule__Selector__Group__1 ;
     public final void rule__Selector__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:945:1: ( rule__Selector__Group__0__Impl rule__Selector__Group__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:946:2: rule__Selector__Group__0__Impl rule__Selector__Group__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:988:1: ( rule__Selector__Group__0__Impl rule__Selector__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:989:2: rule__Selector__Group__0__Impl rule__Selector__Group__1
             {
-            pushFollow(FOLLOW_rule__Selector__Group__0__Impl_in_rule__Selector__Group__01958);
+            pushFollow(FOLLOW_rule__Selector__Group__0__Impl_in_rule__Selector__Group__02045);
             rule__Selector__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Selector__Group__1_in_rule__Selector__Group__01961);
+
+            pushFollow(FOLLOW_rule__Selector__Group__1_in_rule__Selector__Group__02048);
             rule__Selector__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -2945,29 +2837,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:953:1: rule__Selector__Group__0__Impl : ( ruleSum ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:996:1: rule__Selector__Group__0__Impl : ( ruleSum ) ;
     public final void rule__Selector__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:957:1: ( ( ruleSum ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:958:1: ( ruleSum )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1000:1: ( ( ruleSum ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1001:1: ( ruleSum )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:958:1: ( ruleSum )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:959:1: ruleSum
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1001:1: ( ruleSum )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1002:1: ruleSum
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSelectorAccess().getSumParserRuleCall_0()); 
-            }
-            pushFollow(FOLLOW_ruleSum_in_rule__Selector__Group__0__Impl1988);
+             before(grammarAccess.getSelectorAccess().getSumParserRuleCall_0()); 
+            pushFollow(FOLLOW_ruleSum_in_rule__Selector__Group__0__Impl2075);
             ruleSum();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSelectorAccess().getSumParserRuleCall_0()); 
-            }
+
+             after(grammarAccess.getSelectorAccess().getSumParserRuleCall_0()); 
 
             }
 
@@ -2990,20 +2878,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:970:1: rule__Selector__Group__1 : rule__Selector__Group__1__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1013:1: rule__Selector__Group__1 : rule__Selector__Group__1__Impl ;
     public final void rule__Selector__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:974:1: ( rule__Selector__Group__1__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:975:2: rule__Selector__Group__1__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1017:1: ( rule__Selector__Group__1__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1018:2: rule__Selector__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Selector__Group__1__Impl_in_rule__Selector__Group__12017);
+            pushFollow(FOLLOW_rule__Selector__Group__1__Impl_in_rule__Selector__Group__12104);
             rule__Selector__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3023,53 +2911,38 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:981:1: rule__Selector__Group__1__Impl : ( ( rule__Selector__Group_1__0 )* ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1024:1: rule__Selector__Group__1__Impl : ( ( '>' )? ) ;
     public final void rule__Selector__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:985:1: ( ( ( rule__Selector__Group_1__0 )* ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:986:1: ( ( rule__Selector__Group_1__0 )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1028:1: ( ( ( '>' )? ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1029:1: ( ( '>' )? )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:986:1: ( ( rule__Selector__Group_1__0 )* )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:987:1: ( rule__Selector__Group_1__0 )*
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1029:1: ( ( '>' )? )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1030:1: ( '>' )?
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSelectorAccess().getGroup_1()); 
+             before(grammarAccess.getSelectorAccess().getGreaterThanSignKeyword_1()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1031:1: ( '>' )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
+
+            if ( (LA12_0==19) ) {
+                alt12=1;
             }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:988:1: ( rule__Selector__Group_1__0 )*
-            loop11:
-            do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+            switch (alt12) {
+                case 1 :
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1032:2: '>'
+                    {
+                    match(input,19,FOLLOW_19_in_rule__Selector__Group__1__Impl2133); 
 
-                if ( (LA11_0==18) ) {
-                    alt11=1;
-                }
+                    }
+                    break;
 
-
-                switch (alt11) {
-            	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:988:2: rule__Selector__Group_1__0
-            	    {
-            	    pushFollow(FOLLOW_rule__Selector__Group_1__0_in_rule__Selector__Group__1__Impl2044);
-            	    rule__Selector__Group_1__0();
-
-            	    state._fsp--;
-            	    if (state.failed) return ;
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop11;
-                }
-            } while (true);
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSelectorAccess().getGroup_1()); 
             }
+
+             after(grammarAccess.getSelectorAccess().getGreaterThanSignKeyword_1()); 
 
             }
 
@@ -3091,183 +2964,26 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Selector__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Selector__Group_1__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1002:1: rule__Selector__Group_1__0 : rule__Selector__Group_1__0__Impl rule__Selector__Group_1__1 ;
-    public final void rule__Selector__Group_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1006:1: ( rule__Selector__Group_1__0__Impl rule__Selector__Group_1__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1007:2: rule__Selector__Group_1__0__Impl rule__Selector__Group_1__1
-            {
-            pushFollow(FOLLOW_rule__Selector__Group_1__0__Impl_in_rule__Selector__Group_1__02079);
-            rule__Selector__Group_1__0__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Selector__Group_1__1_in_rule__Selector__Group_1__02082);
-            rule__Selector__Group_1__1();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Selector__Group_1__0"
-
-
-    // $ANTLR start "rule__Selector__Group_1__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1014:1: rule__Selector__Group_1__0__Impl : ( '>' ) ;
-    public final void rule__Selector__Group_1__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1018:1: ( ( '>' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1019:1: ( '>' )
-            {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1019:1: ( '>' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1020:1: '>'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSelectorAccess().getGreaterThanSignKeyword_1_0()); 
-            }
-            match(input,18,FOLLOW_18_in_rule__Selector__Group_1__0__Impl2110); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSelectorAccess().getGreaterThanSignKeyword_1_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Selector__Group_1__0__Impl"
-
-
-    // $ANTLR start "rule__Selector__Group_1__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1033:1: rule__Selector__Group_1__1 : rule__Selector__Group_1__1__Impl ;
-    public final void rule__Selector__Group_1__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1037:1: ( rule__Selector__Group_1__1__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1038:2: rule__Selector__Group_1__1__Impl
-            {
-            pushFollow(FOLLOW_rule__Selector__Group_1__1__Impl_in_rule__Selector__Group_1__12141);
-            rule__Selector__Group_1__1__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Selector__Group_1__1"
-
-
-    // $ANTLR start "rule__Selector__Group_1__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1044:1: rule__Selector__Group_1__1__Impl : ( ruleSum ) ;
-    public final void rule__Selector__Group_1__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1048:1: ( ( ruleSum ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1049:1: ( ruleSum )
-            {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1049:1: ( ruleSum )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1050:1: ruleSum
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSelectorAccess().getSumParserRuleCall_1_1()); 
-            }
-            pushFollow(FOLLOW_ruleSum_in_rule__Selector__Group_1__1__Impl2168);
-            ruleSum();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSelectorAccess().getSumParserRuleCall_1_1()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Selector__Group_1__1__Impl"
-
-
     // $ANTLR start "rule__Sum__Group__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1065:1: rule__Sum__Group__0 : rule__Sum__Group__0__Impl rule__Sum__Group__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1047:1: rule__Sum__Group__0 : rule__Sum__Group__0__Impl rule__Sum__Group__1 ;
     public final void rule__Sum__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1069:1: ( rule__Sum__Group__0__Impl rule__Sum__Group__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1070:2: rule__Sum__Group__0__Impl rule__Sum__Group__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1051:1: ( rule__Sum__Group__0__Impl rule__Sum__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1052:2: rule__Sum__Group__0__Impl rule__Sum__Group__1
             {
-            pushFollow(FOLLOW_rule__Sum__Group__0__Impl_in_rule__Sum__Group__02201);
+            pushFollow(FOLLOW_rule__Sum__Group__0__Impl_in_rule__Sum__Group__02170);
             rule__Sum__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Sum__Group__1_in_rule__Sum__Group__02204);
+
+            pushFollow(FOLLOW_rule__Sum__Group__1_in_rule__Sum__Group__02173);
             rule__Sum__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3287,29 +3003,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Sum__Group__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1077:1: rule__Sum__Group__0__Impl : ( ruleProduct ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1059:1: rule__Sum__Group__0__Impl : ( ruleProduct ) ;
     public final void rule__Sum__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1081:1: ( ( ruleProduct ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1082:1: ( ruleProduct )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1063:1: ( ( ruleProduct ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1064:1: ( ruleProduct )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1082:1: ( ruleProduct )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1083:1: ruleProduct
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1064:1: ( ruleProduct )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1065:1: ruleProduct
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSumAccess().getProductParserRuleCall_0()); 
-            }
-            pushFollow(FOLLOW_ruleProduct_in_rule__Sum__Group__0__Impl2231);
+             before(grammarAccess.getSumAccess().getProductParserRuleCall_0()); 
+            pushFollow(FOLLOW_ruleProduct_in_rule__Sum__Group__0__Impl2200);
             ruleProduct();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSumAccess().getProductParserRuleCall_0()); 
-            }
+
+             after(grammarAccess.getSumAccess().getProductParserRuleCall_0()); 
 
             }
 
@@ -3332,20 +3044,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Sum__Group__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1094:1: rule__Sum__Group__1 : rule__Sum__Group__1__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1076:1: rule__Sum__Group__1 : rule__Sum__Group__1__Impl ;
     public final void rule__Sum__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1098:1: ( rule__Sum__Group__1__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1099:2: rule__Sum__Group__1__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1080:1: ( rule__Sum__Group__1__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1081:2: rule__Sum__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Sum__Group__1__Impl_in_rule__Sum__Group__12260);
+            pushFollow(FOLLOW_rule__Sum__Group__1__Impl_in_rule__Sum__Group__12229);
             rule__Sum__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3365,53 +3077,49 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Sum__Group__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1105:1: rule__Sum__Group__1__Impl : ( ( rule__Sum__Group_1__0 )* ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1087:1: rule__Sum__Group__1__Impl : ( ( rule__Sum__Group_1__0 )* ) ;
     public final void rule__Sum__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1109:1: ( ( ( rule__Sum__Group_1__0 )* ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1110:1: ( ( rule__Sum__Group_1__0 )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1091:1: ( ( ( rule__Sum__Group_1__0 )* ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1092:1: ( ( rule__Sum__Group_1__0 )* )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1110:1: ( ( rule__Sum__Group_1__0 )* )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1111:1: ( rule__Sum__Group_1__0 )*
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1092:1: ( ( rule__Sum__Group_1__0 )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1093:1: ( rule__Sum__Group_1__0 )*
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSumAccess().getGroup_1()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1112:1: ( rule__Sum__Group_1__0 )*
-            loop12:
+             before(grammarAccess.getSumAccess().getGroup_1()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1094:1: ( rule__Sum__Group_1__0 )*
+            loop13:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA12_0==19) ) {
-                    alt12=1;
+                if ( (LA13_0==20) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt13) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1112:2: rule__Sum__Group_1__0
+            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1094:2: rule__Sum__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Sum__Group_1__0_in_rule__Sum__Group__1__Impl2287);
+            	    pushFollow(FOLLOW_rule__Sum__Group_1__0_in_rule__Sum__Group__1__Impl2256);
             	    rule__Sum__Group_1__0();
 
             	    state._fsp--;
-            	    if (state.failed) return ;
+
 
             	    }
             	    break;
 
             	default :
-            	    break loop12;
+            	    break loop13;
                 }
             } while (true);
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSumAccess().getGroup_1()); 
-            }
+             after(grammarAccess.getSumAccess().getGroup_1()); 
 
             }
 
@@ -3434,25 +3142,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Sum__Group_1__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1126:1: rule__Sum__Group_1__0 : rule__Sum__Group_1__0__Impl rule__Sum__Group_1__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1108:1: rule__Sum__Group_1__0 : rule__Sum__Group_1__0__Impl rule__Sum__Group_1__1 ;
     public final void rule__Sum__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1130:1: ( rule__Sum__Group_1__0__Impl rule__Sum__Group_1__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1131:2: rule__Sum__Group_1__0__Impl rule__Sum__Group_1__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1112:1: ( rule__Sum__Group_1__0__Impl rule__Sum__Group_1__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1113:2: rule__Sum__Group_1__0__Impl rule__Sum__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Sum__Group_1__0__Impl_in_rule__Sum__Group_1__02322);
+            pushFollow(FOLLOW_rule__Sum__Group_1__0__Impl_in_rule__Sum__Group_1__02291);
             rule__Sum__Group_1__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Sum__Group_1__1_in_rule__Sum__Group_1__02325);
+
+            pushFollow(FOLLOW_rule__Sum__Group_1__1_in_rule__Sum__Group_1__02294);
             rule__Sum__Group_1__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3472,25 +3180,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Sum__Group_1__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1138:1: rule__Sum__Group_1__0__Impl : ( ',' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1120:1: rule__Sum__Group_1__0__Impl : ( ',' ) ;
     public final void rule__Sum__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1142:1: ( ( ',' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1143:1: ( ',' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1124:1: ( ( ',' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1125:1: ( ',' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1143:1: ( ',' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1144:1: ','
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1125:1: ( ',' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1126:1: ','
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSumAccess().getCommaKeyword_1_0()); 
-            }
-            match(input,19,FOLLOW_19_in_rule__Sum__Group_1__0__Impl2353); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSumAccess().getCommaKeyword_1_0()); 
-            }
+             before(grammarAccess.getSumAccess().getCommaKeyword_1_0()); 
+            match(input,20,FOLLOW_20_in_rule__Sum__Group_1__0__Impl2322); 
+             after(grammarAccess.getSumAccess().getCommaKeyword_1_0()); 
 
             }
 
@@ -3513,20 +3217,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Sum__Group_1__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1157:1: rule__Sum__Group_1__1 : rule__Sum__Group_1__1__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1139:1: rule__Sum__Group_1__1 : rule__Sum__Group_1__1__Impl ;
     public final void rule__Sum__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1161:1: ( rule__Sum__Group_1__1__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1162:2: rule__Sum__Group_1__1__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1143:1: ( rule__Sum__Group_1__1__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1144:2: rule__Sum__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Sum__Group_1__1__Impl_in_rule__Sum__Group_1__12384);
+            pushFollow(FOLLOW_rule__Sum__Group_1__1__Impl_in_rule__Sum__Group_1__12353);
             rule__Sum__Group_1__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3546,29 +3250,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Sum__Group_1__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1168:1: rule__Sum__Group_1__1__Impl : ( ruleProduct ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1150:1: rule__Sum__Group_1__1__Impl : ( ruleProduct ) ;
     public final void rule__Sum__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1172:1: ( ( ruleProduct ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1173:1: ( ruleProduct )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1154:1: ( ( ruleProduct ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1155:1: ( ruleProduct )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1173:1: ( ruleProduct )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1174:1: ruleProduct
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1155:1: ( ruleProduct )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1156:1: ruleProduct
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSumAccess().getProductParserRuleCall_1_1()); 
-            }
-            pushFollow(FOLLOW_ruleProduct_in_rule__Sum__Group_1__1__Impl2411);
+             before(grammarAccess.getSumAccess().getProductParserRuleCall_1_1()); 
+            pushFollow(FOLLOW_ruleProduct_in_rule__Sum__Group_1__1__Impl2380);
             ruleProduct();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSumAccess().getProductParserRuleCall_1_1()); 
-            }
+
+             after(grammarAccess.getSumAccess().getProductParserRuleCall_1_1()); 
 
             }
 
@@ -3591,25 +3291,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Term__Group__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1189:1: rule__Term__Group__0 : rule__Term__Group__0__Impl rule__Term__Group__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1171:1: rule__Term__Group__0 : rule__Term__Group__0__Impl rule__Term__Group__1 ;
     public final void rule__Term__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1193:1: ( rule__Term__Group__0__Impl rule__Term__Group__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1194:2: rule__Term__Group__0__Impl rule__Term__Group__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1175:1: ( rule__Term__Group__0__Impl rule__Term__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1176:2: rule__Term__Group__0__Impl rule__Term__Group__1
             {
-            pushFollow(FOLLOW_rule__Term__Group__0__Impl_in_rule__Term__Group__02444);
+            pushFollow(FOLLOW_rule__Term__Group__0__Impl_in_rule__Term__Group__02413);
             rule__Term__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Term__Group__1_in_rule__Term__Group__02447);
+
+            pushFollow(FOLLOW_rule__Term__Group__1_in_rule__Term__Group__02416);
             rule__Term__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3629,29 +3329,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Term__Group__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1201:1: rule__Term__Group__0__Impl : ( ruleStep ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1183:1: rule__Term__Group__0__Impl : ( ruleStep ) ;
     public final void rule__Term__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1205:1: ( ( ruleStep ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1206:1: ( ruleStep )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1187:1: ( ( ruleStep ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1188:1: ( ruleStep )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1206:1: ( ruleStep )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1207:1: ruleStep
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1188:1: ( ruleStep )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1189:1: ruleStep
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getTermAccess().getStepParserRuleCall_0()); 
-            }
-            pushFollow(FOLLOW_ruleStep_in_rule__Term__Group__0__Impl2474);
+             before(grammarAccess.getTermAccess().getStepParserRuleCall_0()); 
+            pushFollow(FOLLOW_ruleStep_in_rule__Term__Group__0__Impl2443);
             ruleStep();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getTermAccess().getStepParserRuleCall_0()); 
-            }
+
+             after(grammarAccess.getTermAccess().getStepParserRuleCall_0()); 
 
             }
 
@@ -3674,20 +3370,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Term__Group__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1218:1: rule__Term__Group__1 : rule__Term__Group__1__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1200:1: rule__Term__Group__1 : rule__Term__Group__1__Impl ;
     public final void rule__Term__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1222:1: ( rule__Term__Group__1__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1223:2: rule__Term__Group__1__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1204:1: ( rule__Term__Group__1__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1205:2: rule__Term__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Term__Group__1__Impl_in_rule__Term__Group__12503);
+            pushFollow(FOLLOW_rule__Term__Group__1__Impl_in_rule__Term__Group__12472);
             rule__Term__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3707,47 +3403,55 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Term__Group__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1229:1: rule__Term__Group__1__Impl : ( ( rule__Term__Group_1__0 )* ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1211:1: rule__Term__Group__1__Impl : ( ( rule__Term__Group_1__0 )* ) ;
     public final void rule__Term__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1233:1: ( ( ( rule__Term__Group_1__0 )* ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1234:1: ( ( rule__Term__Group_1__0 )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1215:1: ( ( ( rule__Term__Group_1__0 )* ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1216:1: ( ( rule__Term__Group_1__0 )* )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1234:1: ( ( rule__Term__Group_1__0 )* )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1235:1: ( rule__Term__Group_1__0 )*
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1216:1: ( ( rule__Term__Group_1__0 )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1217:1: ( rule__Term__Group_1__0 )*
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getTermAccess().getGroup_1()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1236:1: ( rule__Term__Group_1__0 )*
-            loop13:
+             before(grammarAccess.getTermAccess().getGroup_1()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1218:1: ( rule__Term__Group_1__0 )*
+            loop14:
             do {
-                int alt13=2;
-                alt13 = dfa13.predict(input);
-                switch (alt13) {
+                int alt14=2;
+                int LA14_0 = input.LA(1);
+
+                if ( (LA14_0==19) ) {
+                    int LA14_2 = input.LA(2);
+
+                    if ( ((LA14_2>=RULE_STRING && LA14_2<=RULE_ID)||LA14_2==16) ) {
+                        alt14=1;
+                    }
+
+
+                }
+
+
+                switch (alt14) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1236:2: rule__Term__Group_1__0
+            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1218:2: rule__Term__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Term__Group_1__0_in_rule__Term__Group__1__Impl2530);
+            	    pushFollow(FOLLOW_rule__Term__Group_1__0_in_rule__Term__Group__1__Impl2499);
             	    rule__Term__Group_1__0();
 
             	    state._fsp--;
-            	    if (state.failed) return ;
+
 
             	    }
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop14;
                 }
             } while (true);
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getTermAccess().getGroup_1()); 
-            }
+             after(grammarAccess.getTermAccess().getGroup_1()); 
 
             }
 
@@ -3770,25 +3474,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Term__Group_1__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1250:1: rule__Term__Group_1__0 : rule__Term__Group_1__0__Impl rule__Term__Group_1__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1232:1: rule__Term__Group_1__0 : rule__Term__Group_1__0__Impl rule__Term__Group_1__1 ;
     public final void rule__Term__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1254:1: ( rule__Term__Group_1__0__Impl rule__Term__Group_1__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1255:2: rule__Term__Group_1__0__Impl rule__Term__Group_1__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1236:1: ( rule__Term__Group_1__0__Impl rule__Term__Group_1__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1237:2: rule__Term__Group_1__0__Impl rule__Term__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Term__Group_1__0__Impl_in_rule__Term__Group_1__02565);
+            pushFollow(FOLLOW_rule__Term__Group_1__0__Impl_in_rule__Term__Group_1__02534);
             rule__Term__Group_1__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Term__Group_1__1_in_rule__Term__Group_1__02568);
+
+            pushFollow(FOLLOW_rule__Term__Group_1__1_in_rule__Term__Group_1__02537);
             rule__Term__Group_1__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3808,31 +3512,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Term__Group_1__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1262:1: rule__Term__Group_1__0__Impl : ( ( '>' ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1244:1: rule__Term__Group_1__0__Impl : ( '>' ) ;
     public final void rule__Term__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1266:1: ( ( ( '>' ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1267:1: ( ( '>' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1248:1: ( ( '>' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1249:1: ( '>' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1267:1: ( ( '>' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1268:1: ( '>' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1249:1: ( '>' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1250:1: '>'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getTermAccess().getGreaterThanSignKeyword_1_0()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1269:1: ( '>' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1270:2: '>'
-            {
-            match(input,18,FOLLOW_18_in_rule__Term__Group_1__0__Impl2597); if (state.failed) return ;
-
-            }
-
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getTermAccess().getGreaterThanSignKeyword_1_0()); 
-            }
+             before(grammarAccess.getTermAccess().getGreaterThanSignKeyword_1_0()); 
+            match(input,19,FOLLOW_19_in_rule__Term__Group_1__0__Impl2565); 
+             after(grammarAccess.getTermAccess().getGreaterThanSignKeyword_1_0()); 
 
             }
 
@@ -3855,20 +3549,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Term__Group_1__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1281:1: rule__Term__Group_1__1 : rule__Term__Group_1__1__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1263:1: rule__Term__Group_1__1 : rule__Term__Group_1__1__Impl ;
     public final void rule__Term__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1285:1: ( rule__Term__Group_1__1__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1286:2: rule__Term__Group_1__1__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1267:1: ( rule__Term__Group_1__1__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1268:2: rule__Term__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Term__Group_1__1__Impl_in_rule__Term__Group_1__12629);
+            pushFollow(FOLLOW_rule__Term__Group_1__1__Impl_in_rule__Term__Group_1__12596);
             rule__Term__Group_1__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3888,29 +3582,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Term__Group_1__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1292:1: rule__Term__Group_1__1__Impl : ( ruleStep ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1274:1: rule__Term__Group_1__1__Impl : ( ruleStep ) ;
     public final void rule__Term__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1296:1: ( ( ruleStep ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1297:1: ( ruleStep )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1278:1: ( ( ruleStep ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1279:1: ( ruleStep )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1297:1: ( ruleStep )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1298:1: ruleStep
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1279:1: ( ruleStep )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1280:1: ruleStep
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getTermAccess().getStepParserRuleCall_1_1()); 
-            }
-            pushFollow(FOLLOW_ruleStep_in_rule__Term__Group_1__1__Impl2656);
+             before(grammarAccess.getTermAccess().getStepParserRuleCall_1_1()); 
+            pushFollow(FOLLOW_ruleStep_in_rule__Term__Group_1__1__Impl2623);
             ruleStep();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getTermAccess().getStepParserRuleCall_1_1()); 
-            }
+
+             after(grammarAccess.getTermAccess().getStepParserRuleCall_1_1()); 
 
             }
 
@@ -3933,25 +3623,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Step__Group_1__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1313:1: rule__Step__Group_1__0 : rule__Step__Group_1__0__Impl rule__Step__Group_1__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1295:1: rule__Step__Group_1__0 : rule__Step__Group_1__0__Impl rule__Step__Group_1__1 ;
     public final void rule__Step__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1317:1: ( rule__Step__Group_1__0__Impl rule__Step__Group_1__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1318:2: rule__Step__Group_1__0__Impl rule__Step__Group_1__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1299:1: ( rule__Step__Group_1__0__Impl rule__Step__Group_1__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1300:2: rule__Step__Group_1__0__Impl rule__Step__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Step__Group_1__0__Impl_in_rule__Step__Group_1__02689);
+            pushFollow(FOLLOW_rule__Step__Group_1__0__Impl_in_rule__Step__Group_1__02656);
             rule__Step__Group_1__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Step__Group_1__1_in_rule__Step__Group_1__02692);
+
+            pushFollow(FOLLOW_rule__Step__Group_1__1_in_rule__Step__Group_1__02659);
             rule__Step__Group_1__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -3971,25 +3661,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Step__Group_1__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1325:1: rule__Step__Group_1__0__Impl : ( '(' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1307:1: rule__Step__Group_1__0__Impl : ( '(' ) ;
     public final void rule__Step__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1329:1: ( ( '(' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1330:1: ( '(' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1311:1: ( ( '(' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1312:1: ( '(' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1330:1: ( '(' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1331:1: '('
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1312:1: ( '(' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1313:1: '('
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getStepAccess().getLeftParenthesisKeyword_1_0()); 
-            }
-            match(input,15,FOLLOW_15_in_rule__Step__Group_1__0__Impl2720); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getStepAccess().getLeftParenthesisKeyword_1_0()); 
-            }
+             before(grammarAccess.getStepAccess().getLeftParenthesisKeyword_1_0()); 
+            match(input,16,FOLLOW_16_in_rule__Step__Group_1__0__Impl2687); 
+             after(grammarAccess.getStepAccess().getLeftParenthesisKeyword_1_0()); 
 
             }
 
@@ -4012,25 +3698,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Step__Group_1__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1344:1: rule__Step__Group_1__1 : rule__Step__Group_1__1__Impl rule__Step__Group_1__2 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1326:1: rule__Step__Group_1__1 : rule__Step__Group_1__1__Impl rule__Step__Group_1__2 ;
     public final void rule__Step__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1348:1: ( rule__Step__Group_1__1__Impl rule__Step__Group_1__2 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1349:2: rule__Step__Group_1__1__Impl rule__Step__Group_1__2
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1330:1: ( rule__Step__Group_1__1__Impl rule__Step__Group_1__2 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1331:2: rule__Step__Group_1__1__Impl rule__Step__Group_1__2
             {
-            pushFollow(FOLLOW_rule__Step__Group_1__1__Impl_in_rule__Step__Group_1__12751);
+            pushFollow(FOLLOW_rule__Step__Group_1__1__Impl_in_rule__Step__Group_1__12718);
             rule__Step__Group_1__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Step__Group_1__2_in_rule__Step__Group_1__12754);
+
+            pushFollow(FOLLOW_rule__Step__Group_1__2_in_rule__Step__Group_1__12721);
             rule__Step__Group_1__2();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -4050,29 +3736,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Step__Group_1__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1356:1: rule__Step__Group_1__1__Impl : ( ruleSum ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1338:1: rule__Step__Group_1__1__Impl : ( ruleSum ) ;
     public final void rule__Step__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1360:1: ( ( ruleSum ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1361:1: ( ruleSum )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1342:1: ( ( ruleSum ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1343:1: ( ruleSum )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1361:1: ( ruleSum )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1362:1: ruleSum
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1343:1: ( ruleSum )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1344:1: ruleSum
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getStepAccess().getSumParserRuleCall_1_1()); 
-            }
-            pushFollow(FOLLOW_ruleSum_in_rule__Step__Group_1__1__Impl2781);
+             before(grammarAccess.getStepAccess().getSumParserRuleCall_1_1()); 
+            pushFollow(FOLLOW_ruleSum_in_rule__Step__Group_1__1__Impl2748);
             ruleSum();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getStepAccess().getSumParserRuleCall_1_1()); 
-            }
+
+             after(grammarAccess.getStepAccess().getSumParserRuleCall_1_1()); 
 
             }
 
@@ -4095,20 +3777,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Step__Group_1__2"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1373:1: rule__Step__Group_1__2 : rule__Step__Group_1__2__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1355:1: rule__Step__Group_1__2 : rule__Step__Group_1__2__Impl ;
     public final void rule__Step__Group_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1377:1: ( rule__Step__Group_1__2__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1378:2: rule__Step__Group_1__2__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1359:1: ( rule__Step__Group_1__2__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1360:2: rule__Step__Group_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__Step__Group_1__2__Impl_in_rule__Step__Group_1__22810);
+            pushFollow(FOLLOW_rule__Step__Group_1__2__Impl_in_rule__Step__Group_1__22777);
             rule__Step__Group_1__2__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -4128,25 +3810,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Step__Group_1__2__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1384:1: rule__Step__Group_1__2__Impl : ( ')' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1366:1: rule__Step__Group_1__2__Impl : ( ')' ) ;
     public final void rule__Step__Group_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1388:1: ( ( ')' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1389:1: ( ')' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1370:1: ( ( ')' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1371:1: ( ')' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1389:1: ( ')' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1390:1: ')'
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1371:1: ( ')' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1372:1: ')'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getStepAccess().getRightParenthesisKeyword_1_2()); 
-            }
-            match(input,16,FOLLOW_16_in_rule__Step__Group_1__2__Impl2838); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getStepAccess().getRightParenthesisKeyword_1_2()); 
-            }
+             before(grammarAccess.getStepAccess().getRightParenthesisKeyword_1_2()); 
+            match(input,17,FOLLOW_17_in_rule__Step__Group_1__2__Impl2805); 
+             after(grammarAccess.getStepAccess().getRightParenthesisKeyword_1_2()); 
 
             }
 
@@ -4168,26 +3846,198 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Step__Group_1__2__Impl"
 
 
+    // $ANTLR start "rule__Rule__Group__0"
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1391:1: rule__Rule__Group__0 : rule__Rule__Group__0__Impl rule__Rule__Group__1 ;
+    public final void rule__Rule__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1395:1: ( rule__Rule__Group__0__Impl rule__Rule__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1396:2: rule__Rule__Group__0__Impl rule__Rule__Group__1
+            {
+            pushFollow(FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__02842);
+            rule__Rule__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__02845);
+            rule__Rule__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rule__Group__0"
+
+
+    // $ANTLR start "rule__Rule__Group__0__Impl"
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1403:1: rule__Rule__Group__0__Impl : ( ( rule__Rule__Alternatives_0 ) ) ;
+    public final void rule__Rule__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1407:1: ( ( ( rule__Rule__Alternatives_0 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1408:1: ( ( rule__Rule__Alternatives_0 ) )
+            {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1408:1: ( ( rule__Rule__Alternatives_0 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1409:1: ( rule__Rule__Alternatives_0 )
+            {
+             before(grammarAccess.getRuleAccess().getAlternatives_0()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1410:1: ( rule__Rule__Alternatives_0 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1410:2: rule__Rule__Alternatives_0
+            {
+            pushFollow(FOLLOW_rule__Rule__Alternatives_0_in_rule__Rule__Group__0__Impl2872);
+            rule__Rule__Alternatives_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRuleAccess().getAlternatives_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rule__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Rule__Group__1"
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1420:1: rule__Rule__Group__1 : rule__Rule__Group__1__Impl ;
+    public final void rule__Rule__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1424:1: ( rule__Rule__Group__1__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1425:2: rule__Rule__Group__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__12902);
+            rule__Rule__Group__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rule__Group__1"
+
+
+    // $ANTLR start "rule__Rule__Group__1__Impl"
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1431:1: rule__Rule__Group__1__Impl : ( ( ';' )? ) ;
+    public final void rule__Rule__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1435:1: ( ( ( ';' )? ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1436:1: ( ( ';' )? )
+            {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1436:1: ( ( ';' )? )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1437:1: ( ';' )?
+            {
+             before(grammarAccess.getRuleAccess().getSemicolonKeyword_1()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1438:1: ( ';' )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
+
+            if ( (LA15_0==18) ) {
+                alt15=1;
+            }
+            switch (alt15) {
+                case 1 :
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1439:2: ';'
+                    {
+                    match(input,18,FOLLOW_18_in_rule__Rule__Group__1__Impl2931); 
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getRuleAccess().getSemicolonKeyword_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Rule__Group__1__Impl"
+
+
     // $ANTLR start "rule__Nested__Group__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1409:1: rule__Nested__Group__0 : rule__Nested__Group__0__Impl rule__Nested__Group__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1454:1: rule__Nested__Group__0 : rule__Nested__Group__0__Impl rule__Nested__Group__1 ;
     public final void rule__Nested__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1413:1: ( rule__Nested__Group__0__Impl rule__Nested__Group__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1414:2: rule__Nested__Group__0__Impl rule__Nested__Group__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1458:1: ( rule__Nested__Group__0__Impl rule__Nested__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1459:2: rule__Nested__Group__0__Impl rule__Nested__Group__1
             {
-            pushFollow(FOLLOW_rule__Nested__Group__0__Impl_in_rule__Nested__Group__02875);
+            pushFollow(FOLLOW_rule__Nested__Group__0__Impl_in_rule__Nested__Group__02968);
             rule__Nested__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Nested__Group__1_in_rule__Nested__Group__02878);
+
+            pushFollow(FOLLOW_rule__Nested__Group__1_in_rule__Nested__Group__02971);
             rule__Nested__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -4207,29 +4057,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1421:1: rule__Nested__Group__0__Impl : ( ruleSelector ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1466:1: rule__Nested__Group__0__Impl : ( ruleSelector ) ;
     public final void rule__Nested__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1425:1: ( ( ruleSelector ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1426:1: ( ruleSelector )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1470:1: ( ( ruleSelector ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1471:1: ( ruleSelector )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1426:1: ( ruleSelector )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1427:1: ruleSelector
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1471:1: ( ruleSelector )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1472:1: ruleSelector
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNestedAccess().getSelectorParserRuleCall_0()); 
-            }
-            pushFollow(FOLLOW_ruleSelector_in_rule__Nested__Group__0__Impl2905);
+             before(grammarAccess.getNestedAccess().getSelectorParserRuleCall_0()); 
+            pushFollow(FOLLOW_ruleSelector_in_rule__Nested__Group__0__Impl2998);
             ruleSelector();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNestedAccess().getSelectorParserRuleCall_0()); 
-            }
+
+             after(grammarAccess.getNestedAccess().getSelectorParserRuleCall_0()); 
 
             }
 
@@ -4252,20 +4098,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1438:1: rule__Nested__Group__1 : rule__Nested__Group__1__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1483:1: rule__Nested__Group__1 : rule__Nested__Group__1__Impl ;
     public final void rule__Nested__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1442:1: ( rule__Nested__Group__1__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1443:2: rule__Nested__Group__1__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1487:1: ( rule__Nested__Group__1__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1488:2: rule__Nested__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Nested__Group__1__Impl_in_rule__Nested__Group__12934);
+            pushFollow(FOLLOW_rule__Nested__Group__1__Impl_in_rule__Nested__Group__13027);
             rule__Nested__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -4285,35 +4131,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1449:1: rule__Nested__Group__1__Impl : ( ( rule__Nested__Alternatives_1 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1494:1: rule__Nested__Group__1__Impl : ( ( rule__Nested__Alternatives_1 ) ) ;
     public final void rule__Nested__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1453:1: ( ( ( rule__Nested__Alternatives_1 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1454:1: ( ( rule__Nested__Alternatives_1 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1498:1: ( ( ( rule__Nested__Alternatives_1 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1499:1: ( ( rule__Nested__Alternatives_1 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1454:1: ( ( rule__Nested__Alternatives_1 ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1455:1: ( rule__Nested__Alternatives_1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1499:1: ( ( rule__Nested__Alternatives_1 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1500:1: ( rule__Nested__Alternatives_1 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNestedAccess().getAlternatives_1()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1456:1: ( rule__Nested__Alternatives_1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1456:2: rule__Nested__Alternatives_1
+             before(grammarAccess.getNestedAccess().getAlternatives_1()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1501:1: ( rule__Nested__Alternatives_1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1501:2: rule__Nested__Alternatives_1
             {
-            pushFollow(FOLLOW_rule__Nested__Alternatives_1_in_rule__Nested__Group__1__Impl2961);
+            pushFollow(FOLLOW_rule__Nested__Alternatives_1_in_rule__Nested__Group__1__Impl3054);
             rule__Nested__Alternatives_1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNestedAccess().getAlternatives_1()); 
-            }
+             after(grammarAccess.getNestedAccess().getAlternatives_1()); 
 
             }
 
@@ -4336,25 +4178,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group_1_0__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1470:1: rule__Nested__Group_1_0__0 : rule__Nested__Group_1_0__0__Impl rule__Nested__Group_1_0__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1515:1: rule__Nested__Group_1_0__0 : rule__Nested__Group_1_0__0__Impl rule__Nested__Group_1_0__1 ;
     public final void rule__Nested__Group_1_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1474:1: ( rule__Nested__Group_1_0__0__Impl rule__Nested__Group_1_0__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1475:2: rule__Nested__Group_1_0__0__Impl rule__Nested__Group_1_0__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1519:1: ( rule__Nested__Group_1_0__0__Impl rule__Nested__Group_1_0__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1520:2: rule__Nested__Group_1_0__0__Impl rule__Nested__Group_1_0__1
             {
-            pushFollow(FOLLOW_rule__Nested__Group_1_0__0__Impl_in_rule__Nested__Group_1_0__02995);
+            pushFollow(FOLLOW_rule__Nested__Group_1_0__0__Impl_in_rule__Nested__Group_1_0__03088);
             rule__Nested__Group_1_0__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Nested__Group_1_0__1_in_rule__Nested__Group_1_0__02998);
+
+            pushFollow(FOLLOW_rule__Nested__Group_1_0__1_in_rule__Nested__Group_1_0__03091);
             rule__Nested__Group_1_0__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -4374,25 +4216,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group_1_0__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1482:1: rule__Nested__Group_1_0__0__Impl : ( ':' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1527:1: rule__Nested__Group_1_0__0__Impl : ( ':' ) ;
     public final void rule__Nested__Group_1_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1486:1: ( ( ':' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1487:1: ( ':' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1531:1: ( ( ':' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1532:1: ( ':' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1487:1: ( ':' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1488:1: ':'
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1532:1: ( ':' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1533:1: ':'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNestedAccess().getColonKeyword_1_0_0()); 
-            }
-            match(input,20,FOLLOW_20_in_rule__Nested__Group_1_0__0__Impl3026); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNestedAccess().getColonKeyword_1_0_0()); 
-            }
+             before(grammarAccess.getNestedAccess().getColonKeyword_1_0_0()); 
+            match(input,21,FOLLOW_21_in_rule__Nested__Group_1_0__0__Impl3119); 
+             after(grammarAccess.getNestedAccess().getColonKeyword_1_0_0()); 
 
             }
 
@@ -4415,20 +4253,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group_1_0__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1501:1: rule__Nested__Group_1_0__1 : rule__Nested__Group_1_0__1__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1546:1: rule__Nested__Group_1_0__1 : rule__Nested__Group_1_0__1__Impl ;
     public final void rule__Nested__Group_1_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1505:1: ( rule__Nested__Group_1_0__1__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1506:2: rule__Nested__Group_1_0__1__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1550:1: ( rule__Nested__Group_1_0__1__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1551:2: rule__Nested__Group_1_0__1__Impl
             {
-            pushFollow(FOLLOW_rule__Nested__Group_1_0__1__Impl_in_rule__Nested__Group_1_0__13057);
+            pushFollow(FOLLOW_rule__Nested__Group_1_0__1__Impl_in_rule__Nested__Group_1_0__13150);
             rule__Nested__Group_1_0__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -4448,35 +4286,31 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group_1_0__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1512:1: rule__Nested__Group_1_0__1__Impl : ( ( rule__Nested__Alternatives_1_0_1 ) ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1557:1: rule__Nested__Group_1_0__1__Impl : ( ( rule__Nested__Alternatives_1_0_1 ) ) ;
     public final void rule__Nested__Group_1_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1516:1: ( ( ( rule__Nested__Alternatives_1_0_1 ) ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1517:1: ( ( rule__Nested__Alternatives_1_0_1 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1561:1: ( ( ( rule__Nested__Alternatives_1_0_1 ) ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1562:1: ( ( rule__Nested__Alternatives_1_0_1 ) )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1517:1: ( ( rule__Nested__Alternatives_1_0_1 ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1518:1: ( rule__Nested__Alternatives_1_0_1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1562:1: ( ( rule__Nested__Alternatives_1_0_1 ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1563:1: ( rule__Nested__Alternatives_1_0_1 )
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNestedAccess().getAlternatives_1_0_1()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1519:1: ( rule__Nested__Alternatives_1_0_1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1519:2: rule__Nested__Alternatives_1_0_1
+             before(grammarAccess.getNestedAccess().getAlternatives_1_0_1()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1564:1: ( rule__Nested__Alternatives_1_0_1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1564:2: rule__Nested__Alternatives_1_0_1
             {
-            pushFollow(FOLLOW_rule__Nested__Alternatives_1_0_1_in_rule__Nested__Group_1_0__1__Impl3084);
+            pushFollow(FOLLOW_rule__Nested__Alternatives_1_0_1_in_rule__Nested__Group_1_0__1__Impl3177);
             rule__Nested__Alternatives_1_0_1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNestedAccess().getAlternatives_1_0_1()); 
-            }
+             after(grammarAccess.getNestedAccess().getAlternatives_1_0_1()); 
 
             }
 
@@ -4499,25 +4333,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group_1_1__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1533:1: rule__Nested__Group_1_1__0 : rule__Nested__Group_1_1__0__Impl rule__Nested__Group_1_1__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1578:1: rule__Nested__Group_1_1__0 : rule__Nested__Group_1_1__0__Impl rule__Nested__Group_1_1__1 ;
     public final void rule__Nested__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1537:1: ( rule__Nested__Group_1_1__0__Impl rule__Nested__Group_1_1__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1538:2: rule__Nested__Group_1_1__0__Impl rule__Nested__Group_1_1__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1582:1: ( rule__Nested__Group_1_1__0__Impl rule__Nested__Group_1_1__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1583:2: rule__Nested__Group_1_1__0__Impl rule__Nested__Group_1_1__1
             {
-            pushFollow(FOLLOW_rule__Nested__Group_1_1__0__Impl_in_rule__Nested__Group_1_1__03118);
+            pushFollow(FOLLOW_rule__Nested__Group_1_1__0__Impl_in_rule__Nested__Group_1_1__03211);
             rule__Nested__Group_1_1__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Nested__Group_1_1__1_in_rule__Nested__Group_1_1__03121);
+
+            pushFollow(FOLLOW_rule__Nested__Group_1_1__1_in_rule__Nested__Group_1_1__03214);
             rule__Nested__Group_1_1__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -4537,25 +4371,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group_1_1__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1545:1: rule__Nested__Group_1_1__0__Impl : ( '{' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1590:1: rule__Nested__Group_1_1__0__Impl : ( '{' ) ;
     public final void rule__Nested__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1549:1: ( ( '{' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1550:1: ( '{' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1594:1: ( ( '{' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1595:1: ( '{' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1550:1: ( '{' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1551:1: '{'
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1595:1: ( '{' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1596:1: '{'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNestedAccess().getLeftCurlyBracketKeyword_1_1_0()); 
-            }
-            match(input,21,FOLLOW_21_in_rule__Nested__Group_1_1__0__Impl3149); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNestedAccess().getLeftCurlyBracketKeyword_1_1_0()); 
-            }
+             before(grammarAccess.getNestedAccess().getLeftCurlyBracketKeyword_1_1_0()); 
+            match(input,22,FOLLOW_22_in_rule__Nested__Group_1_1__0__Impl3242); 
+             after(grammarAccess.getNestedAccess().getLeftCurlyBracketKeyword_1_1_0()); 
 
             }
 
@@ -4578,25 +4408,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group_1_1__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1564:1: rule__Nested__Group_1_1__1 : rule__Nested__Group_1_1__1__Impl rule__Nested__Group_1_1__2 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1609:1: rule__Nested__Group_1_1__1 : rule__Nested__Group_1_1__1__Impl rule__Nested__Group_1_1__2 ;
     public final void rule__Nested__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1568:1: ( rule__Nested__Group_1_1__1__Impl rule__Nested__Group_1_1__2 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1569:2: rule__Nested__Group_1_1__1__Impl rule__Nested__Group_1_1__2
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1613:1: ( rule__Nested__Group_1_1__1__Impl rule__Nested__Group_1_1__2 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1614:2: rule__Nested__Group_1_1__1__Impl rule__Nested__Group_1_1__2
             {
-            pushFollow(FOLLOW_rule__Nested__Group_1_1__1__Impl_in_rule__Nested__Group_1_1__13180);
+            pushFollow(FOLLOW_rule__Nested__Group_1_1__1__Impl_in_rule__Nested__Group_1_1__13273);
             rule__Nested__Group_1_1__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Nested__Group_1_1__2_in_rule__Nested__Group_1_1__13183);
+
+            pushFollow(FOLLOW_rule__Nested__Group_1_1__2_in_rule__Nested__Group_1_1__13276);
             rule__Nested__Group_1_1__2();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -4616,53 +4446,49 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group_1_1__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1576:1: rule__Nested__Group_1_1__1__Impl : ( ( ruleRule )* ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1621:1: rule__Nested__Group_1_1__1__Impl : ( ( ruleRule )* ) ;
     public final void rule__Nested__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1580:1: ( ( ( ruleRule )* ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1581:1: ( ( ruleRule )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1625:1: ( ( ( ruleRule )* ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1626:1: ( ( ruleRule )* )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1581:1: ( ( ruleRule )* )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1582:1: ( ruleRule )*
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1626:1: ( ( ruleRule )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1627:1: ( ruleRule )*
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNestedAccess().getRuleParserRuleCall_1_1_1()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1583:1: ( ruleRule )*
-            loop14:
+             before(grammarAccess.getNestedAccess().getRuleParserRuleCall_1_1_1()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1628:1: ( ruleRule )*
+            loop16:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt16=2;
+                int LA16_0 = input.LA(1);
 
-                if ( ((LA14_0>=RULE_STRING && LA14_0<=RULE_ID)||LA14_0==15||LA14_0==24||LA14_0==27) ) {
-                    alt14=1;
+                if ( ((LA16_0>=RULE_STRING && LA16_0<=RULE_ID)||LA16_0==16||LA16_0==25||LA16_0==28) ) {
+                    alt16=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt16) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1583:3: ruleRule
+            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1628:3: ruleRule
             	    {
-            	    pushFollow(FOLLOW_ruleRule_in_rule__Nested__Group_1_1__1__Impl3211);
+            	    pushFollow(FOLLOW_ruleRule_in_rule__Nested__Group_1_1__1__Impl3304);
             	    ruleRule();
 
             	    state._fsp--;
-            	    if (state.failed) return ;
+
 
             	    }
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop16;
                 }
             } while (true);
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNestedAccess().getRuleParserRuleCall_1_1_1()); 
-            }
+             after(grammarAccess.getNestedAccess().getRuleParserRuleCall_1_1_1()); 
 
             }
 
@@ -4685,20 +4511,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group_1_1__2"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1593:1: rule__Nested__Group_1_1__2 : rule__Nested__Group_1_1__2__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1638:1: rule__Nested__Group_1_1__2 : rule__Nested__Group_1_1__2__Impl ;
     public final void rule__Nested__Group_1_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1597:1: ( rule__Nested__Group_1_1__2__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1598:2: rule__Nested__Group_1_1__2__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1642:1: ( rule__Nested__Group_1_1__2__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1643:2: rule__Nested__Group_1_1__2__Impl
             {
-            pushFollow(FOLLOW_rule__Nested__Group_1_1__2__Impl_in_rule__Nested__Group_1_1__23242);
+            pushFollow(FOLLOW_rule__Nested__Group_1_1__2__Impl_in_rule__Nested__Group_1_1__23335);
             rule__Nested__Group_1_1__2__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -4718,25 +4544,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Nested__Group_1_1__2__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1604:1: rule__Nested__Group_1_1__2__Impl : ( '}' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1649:1: rule__Nested__Group_1_1__2__Impl : ( '}' ) ;
     public final void rule__Nested__Group_1_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1608:1: ( ( '}' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1609:1: ( '}' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1653:1: ( ( '}' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1654:1: ( '}' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1609:1: ( '}' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1610:1: '}'
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1654:1: ( '}' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1655:1: '}'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getNestedAccess().getRightCurlyBracketKeyword_1_1_2()); 
-            }
-            match(input,22,FOLLOW_22_in_rule__Nested__Group_1_1__2__Impl3270); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getNestedAccess().getRightCurlyBracketKeyword_1_1_2()); 
-            }
+             before(grammarAccess.getNestedAccess().getRightCurlyBracketKeyword_1_1_2()); 
+            match(input,23,FOLLOW_23_in_rule__Nested__Group_1_1__2__Impl3363); 
+             after(grammarAccess.getNestedAccess().getRightCurlyBracketKeyword_1_1_2()); 
 
             }
 
@@ -4759,25 +4581,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Property__Group__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1629:1: rule__Property__Group__0 : rule__Property__Group__0__Impl rule__Property__Group__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1674:1: rule__Property__Group__0 : rule__Property__Group__0__Impl rule__Property__Group__1 ;
     public final void rule__Property__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1633:1: ( rule__Property__Group__0__Impl rule__Property__Group__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1634:2: rule__Property__Group__0__Impl rule__Property__Group__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1678:1: ( rule__Property__Group__0__Impl rule__Property__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1679:2: rule__Property__Group__0__Impl rule__Property__Group__1
             {
-            pushFollow(FOLLOW_rule__Property__Group__0__Impl_in_rule__Property__Group__03307);
+            pushFollow(FOLLOW_rule__Property__Group__0__Impl_in_rule__Property__Group__03400);
             rule__Property__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Property__Group__1_in_rule__Property__Group__03310);
+
+            pushFollow(FOLLOW_rule__Property__Group__1_in_rule__Property__Group__03403);
             rule__Property__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -4797,25 +4619,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Property__Group__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1641:1: rule__Property__Group__0__Impl : ( RULE_ID ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1686:1: rule__Property__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__Property__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1645:1: ( ( RULE_ID ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1646:1: ( RULE_ID )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1690:1: ( ( RULE_ID ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1691:1: ( RULE_ID )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1646:1: ( RULE_ID )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1647:1: RULE_ID
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1691:1: ( RULE_ID )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1692:1: RULE_ID
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getPropertyAccess().getIDTerminalRuleCall_0()); 
-            }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Property__Group__0__Impl3337); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getPropertyAccess().getIDTerminalRuleCall_0()); 
-            }
+             before(grammarAccess.getPropertyAccess().getIDTerminalRuleCall_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Property__Group__0__Impl3430); 
+             after(grammarAccess.getPropertyAccess().getIDTerminalRuleCall_0()); 
 
             }
 
@@ -4838,25 +4656,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Property__Group__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1658:1: rule__Property__Group__1 : rule__Property__Group__1__Impl rule__Property__Group__2 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1703:1: rule__Property__Group__1 : rule__Property__Group__1__Impl rule__Property__Group__2 ;
     public final void rule__Property__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1662:1: ( rule__Property__Group__1__Impl rule__Property__Group__2 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1663:2: rule__Property__Group__1__Impl rule__Property__Group__2
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1707:1: ( rule__Property__Group__1__Impl rule__Property__Group__2 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1708:2: rule__Property__Group__1__Impl rule__Property__Group__2
             {
-            pushFollow(FOLLOW_rule__Property__Group__1__Impl_in_rule__Property__Group__13366);
+            pushFollow(FOLLOW_rule__Property__Group__1__Impl_in_rule__Property__Group__13459);
             rule__Property__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Property__Group__2_in_rule__Property__Group__13369);
+
+            pushFollow(FOLLOW_rule__Property__Group__2_in_rule__Property__Group__13462);
             rule__Property__Group__2();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -4876,25 +4694,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Property__Group__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1670:1: rule__Property__Group__1__Impl : ( '=' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1715:1: rule__Property__Group__1__Impl : ( '=' ) ;
     public final void rule__Property__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1674:1: ( ( '=' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1675:1: ( '=' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1719:1: ( ( '=' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1720:1: ( '=' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1675:1: ( '=' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1676:1: '='
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1720:1: ( '=' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1721:1: '='
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getPropertyAccess().getEqualsSignKeyword_1()); 
-            }
-            match(input,23,FOLLOW_23_in_rule__Property__Group__1__Impl3397); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getPropertyAccess().getEqualsSignKeyword_1()); 
-            }
+             before(grammarAccess.getPropertyAccess().getEqualsSignKeyword_1()); 
+            match(input,24,FOLLOW_24_in_rule__Property__Group__1__Impl3490); 
+             after(grammarAccess.getPropertyAccess().getEqualsSignKeyword_1()); 
 
             }
 
@@ -4917,20 +4731,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Property__Group__2"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1689:1: rule__Property__Group__2 : rule__Property__Group__2__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1734:1: rule__Property__Group__2 : rule__Property__Group__2__Impl ;
     public final void rule__Property__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1693:1: ( rule__Property__Group__2__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1694:2: rule__Property__Group__2__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1738:1: ( rule__Property__Group__2__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1739:2: rule__Property__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Property__Group__2__Impl_in_rule__Property__Group__23428);
+            pushFollow(FOLLOW_rule__Property__Group__2__Impl_in_rule__Property__Group__23521);
             rule__Property__Group__2__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -4950,29 +4764,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Property__Group__2__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1700:1: rule__Property__Group__2__Impl : ( ruleValue ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1745:1: rule__Property__Group__2__Impl : ( ruleValue ) ;
     public final void rule__Property__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1704:1: ( ( ruleValue ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1705:1: ( ruleValue )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1749:1: ( ( ruleValue ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1750:1: ( ruleValue )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1705:1: ( ruleValue )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1706:1: ruleValue
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1750:1: ( ruleValue )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1751:1: ruleValue
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getPropertyAccess().getValueParserRuleCall_2()); 
-            }
-            pushFollow(FOLLOW_ruleValue_in_rule__Property__Group__2__Impl3455);
+             before(grammarAccess.getPropertyAccess().getValueParserRuleCall_2()); 
+            pushFollow(FOLLOW_ruleValue_in_rule__Property__Group__2__Impl3548);
             ruleValue();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getPropertyAccess().getValueParserRuleCall_2()); 
-            }
+
+             after(grammarAccess.getPropertyAccess().getValueParserRuleCall_2()); 
 
             }
 
@@ -4995,25 +4805,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Constraint__Group__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1723:1: rule__Constraint__Group__0 : rule__Constraint__Group__0__Impl rule__Constraint__Group__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1768:1: rule__Constraint__Group__0 : rule__Constraint__Group__0__Impl rule__Constraint__Group__1 ;
     public final void rule__Constraint__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1727:1: ( rule__Constraint__Group__0__Impl rule__Constraint__Group__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1728:2: rule__Constraint__Group__0__Impl rule__Constraint__Group__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1772:1: ( rule__Constraint__Group__0__Impl rule__Constraint__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1773:2: rule__Constraint__Group__0__Impl rule__Constraint__Group__1
             {
-            pushFollow(FOLLOW_rule__Constraint__Group__0__Impl_in_rule__Constraint__Group__03490);
+            pushFollow(FOLLOW_rule__Constraint__Group__0__Impl_in_rule__Constraint__Group__03583);
             rule__Constraint__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Constraint__Group__1_in_rule__Constraint__Group__03493);
+
+            pushFollow(FOLLOW_rule__Constraint__Group__1_in_rule__Constraint__Group__03586);
             rule__Constraint__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -5033,25 +4843,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Constraint__Group__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1735:1: rule__Constraint__Group__0__Impl : ( '@constrain' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1780:1: rule__Constraint__Group__0__Impl : ( '@constrain' ) ;
     public final void rule__Constraint__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1739:1: ( ( '@constrain' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1740:1: ( '@constrain' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1784:1: ( ( '@constrain' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1785:1: ( '@constrain' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1740:1: ( '@constrain' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1741:1: '@constrain'
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1785:1: ( '@constrain' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1786:1: '@constrain'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getConstraintAccess().getConstrainKeyword_0()); 
-            }
-            match(input,24,FOLLOW_24_in_rule__Constraint__Group__0__Impl3521); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getConstraintAccess().getConstrainKeyword_0()); 
-            }
+             before(grammarAccess.getConstraintAccess().getConstrainKeyword_0()); 
+            match(input,25,FOLLOW_25_in_rule__Constraint__Group__0__Impl3614); 
+             after(grammarAccess.getConstraintAccess().getConstrainKeyword_0()); 
 
             }
 
@@ -5074,20 +4880,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Constraint__Group__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1754:1: rule__Constraint__Group__1 : rule__Constraint__Group__1__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1799:1: rule__Constraint__Group__1 : rule__Constraint__Group__1__Impl ;
     public final void rule__Constraint__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1758:1: ( rule__Constraint__Group__1__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1759:2: rule__Constraint__Group__1__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1803:1: ( rule__Constraint__Group__1__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1804:2: rule__Constraint__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Constraint__Group__1__Impl_in_rule__Constraint__Group__13552);
+            pushFollow(FOLLOW_rule__Constraint__Group__1__Impl_in_rule__Constraint__Group__13645);
             rule__Constraint__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -5107,29 +4913,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Constraint__Group__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1765:1: rule__Constraint__Group__1__Impl : ( ruleSingleStep ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1810:1: rule__Constraint__Group__1__Impl : ( ruleSingleStep ) ;
     public final void rule__Constraint__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1769:1: ( ( ruleSingleStep ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1770:1: ( ruleSingleStep )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1814:1: ( ( ruleSingleStep ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1815:1: ( ruleSingleStep )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1770:1: ( ruleSingleStep )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1771:1: ruleSingleStep
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1815:1: ( ruleSingleStep )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1816:1: ruleSingleStep
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getConstraintAccess().getSingleStepParserRuleCall_1()); 
-            }
-            pushFollow(FOLLOW_ruleSingleStep_in_rule__Constraint__Group__1__Impl3579);
+             before(grammarAccess.getConstraintAccess().getSingleStepParserRuleCall_1()); 
+            pushFollow(FOLLOW_ruleSingleStep_in_rule__Constraint__Group__1__Impl3672);
             ruleSingleStep();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getConstraintAccess().getSingleStepParserRuleCall_1()); 
-            }
+
+             after(grammarAccess.getConstraintAccess().getSingleStepParserRuleCall_1()); 
 
             }
 
@@ -5152,25 +4954,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SingleStep__Group__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1786:1: rule__SingleStep__Group__0 : rule__SingleStep__Group__0__Impl rule__SingleStep__Group__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1831:1: rule__SingleStep__Group__0 : rule__SingleStep__Group__0__Impl rule__SingleStep__Group__1 ;
     public final void rule__SingleStep__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1790:1: ( rule__SingleStep__Group__0__Impl rule__SingleStep__Group__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1791:2: rule__SingleStep__Group__0__Impl rule__SingleStep__Group__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1835:1: ( rule__SingleStep__Group__0__Impl rule__SingleStep__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1836:2: rule__SingleStep__Group__0__Impl rule__SingleStep__Group__1
             {
-            pushFollow(FOLLOW_rule__SingleStep__Group__0__Impl_in_rule__SingleStep__Group__03612);
+            pushFollow(FOLLOW_rule__SingleStep__Group__0__Impl_in_rule__SingleStep__Group__03705);
             rule__SingleStep__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SingleStep__Group__1_in_rule__SingleStep__Group__03615);
+
+            pushFollow(FOLLOW_rule__SingleStep__Group__1_in_rule__SingleStep__Group__03708);
             rule__SingleStep__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -5190,29 +4992,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SingleStep__Group__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1798:1: rule__SingleStep__Group__0__Impl : ( ruleIdent ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1843:1: rule__SingleStep__Group__0__Impl : ( ruleIdent ) ;
     public final void rule__SingleStep__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1802:1: ( ( ruleIdent ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1803:1: ( ruleIdent )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1847:1: ( ( ruleIdent ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1848:1: ( ruleIdent )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1803:1: ( ruleIdent )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1804:1: ruleIdent
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1848:1: ( ruleIdent )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1849:1: ruleIdent
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSingleStepAccess().getIdentParserRuleCall_0()); 
-            }
-            pushFollow(FOLLOW_ruleIdent_in_rule__SingleStep__Group__0__Impl3642);
+             before(grammarAccess.getSingleStepAccess().getIdentParserRuleCall_0()); 
+            pushFollow(FOLLOW_ruleIdent_in_rule__SingleStep__Group__0__Impl3735);
             ruleIdent();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSingleStepAccess().getIdentParserRuleCall_0()); 
-            }
+
+             after(grammarAccess.getSingleStepAccess().getIdentParserRuleCall_0()); 
 
             }
 
@@ -5235,25 +5033,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SingleStep__Group__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1815:1: rule__SingleStep__Group__1 : rule__SingleStep__Group__1__Impl rule__SingleStep__Group__2 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1860:1: rule__SingleStep__Group__1 : rule__SingleStep__Group__1__Impl rule__SingleStep__Group__2 ;
     public final void rule__SingleStep__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1819:1: ( rule__SingleStep__Group__1__Impl rule__SingleStep__Group__2 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1820:2: rule__SingleStep__Group__1__Impl rule__SingleStep__Group__2
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1864:1: ( rule__SingleStep__Group__1__Impl rule__SingleStep__Group__2 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1865:2: rule__SingleStep__Group__1__Impl rule__SingleStep__Group__2
             {
-            pushFollow(FOLLOW_rule__SingleStep__Group__1__Impl_in_rule__SingleStep__Group__13671);
+            pushFollow(FOLLOW_rule__SingleStep__Group__1__Impl_in_rule__SingleStep__Group__13764);
             rule__SingleStep__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__SingleStep__Group__2_in_rule__SingleStep__Group__13674);
+
+            pushFollow(FOLLOW_rule__SingleStep__Group__2_in_rule__SingleStep__Group__13767);
             rule__SingleStep__Group__2();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -5273,46 +5071,42 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SingleStep__Group__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1827:1: rule__SingleStep__Group__1__Impl : ( ( ruleVals )? ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1872:1: rule__SingleStep__Group__1__Impl : ( ( ruleVals )? ) ;
     public final void rule__SingleStep__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1831:1: ( ( ( ruleVals )? ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1832:1: ( ( ruleVals )? )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1876:1: ( ( ( ruleVals )? ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1877:1: ( ( ruleVals )? )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1832:1: ( ( ruleVals )? )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1833:1: ( ruleVals )?
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1877:1: ( ( ruleVals )? )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1878:1: ( ruleVals )?
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSingleStepAccess().getValsParserRuleCall_1()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1834:1: ( ruleVals )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+             before(grammarAccess.getSingleStepAccess().getValsParserRuleCall_1()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1879:1: ( ruleVals )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA15_0==25) ) {
-                alt15=1;
+            if ( (LA17_0==26) ) {
+                alt17=1;
             }
-            switch (alt15) {
+            switch (alt17) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1834:3: ruleVals
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1879:3: ruleVals
                     {
-                    pushFollow(FOLLOW_ruleVals_in_rule__SingleStep__Group__1__Impl3702);
+                    pushFollow(FOLLOW_ruleVals_in_rule__SingleStep__Group__1__Impl3795);
                     ruleVals();
 
                     state._fsp--;
-                    if (state.failed) return ;
+
 
                     }
                     break;
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSingleStepAccess().getValsParserRuleCall_1()); 
-            }
+             after(grammarAccess.getSingleStepAccess().getValsParserRuleCall_1()); 
 
             }
 
@@ -5335,20 +5129,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SingleStep__Group__2"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1844:1: rule__SingleStep__Group__2 : rule__SingleStep__Group__2__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1889:1: rule__SingleStep__Group__2 : rule__SingleStep__Group__2__Impl ;
     public final void rule__SingleStep__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1848:1: ( rule__SingleStep__Group__2__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1849:2: rule__SingleStep__Group__2__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1893:1: ( rule__SingleStep__Group__2__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1894:2: rule__SingleStep__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__SingleStep__Group__2__Impl_in_rule__SingleStep__Group__23733);
+            pushFollow(FOLLOW_rule__SingleStep__Group__2__Impl_in_rule__SingleStep__Group__23826);
             rule__SingleStep__Group__2__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -5368,46 +5162,42 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__SingleStep__Group__2__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1855:1: rule__SingleStep__Group__2__Impl : ( ( ruleStepSuffix )? ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1900:1: rule__SingleStep__Group__2__Impl : ( ( ruleStepSuffix )? ) ;
     public final void rule__SingleStep__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1859:1: ( ( ( ruleStepSuffix )? ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1860:1: ( ( ruleStepSuffix )? )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1904:1: ( ( ( ruleStepSuffix )? ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1905:1: ( ( ruleStepSuffix )? )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1860:1: ( ( ruleStepSuffix )? )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1861:1: ( ruleStepSuffix )?
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1905:1: ( ( ruleStepSuffix )? )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1906:1: ( ruleStepSuffix )?
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getSingleStepAccess().getStepSuffixParserRuleCall_2()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1862:1: ( ruleStepSuffix )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+             before(grammarAccess.getSingleStepAccess().getStepSuffixParserRuleCall_2()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1907:1: ( ruleStepSuffix )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA16_0==26) ) {
-                alt16=1;
+            if ( (LA18_0==27) ) {
+                alt18=1;
             }
-            switch (alt16) {
+            switch (alt18) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1862:3: ruleStepSuffix
+                    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1907:3: ruleStepSuffix
                     {
-                    pushFollow(FOLLOW_ruleStepSuffix_in_rule__SingleStep__Group__2__Impl3761);
+                    pushFollow(FOLLOW_ruleStepSuffix_in_rule__SingleStep__Group__2__Impl3854);
                     ruleStepSuffix();
 
                     state._fsp--;
-                    if (state.failed) return ;
+
 
                     }
                     break;
 
             }
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getSingleStepAccess().getStepSuffixParserRuleCall_2()); 
-            }
+             after(grammarAccess.getSingleStepAccess().getStepSuffixParserRuleCall_2()); 
 
             }
 
@@ -5430,25 +5220,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Vals__Group__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1878:1: rule__Vals__Group__0 : rule__Vals__Group__0__Impl rule__Vals__Group__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1923:1: rule__Vals__Group__0 : rule__Vals__Group__0__Impl rule__Vals__Group__1 ;
     public final void rule__Vals__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1882:1: ( rule__Vals__Group__0__Impl rule__Vals__Group__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1883:2: rule__Vals__Group__0__Impl rule__Vals__Group__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1927:1: ( rule__Vals__Group__0__Impl rule__Vals__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1928:2: rule__Vals__Group__0__Impl rule__Vals__Group__1
             {
-            pushFollow(FOLLOW_rule__Vals__Group__0__Impl_in_rule__Vals__Group__03798);
+            pushFollow(FOLLOW_rule__Vals__Group__0__Impl_in_rule__Vals__Group__03891);
             rule__Vals__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Vals__Group__1_in_rule__Vals__Group__03801);
+
+            pushFollow(FOLLOW_rule__Vals__Group__1_in_rule__Vals__Group__03894);
             rule__Vals__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -5468,25 +5258,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Vals__Group__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1890:1: rule__Vals__Group__0__Impl : ( '.' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1935:1: rule__Vals__Group__0__Impl : ( '.' ) ;
     public final void rule__Vals__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1894:1: ( ( '.' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1895:1: ( '.' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1939:1: ( ( '.' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1940:1: ( '.' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1895:1: ( '.' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1896:1: '.'
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1940:1: ( '.' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1941:1: '.'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getValsAccess().getFullStopKeyword_0()); 
-            }
-            match(input,25,FOLLOW_25_in_rule__Vals__Group__0__Impl3829); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getValsAccess().getFullStopKeyword_0()); 
-            }
+             before(grammarAccess.getValsAccess().getFullStopKeyword_0()); 
+            match(input,26,FOLLOW_26_in_rule__Vals__Group__0__Impl3922); 
+             after(grammarAccess.getValsAccess().getFullStopKeyword_0()); 
 
             }
 
@@ -5509,25 +5295,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Vals__Group__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1909:1: rule__Vals__Group__1 : rule__Vals__Group__1__Impl rule__Vals__Group__2 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1954:1: rule__Vals__Group__1 : rule__Vals__Group__1__Impl rule__Vals__Group__2 ;
     public final void rule__Vals__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1913:1: ( rule__Vals__Group__1__Impl rule__Vals__Group__2 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1914:2: rule__Vals__Group__1__Impl rule__Vals__Group__2
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1958:1: ( rule__Vals__Group__1__Impl rule__Vals__Group__2 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1959:2: rule__Vals__Group__1__Impl rule__Vals__Group__2
             {
-            pushFollow(FOLLOW_rule__Vals__Group__1__Impl_in_rule__Vals__Group__13860);
+            pushFollow(FOLLOW_rule__Vals__Group__1__Impl_in_rule__Vals__Group__13953);
             rule__Vals__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Vals__Group__2_in_rule__Vals__Group__13863);
+
+            pushFollow(FOLLOW_rule__Vals__Group__2_in_rule__Vals__Group__13956);
             rule__Vals__Group__2();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -5547,29 +5333,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Vals__Group__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1921:1: rule__Vals__Group__1__Impl : ( ruleIdent ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1966:1: rule__Vals__Group__1__Impl : ( ruleIdent ) ;
     public final void rule__Vals__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1925:1: ( ( ruleIdent ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1926:1: ( ruleIdent )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1970:1: ( ( ruleIdent ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1971:1: ( ruleIdent )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1926:1: ( ruleIdent )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1927:1: ruleIdent
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1971:1: ( ruleIdent )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1972:1: ruleIdent
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getValsAccess().getIdentParserRuleCall_1()); 
-            }
-            pushFollow(FOLLOW_ruleIdent_in_rule__Vals__Group__1__Impl3890);
+             before(grammarAccess.getValsAccess().getIdentParserRuleCall_1()); 
+            pushFollow(FOLLOW_ruleIdent_in_rule__Vals__Group__1__Impl3983);
             ruleIdent();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getValsAccess().getIdentParserRuleCall_1()); 
-            }
+
+             after(grammarAccess.getValsAccess().getIdentParserRuleCall_1()); 
 
             }
 
@@ -5592,20 +5374,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Vals__Group__2"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1938:1: rule__Vals__Group__2 : rule__Vals__Group__2__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1983:1: rule__Vals__Group__2 : rule__Vals__Group__2__Impl ;
     public final void rule__Vals__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1942:1: ( rule__Vals__Group__2__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1943:2: rule__Vals__Group__2__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1987:1: ( rule__Vals__Group__2__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1988:2: rule__Vals__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Vals__Group__2__Impl_in_rule__Vals__Group__23919);
+            pushFollow(FOLLOW_rule__Vals__Group__2__Impl_in_rule__Vals__Group__24012);
             rule__Vals__Group__2__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -5625,59 +5407,49 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Vals__Group__2__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1949:1: rule__Vals__Group__2__Impl : ( ( ruleVals )* ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1994:1: rule__Vals__Group__2__Impl : ( ( ruleVals )* ) ;
     public final void rule__Vals__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1953:1: ( ( ( ruleVals )* ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1954:1: ( ( ruleVals )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1998:1: ( ( ( ruleVals )* ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1999:1: ( ( ruleVals )* )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1954:1: ( ( ruleVals )* )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1955:1: ( ruleVals )*
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1999:1: ( ( ruleVals )* )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2000:1: ( ruleVals )*
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getValsAccess().getValsParserRuleCall_2()); 
-            }
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1956:1: ( ruleVals )*
-            loop17:
+             before(grammarAccess.getValsAccess().getValsParserRuleCall_2()); 
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2001:1: ( ruleVals )*
+            loop19:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-                if ( (LA17_0==25) ) {
-                    int LA17_2 = input.LA(2);
-
-                    if ( (synpred23_InternalCcsEclipse()) ) {
-                        alt17=1;
-                    }
-
-
+                if ( (LA19_0==26) ) {
+                    alt19=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt19) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1956:3: ruleVals
+            	    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2001:3: ruleVals
             	    {
-            	    pushFollow(FOLLOW_ruleVals_in_rule__Vals__Group__2__Impl3947);
+            	    pushFollow(FOLLOW_ruleVals_in_rule__Vals__Group__2__Impl4040);
             	    ruleVals();
 
             	    state._fsp--;
-            	    if (state.failed) return ;
+
 
             	    }
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop19;
                 }
             } while (true);
 
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getValsAccess().getValsParserRuleCall_2()); 
-            }
+             after(grammarAccess.getValsAccess().getValsParserRuleCall_2()); 
 
             }
 
@@ -5700,25 +5472,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__StepSuffix__Group__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1972:1: rule__StepSuffix__Group__0 : rule__StepSuffix__Group__0__Impl rule__StepSuffix__Group__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2017:1: rule__StepSuffix__Group__0 : rule__StepSuffix__Group__0__Impl rule__StepSuffix__Group__1 ;
     public final void rule__StepSuffix__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1976:1: ( rule__StepSuffix__Group__0__Impl rule__StepSuffix__Group__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1977:2: rule__StepSuffix__Group__0__Impl rule__StepSuffix__Group__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2021:1: ( rule__StepSuffix__Group__0__Impl rule__StepSuffix__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2022:2: rule__StepSuffix__Group__0__Impl rule__StepSuffix__Group__1
             {
-            pushFollow(FOLLOW_rule__StepSuffix__Group__0__Impl_in_rule__StepSuffix__Group__03984);
+            pushFollow(FOLLOW_rule__StepSuffix__Group__0__Impl_in_rule__StepSuffix__Group__04077);
             rule__StepSuffix__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__StepSuffix__Group__1_in_rule__StepSuffix__Group__03987);
+
+            pushFollow(FOLLOW_rule__StepSuffix__Group__1_in_rule__StepSuffix__Group__04080);
             rule__StepSuffix__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -5738,25 +5510,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__StepSuffix__Group__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1984:1: rule__StepSuffix__Group__0__Impl : ( '/' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2029:1: rule__StepSuffix__Group__0__Impl : ( '/' ) ;
     public final void rule__StepSuffix__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1988:1: ( ( '/' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1989:1: ( '/' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2033:1: ( ( '/' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2034:1: ( '/' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1989:1: ( '/' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1990:1: '/'
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2034:1: ( '/' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2035:1: '/'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getStepSuffixAccess().getSolidusKeyword_0()); 
-            }
-            match(input,26,FOLLOW_26_in_rule__StepSuffix__Group__0__Impl4015); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getStepSuffixAccess().getSolidusKeyword_0()); 
-            }
+             before(grammarAccess.getStepSuffixAccess().getSolidusKeyword_0()); 
+            match(input,27,FOLLOW_27_in_rule__StepSuffix__Group__0__Impl4108); 
+             after(grammarAccess.getStepSuffixAccess().getSolidusKeyword_0()); 
 
             }
 
@@ -5779,20 +5547,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__StepSuffix__Group__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2003:1: rule__StepSuffix__Group__1 : rule__StepSuffix__Group__1__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2048:1: rule__StepSuffix__Group__1 : rule__StepSuffix__Group__1__Impl ;
     public final void rule__StepSuffix__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2007:1: ( rule__StepSuffix__Group__1__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2008:2: rule__StepSuffix__Group__1__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2052:1: ( rule__StepSuffix__Group__1__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2053:2: rule__StepSuffix__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__StepSuffix__Group__1__Impl_in_rule__StepSuffix__Group__14046);
+            pushFollow(FOLLOW_rule__StepSuffix__Group__1__Impl_in_rule__StepSuffix__Group__14139);
             rule__StepSuffix__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -5812,29 +5580,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__StepSuffix__Group__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2014:1: rule__StepSuffix__Group__1__Impl : ( ruleSingleStep ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2059:1: rule__StepSuffix__Group__1__Impl : ( ruleSingleStep ) ;
     public final void rule__StepSuffix__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2018:1: ( ( ruleSingleStep ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2019:1: ( ruleSingleStep )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2063:1: ( ( ruleSingleStep ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2064:1: ( ruleSingleStep )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2019:1: ( ruleSingleStep )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2020:1: ruleSingleStep
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2064:1: ( ruleSingleStep )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2065:1: ruleSingleStep
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getStepSuffixAccess().getSingleStepParserRuleCall_1()); 
-            }
-            pushFollow(FOLLOW_ruleSingleStep_in_rule__StepSuffix__Group__1__Impl4073);
+             before(grammarAccess.getStepSuffixAccess().getSingleStepParserRuleCall_1()); 
+            pushFollow(FOLLOW_ruleSingleStep_in_rule__StepSuffix__Group__1__Impl4166);
             ruleSingleStep();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getStepSuffixAccess().getSingleStepParserRuleCall_1()); 
-            }
+
+             after(grammarAccess.getStepSuffixAccess().getSingleStepParserRuleCall_1()); 
 
             }
 
@@ -5857,25 +5621,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Import__Group__0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2035:1: rule__Import__Group__0 : rule__Import__Group__0__Impl rule__Import__Group__1 ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2080:1: rule__Import__Group__0 : rule__Import__Group__0__Impl rule__Import__Group__1 ;
     public final void rule__Import__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2039:1: ( rule__Import__Group__0__Impl rule__Import__Group__1 )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2040:2: rule__Import__Group__0__Impl rule__Import__Group__1
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2084:1: ( rule__Import__Group__0__Impl rule__Import__Group__1 )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2085:2: rule__Import__Group__0__Impl rule__Import__Group__1
             {
-            pushFollow(FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__04106);
+            pushFollow(FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__04199);
             rule__Import__Group__0__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
-            pushFollow(FOLLOW_rule__Import__Group__1_in_rule__Import__Group__04109);
+
+            pushFollow(FOLLOW_rule__Import__Group__1_in_rule__Import__Group__04202);
             rule__Import__Group__1();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -5895,25 +5659,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Import__Group__0__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2047:1: rule__Import__Group__0__Impl : ( '@import' ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2092:1: rule__Import__Group__0__Impl : ( '@import' ) ;
     public final void rule__Import__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2051:1: ( ( '@import' ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2052:1: ( '@import' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2096:1: ( ( '@import' ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2097:1: ( '@import' )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2052:1: ( '@import' )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2053:1: '@import'
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2097:1: ( '@import' )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2098:1: '@import'
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getImportAccess().getImportKeyword_0()); 
-            }
-            match(input,27,FOLLOW_27_in_rule__Import__Group__0__Impl4137); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getImportAccess().getImportKeyword_0()); 
-            }
+             before(grammarAccess.getImportAccess().getImportKeyword_0()); 
+            match(input,28,FOLLOW_28_in_rule__Import__Group__0__Impl4230); 
+             after(grammarAccess.getImportAccess().getImportKeyword_0()); 
 
             }
 
@@ -5936,20 +5696,20 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Import__Group__1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2066:1: rule__Import__Group__1 : rule__Import__Group__1__Impl ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2111:1: rule__Import__Group__1 : rule__Import__Group__1__Impl ;
     public final void rule__Import__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2070:1: ( rule__Import__Group__1__Impl )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2071:2: rule__Import__Group__1__Impl
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2115:1: ( rule__Import__Group__1__Impl )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2116:2: rule__Import__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__14168);
+            pushFollow(FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__14261);
             rule__Import__Group__1__Impl();
 
             state._fsp--;
-            if (state.failed) return ;
+
 
             }
 
@@ -5969,25 +5729,21 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Import__Group__1__Impl"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2077:1: rule__Import__Group__1__Impl : ( RULE_STRING ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2122:1: rule__Import__Group__1__Impl : ( RULE_STRING ) ;
     public final void rule__Import__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2081:1: ( ( RULE_STRING ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2082:1: ( RULE_STRING )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2126:1: ( ( RULE_STRING ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2127:1: ( RULE_STRING )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2082:1: ( RULE_STRING )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2083:1: RULE_STRING
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2127:1: ( RULE_STRING )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2128:1: RULE_STRING
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getImportAccess().getSTRINGTerminalRuleCall_1()); 
-            }
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Import__Group__1__Impl4195); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getImportAccess().getSTRINGTerminalRuleCall_1()); 
-            }
+             before(grammarAccess.getImportAccess().getSTRINGTerminalRuleCall_1()); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Import__Group__1__Impl4288); 
+             after(grammarAccess.getImportAccess().getSTRINGTerminalRuleCall_1()); 
 
             }
 
@@ -6010,29 +5766,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RuleSet__ContextAssignment_0"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2099:1: rule__RuleSet__ContextAssignment_0 : ( ruleContext ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2144:1: rule__RuleSet__ContextAssignment_0 : ( ruleContext ) ;
     public final void rule__RuleSet__ContextAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2103:1: ( ( ruleContext ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2104:1: ( ruleContext )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2148:1: ( ( ruleContext ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2149:1: ( ruleContext )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2104:1: ( ruleContext )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2105:1: ruleContext
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2149:1: ( ruleContext )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2150:1: ruleContext
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRuleSetAccess().getContextContextParserRuleCall_0_0()); 
-            }
-            pushFollow(FOLLOW_ruleContext_in_rule__RuleSet__ContextAssignment_04233);
+             before(grammarAccess.getRuleSetAccess().getContextContextParserRuleCall_0_0()); 
+            pushFollow(FOLLOW_ruleContext_in_rule__RuleSet__ContextAssignment_04326);
             ruleContext();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRuleSetAccess().getContextContextParserRuleCall_0_0()); 
-            }
+
+             after(grammarAccess.getRuleSetAccess().getContextContextParserRuleCall_0_0()); 
 
             }
 
@@ -6055,29 +5807,25 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__RuleSet__RulesAssignment_1"
-    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2114:1: rule__RuleSet__RulesAssignment_1 : ( ruleRule ) ;
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2159:1: rule__RuleSet__RulesAssignment_1 : ( ruleRule ) ;
     public final void rule__RuleSet__RulesAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2118:1: ( ( ruleRule ) )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2119:1: ( ruleRule )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2163:1: ( ( ruleRule ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2164:1: ( ruleRule )
             {
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2119:1: ( ruleRule )
-            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2120:1: ruleRule
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2164:1: ( ruleRule )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2165:1: ruleRule
             {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getRuleSetAccess().getRulesRuleParserRuleCall_1_0()); 
-            }
-            pushFollow(FOLLOW_ruleRule_in_rule__RuleSet__RulesAssignment_14264);
+             before(grammarAccess.getRuleSetAccess().getRulesRuleParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleRule_in_rule__RuleSet__RulesAssignment_14357);
             ruleRule();
 
             state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getRuleSetAccess().getRulesRuleParserRuleCall_1_0()); 
-            }
+
+             after(grammarAccess.getRuleSetAccess().getRulesRuleParserRuleCall_1_0()); 
 
             }
 
@@ -6098,343 +5846,242 @@ public class InternalCcsEclipseParser extends AbstractInternalContentAssistParse
     }
     // $ANTLR end "rule__RuleSet__RulesAssignment_1"
 
-    // $ANTLR start synpred19_InternalCcsEclipse
-    public final void synpred19_InternalCcsEclipse_fragment() throws RecognitionException {   
-        // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1236:2: ( rule__Term__Group_1__0 )
-        // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1236:2: rule__Term__Group_1__0
-        {
-        pushFollow(FOLLOW_rule__Term__Group_1__0_in_synpred19_InternalCcsEclipse2530);
-        rule__Term__Group_1__0();
 
-        state._fsp--;
-        if (state.failed) return ;
+    // $ANTLR start "rule__Context__SelectorAssignment_2"
+    // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2174:1: rule__Context__SelectorAssignment_2 : ( ruleSelector ) ;
+    public final void rule__Context__SelectorAssignment_2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2178:1: ( ( ruleSelector ) )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2179:1: ( ruleSelector )
+            {
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2179:1: ( ruleSelector )
+            // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:2180:1: ruleSelector
+            {
+             before(grammarAccess.getContextAccess().getSelectorSelectorParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleSelector_in_rule__Context__SelectorAssignment_24388);
+            ruleSelector();
+
+            state._fsp--;
+
+             after(grammarAccess.getContextAccess().getSelectorSelectorParserRuleCall_2_0()); 
+
+            }
+
+
+            }
 
         }
-    }
-    // $ANTLR end synpred19_InternalCcsEclipse
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
 
-    // $ANTLR start synpred23_InternalCcsEclipse
-    public final void synpred23_InternalCcsEclipse_fragment() throws RecognitionException {   
-        // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1956:3: ( ruleVals )
-        // ../net.immute.ccs.CcsEclipse.ui/src-gen/net/immute/ccs/ui/contentassist/antlr/internal/InternalCcsEclipse.g:1956:3: ruleVals
-        {
-        pushFollow(FOLLOW_ruleVals_in_synpred23_InternalCcsEclipse3947);
-        ruleVals();
-
-        state._fsp--;
-        if (state.failed) return ;
+            	restoreStackSize(stackSize);
 
         }
+        return ;
     }
-    // $ANTLR end synpred23_InternalCcsEclipse
+    // $ANTLR end "rule__Context__SelectorAssignment_2"
 
     // Delegated rules
 
-    public final boolean synpred19_InternalCcsEclipse() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred19_InternalCcsEclipse_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
-    public final boolean synpred23_InternalCcsEclipse() {
-        state.backtracking++;
-        int start = input.mark();
-        try {
-            synpred23_InternalCcsEclipse_fragment(); // can never throw exception
-        } catch (RecognitionException re) {
-            System.err.println("impossible: "+re);
-        }
-        boolean success = !state.failed;
-        input.rewind(start);
-        state.backtracking--;
-        state.failed=false;
-        return success;
-    }
 
-
-    protected DFA13 dfa13 = new DFA13(this);
-    static final String DFA13_eotS =
-        "\13\uffff";
-    static final String DFA13_eofS =
-        "\1\1\12\uffff";
-    static final String DFA13_minS =
-        "\1\6\5\uffff\1\0\4\uffff";
-    static final String DFA13_maxS =
-        "\1\25\5\uffff\1\0\4\uffff";
-    static final String DFA13_acceptS =
-        "\1\uffff\1\2\10\uffff\1\1";
-    static final String DFA13_specialS =
-        "\6\uffff\1\0\4\uffff}>";
-    static final String[] DFA13_transitionS = {
-            "\2\1\7\uffff\2\1\1\uffff\1\6\3\1",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\uffff",
-            "",
-            "",
-            "",
-            ""
-    };
-
-    static final short[] DFA13_eot = DFA.unpackEncodedString(DFA13_eotS);
-    static final short[] DFA13_eof = DFA.unpackEncodedString(DFA13_eofS);
-    static final char[] DFA13_min = DFA.unpackEncodedStringToUnsignedChars(DFA13_minS);
-    static final char[] DFA13_max = DFA.unpackEncodedStringToUnsignedChars(DFA13_maxS);
-    static final short[] DFA13_accept = DFA.unpackEncodedString(DFA13_acceptS);
-    static final short[] DFA13_special = DFA.unpackEncodedString(DFA13_specialS);
-    static final short[][] DFA13_transition;
-
-    static {
-        int numStates = DFA13_transitionS.length;
-        DFA13_transition = new short[numStates][];
-        for (int i=0; i<numStates; i++) {
-            DFA13_transition[i] = DFA.unpackEncodedString(DFA13_transitionS[i]);
-        }
-    }
-
-    class DFA13 extends DFA {
-
-        public DFA13(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 13;
-            this.eot = DFA13_eot;
-            this.eof = DFA13_eof;
-            this.min = DFA13_min;
-            this.max = DFA13_max;
-            this.accept = DFA13_accept;
-            this.special = DFA13_special;
-            this.transition = DFA13_transition;
-        }
-        public String getDescription() {
-            return "()* loopback of 1236:1: ( rule__Term__Group_1__0 )*";
-        }
-        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
-            TokenStream input = (TokenStream)_input;
-        	int _s = s;
-            switch ( s ) {
-                    case 0 : 
-                        int LA13_6 = input.LA(1);
-
-                         
-                        int index13_6 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( (synpred19_InternalCcsEclipse()) ) {s = 10;}
-
-                        else if ( (true) ) {s = 1;}
-
-                         
-                        input.seek(index13_6);
-                        if ( s>=0 ) return s;
-                        break;
-            }
-            if (state.backtracking>0) {state.failed=true; return -1;}
-            NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 13, _s, input);
-            error(nvae);
-            throw nvae;
-        }
-    }
  
 
-    public static final BitSet FOLLOW_ruleRuleSet_in_entryRuleRuleSet67 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRuleSet74 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RuleSet__Group__0_in_ruleRuleSet100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContext_in_entryRuleContext127 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContext134 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Context__Group__0_in_ruleContext160 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelector_in_entryRuleSelector187 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSelector194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Selector__Group__0_in_ruleSelector220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSum_in_entryRuleSum247 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSum254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Sum__Group__0_in_ruleSum280 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProduct_in_entryRuleProduct307 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProduct314 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerm_in_ruleProduct343 = new BitSet(new long[]{0x00000000000080C2L});
-    public static final BitSet FOLLOW_ruleTerm_in_ruleProduct356 = new BitSet(new long[]{0x00000000000080C2L});
-    public static final BitSet FOLLOW_ruleTerm_in_entryRuleTerm386 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTerm393 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Term__Group__0_in_ruleTerm419 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStep_in_entryRuleStep446 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStep453 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Step__Alternatives_in_ruleStep479 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRule_in_entryRuleRule506 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRule513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Alternatives_in_ruleRule539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNested_in_entryRuleNested566 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNested573 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Nested__Group__0_in_ruleNested599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperty_in_entryRuleProperty626 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProperty633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Property__Group__0_in_ruleProperty659 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue686 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleValue693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Value__Alternatives_in_ruleValue719 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstraint_in_entryRuleConstraint746 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConstraint753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Constraint__Group__0_in_ruleConstraint779 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleStep_in_entryRuleSingleStep806 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSingleStep813 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SingleStep__Group__0_in_ruleSingleStep839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_entryRuleIdent866 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIdent873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Ident__Alternatives_in_ruleIdent899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVals_in_entryRuleVals926 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVals933 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Vals__Group__0_in_ruleVals959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStepSuffix_in_entryRuleStepSuffix986 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStepSuffix993 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StepSuffix__Group__0_in_ruleStepSuffix1019 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_entryRuleImport1046 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleImport1053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__Group__0_in_ruleImport1079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleStep_in_rule__Step__Alternatives1115 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Step__Group_1__0_in_rule__Step__Alternatives1132 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_rule__Rule__Alternatives1165 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstraint_in_rule__Rule__Alternatives1182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperty_in_rule__Rule__Alternatives1199 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNested_in_rule__Rule__Alternatives1216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Nested__Group_1_0__0_in_rule__Nested__Alternatives_11248 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Nested__Group_1_1__0_in_rule__Nested__Alternatives_11266 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_rule__Nested__Alternatives_1_0_11299 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstraint_in_rule__Nested__Alternatives_1_0_11316 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperty_in_rule__Nested__Alternatives_1_0_11333 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_HEXINT_in_rule__Value__Alternatives1365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_rule__Value__Alternatives1382 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Value__Alternatives1399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Value__Alternatives1417 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Value__Alternatives1437 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Ident__Alternatives1471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Ident__Alternatives1488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RuleSet__Group__0__Impl_in_rule__RuleSet__Group__01518 = new BitSet(new long[]{0x00000000090080C0L});
-    public static final BitSet FOLLOW_rule__RuleSet__Group__1_in_rule__RuleSet__Group__01521 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RuleSet__ContextAssignment_0_in_rule__RuleSet__Group__0__Impl1548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RuleSet__Group__1__Impl_in_rule__RuleSet__Group__11579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RuleSet__RulesAssignment_1_in_rule__RuleSet__Group__1__Impl1606 = new BitSet(new long[]{0x00000000090080C2L});
-    public static final BitSet FOLLOW_rule__Context__Group__0__Impl_in_rule__Context__Group__01641 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__Context__Group__1_in_rule__Context__Group__01644 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Context__Group__0__Impl1672 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Context__Group__1__Impl_in_rule__Context__Group__11703 = new BitSet(new long[]{0x00000000090080C0L});
-    public static final BitSet FOLLOW_rule__Context__Group__2_in_rule__Context__Group__11706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Context__Group__1__Impl1734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Context__Group__2__Impl_in_rule__Context__Group__21765 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__Context__Group__3_in_rule__Context__Group__21768 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelector_in_rule__Context__Group__2__Impl1795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Context__Group__3__Impl_in_rule__Context__Group__31824 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Context__Group__4_in_rule__Context__Group__31827 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Context__Group__3__Impl1855 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Context__Group__4__Impl_in_rule__Context__Group__41886 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Context__Group__4__Impl1915 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Selector__Group__0__Impl_in_rule__Selector__Group__01958 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__Selector__Group__1_in_rule__Selector__Group__01961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSum_in_rule__Selector__Group__0__Impl1988 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Selector__Group__1__Impl_in_rule__Selector__Group__12017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Selector__Group_1__0_in_rule__Selector__Group__1__Impl2044 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_rule__Selector__Group_1__0__Impl_in_rule__Selector__Group_1__02079 = new BitSet(new long[]{0x00000000090080C0L});
-    public static final BitSet FOLLOW_rule__Selector__Group_1__1_in_rule__Selector__Group_1__02082 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Selector__Group_1__0__Impl2110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Selector__Group_1__1__Impl_in_rule__Selector__Group_1__12141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSum_in_rule__Selector__Group_1__1__Impl2168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Sum__Group__0__Impl_in_rule__Sum__Group__02201 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_rule__Sum__Group__1_in_rule__Sum__Group__02204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProduct_in_rule__Sum__Group__0__Impl2231 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Sum__Group__1__Impl_in_rule__Sum__Group__12260 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Sum__Group_1__0_in_rule__Sum__Group__1__Impl2287 = new BitSet(new long[]{0x0000000000080002L});
-    public static final BitSet FOLLOW_rule__Sum__Group_1__0__Impl_in_rule__Sum__Group_1__02322 = new BitSet(new long[]{0x00000000090080C0L});
-    public static final BitSet FOLLOW_rule__Sum__Group_1__1_in_rule__Sum__Group_1__02325 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__Sum__Group_1__0__Impl2353 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Sum__Group_1__1__Impl_in_rule__Sum__Group_1__12384 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProduct_in_rule__Sum__Group_1__1__Impl2411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Term__Group__0__Impl_in_rule__Term__Group__02444 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__Term__Group__1_in_rule__Term__Group__02447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStep_in_rule__Term__Group__0__Impl2474 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Term__Group__1__Impl_in_rule__Term__Group__12503 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Term__Group_1__0_in_rule__Term__Group__1__Impl2530 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_rule__Term__Group_1__0__Impl_in_rule__Term__Group_1__02565 = new BitSet(new long[]{0x00000000000080C0L});
-    public static final BitSet FOLLOW_rule__Term__Group_1__1_in_rule__Term__Group_1__02568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Term__Group_1__0__Impl2597 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Term__Group_1__1__Impl_in_rule__Term__Group_1__12629 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStep_in_rule__Term__Group_1__1__Impl2656 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Step__Group_1__0__Impl_in_rule__Step__Group_1__02689 = new BitSet(new long[]{0x00000000090080C0L});
-    public static final BitSet FOLLOW_rule__Step__Group_1__1_in_rule__Step__Group_1__02692 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Step__Group_1__0__Impl2720 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Step__Group_1__1__Impl_in_rule__Step__Group_1__12751 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__Step__Group_1__2_in_rule__Step__Group_1__12754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSum_in_rule__Step__Group_1__1__Impl2781 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Step__Group_1__2__Impl_in_rule__Step__Group_1__22810 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Step__Group_1__2__Impl2838 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Nested__Group__0__Impl_in_rule__Nested__Group__02875 = new BitSet(new long[]{0x0000000000300000L});
-    public static final BitSet FOLLOW_rule__Nested__Group__1_in_rule__Nested__Group__02878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelector_in_rule__Nested__Group__0__Impl2905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Nested__Group__1__Impl_in_rule__Nested__Group__12934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Nested__Alternatives_1_in_rule__Nested__Group__1__Impl2961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Nested__Group_1_0__0__Impl_in_rule__Nested__Group_1_0__02995 = new BitSet(new long[]{0x0000000009000080L});
-    public static final BitSet FOLLOW_rule__Nested__Group_1_0__1_in_rule__Nested__Group_1_0__02998 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__Nested__Group_1_0__0__Impl3026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Nested__Group_1_0__1__Impl_in_rule__Nested__Group_1_0__13057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Nested__Alternatives_1_0_1_in_rule__Nested__Group_1_0__1__Impl3084 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Nested__Group_1_1__0__Impl_in_rule__Nested__Group_1_1__03118 = new BitSet(new long[]{0x00000000094080C0L});
-    public static final BitSet FOLLOW_rule__Nested__Group_1_1__1_in_rule__Nested__Group_1_1__03121 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Nested__Group_1_1__0__Impl3149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Nested__Group_1_1__1__Impl_in_rule__Nested__Group_1_1__13180 = new BitSet(new long[]{0x00000000094080C0L});
-    public static final BitSet FOLLOW_rule__Nested__Group_1_1__2_in_rule__Nested__Group_1_1__13183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRule_in_rule__Nested__Group_1_1__1__Impl3211 = new BitSet(new long[]{0x00000000090080C2L});
-    public static final BitSet FOLLOW_rule__Nested__Group_1_1__2__Impl_in_rule__Nested__Group_1_1__23242 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Nested__Group_1_1__2__Impl3270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Property__Group__0__Impl_in_rule__Property__Group__03307 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__Property__Group__1_in_rule__Property__Group__03310 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Property__Group__0__Impl3337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Property__Group__1__Impl_in_rule__Property__Group__13366 = new BitSet(new long[]{0x0000000000003070L});
-    public static final BitSet FOLLOW_rule__Property__Group__2_in_rule__Property__Group__13369 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Property__Group__1__Impl3397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Property__Group__2__Impl_in_rule__Property__Group__23428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__Property__Group__2__Impl3455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Constraint__Group__0__Impl_in_rule__Constraint__Group__03490 = new BitSet(new long[]{0x00000000000000C0L});
-    public static final BitSet FOLLOW_rule__Constraint__Group__1_in_rule__Constraint__Group__03493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Constraint__Group__0__Impl3521 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Constraint__Group__1__Impl_in_rule__Constraint__Group__13552 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleStep_in_rule__Constraint__Group__1__Impl3579 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SingleStep__Group__0__Impl_in_rule__SingleStep__Group__03612 = new BitSet(new long[]{0x0000000006000000L});
-    public static final BitSet FOLLOW_rule__SingleStep__Group__1_in_rule__SingleStep__Group__03615 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rule__SingleStep__Group__0__Impl3642 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SingleStep__Group__1__Impl_in_rule__SingleStep__Group__13671 = new BitSet(new long[]{0x0000000006000000L});
-    public static final BitSet FOLLOW_rule__SingleStep__Group__2_in_rule__SingleStep__Group__13674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVals_in_rule__SingleStep__Group__1__Impl3702 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SingleStep__Group__2__Impl_in_rule__SingleStep__Group__23733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStepSuffix_in_rule__SingleStep__Group__2__Impl3761 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Vals__Group__0__Impl_in_rule__Vals__Group__03798 = new BitSet(new long[]{0x00000000000000C0L});
-    public static final BitSet FOLLOW_rule__Vals__Group__1_in_rule__Vals__Group__03801 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Vals__Group__0__Impl3829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Vals__Group__1__Impl_in_rule__Vals__Group__13860 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_rule__Vals__Group__2_in_rule__Vals__Group__13863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rule__Vals__Group__1__Impl3890 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Vals__Group__2__Impl_in_rule__Vals__Group__23919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVals_in_rule__Vals__Group__2__Impl3947 = new BitSet(new long[]{0x0000000002000002L});
-    public static final BitSet FOLLOW_rule__StepSuffix__Group__0__Impl_in_rule__StepSuffix__Group__03984 = new BitSet(new long[]{0x00000000000000C0L});
-    public static final BitSet FOLLOW_rule__StepSuffix__Group__1_in_rule__StepSuffix__Group__03987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__StepSuffix__Group__0__Impl4015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__StepSuffix__Group__1__Impl_in_rule__StepSuffix__Group__14046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleStep_in_rule__StepSuffix__Group__1__Impl4073 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__04106 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rule__Import__Group__1_in_rule__Import__Group__04109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Import__Group__0__Impl4137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__14168 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Import__Group__1__Impl4195 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContext_in_rule__RuleSet__ContextAssignment_04233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRule_in_rule__RuleSet__RulesAssignment_14264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Term__Group_1__0_in_synpred19_InternalCcsEclipse2530 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVals_in_synpred23_InternalCcsEclipse3947 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRuleSet_in_entryRuleRuleSet61 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRuleSet68 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RuleSet__Group__0_in_ruleRuleSet94 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContext_in_entryRuleContext121 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleContext128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Context__Group__0_in_ruleContext154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelector_in_entryRuleSelector181 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSelector188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Selector__Group__0_in_ruleSelector214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSum_in_entryRuleSum241 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSum248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Sum__Group__0_in_ruleSum274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProduct_in_entryRuleProduct301 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleProduct308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerm_in_ruleProduct337 = new BitSet(new long[]{0x00000000000100C2L});
+    public static final BitSet FOLLOW_ruleTerm_in_ruleProduct350 = new BitSet(new long[]{0x00000000000100C2L});
+    public static final BitSet FOLLOW_ruleTerm_in_entryRuleTerm380 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTerm387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Term__Group__0_in_ruleTerm413 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStep_in_entryRuleStep440 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStep447 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Step__Alternatives_in_ruleStep473 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRule_in_entryRuleRule500 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRule507 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__0_in_ruleRule533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNested_in_entryRuleNested560 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNested567 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Nested__Group__0_in_ruleNested593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_entryRuleProperty620 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleProperty627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Property__Group__0_in_ruleProperty653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulebool_in_entryRulebool680 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulebool687 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bool__Alternatives_in_rulebool713 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue740 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleValue747 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Value__Alternatives_in_ruleValue773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstraint_in_entryRuleConstraint800 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleConstraint807 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Constraint__Group__0_in_ruleConstraint833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleStep_in_entryRuleSingleStep860 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSingleStep867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SingleStep__Group__0_in_ruleSingleStep893 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_entryRuleIdent920 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIdent927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Ident__Alternatives_in_ruleIdent953 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVals_in_entryRuleVals980 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVals987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Vals__Group__0_in_ruleVals1013 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStepSuffix_in_entryRuleStepSuffix1040 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleStepSuffix1047 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StepSuffix__Group__0_in_ruleStepSuffix1073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_entryRuleImport1100 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleImport1107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__0_in_ruleImport1133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleStep_in_rule__Step__Alternatives1169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Step__Group_1__0_in_rule__Step__Alternatives1186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_rule__Rule__Alternatives_01219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstraint_in_rule__Rule__Alternatives_01236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_rule__Rule__Alternatives_01253 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNested_in_rule__Rule__Alternatives_01270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Nested__Group_1_0__0_in_rule__Nested__Alternatives_11302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Nested__Group_1_1__0_in_rule__Nested__Alternatives_11320 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_rule__Nested__Alternatives_1_0_11353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleConstraint_in_rule__Nested__Alternatives_1_0_11370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProperty_in_rule__Nested__Alternatives_1_0_11387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Bool__Alternatives1420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Bool__Alternatives1440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_HEXINT_in_rule__Value__Alternatives1474 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NUMBER_in_rule__Value__Alternatives1491 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Value__Alternatives1508 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulebool_in_rule__Value__Alternatives1525 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Ident__Alternatives1557 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Ident__Alternatives1574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RuleSet__Group__0__Impl_in_rule__RuleSet__Group__01604 = new BitSet(new long[]{0x00000000120100C0L});
+    public static final BitSet FOLLOW_rule__RuleSet__Group__1_in_rule__RuleSet__Group__01607 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RuleSet__ContextAssignment_0_in_rule__RuleSet__Group__0__Impl1634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RuleSet__Group__1__Impl_in_rule__RuleSet__Group__11665 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RuleSet__RulesAssignment_1_in_rule__RuleSet__Group__1__Impl1692 = new BitSet(new long[]{0x00000000120100C2L});
+    public static final BitSet FOLLOW_rule__Context__Group__0__Impl_in_rule__Context__Group__01727 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Context__Group__1_in_rule__Context__Group__01730 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Context__Group__0__Impl1758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Context__Group__1__Impl_in_rule__Context__Group__11789 = new BitSet(new long[]{0x00000000120100C0L});
+    public static final BitSet FOLLOW_rule__Context__Group__2_in_rule__Context__Group__11792 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Context__Group__1__Impl1820 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Context__Group__2__Impl_in_rule__Context__Group__21851 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Context__Group__3_in_rule__Context__Group__21854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Context__SelectorAssignment_2_in_rule__Context__Group__2__Impl1881 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Context__Group__3__Impl_in_rule__Context__Group__31911 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__Context__Group__4_in_rule__Context__Group__31914 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Context__Group__3__Impl1942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Context__Group__4__Impl_in_rule__Context__Group__41973 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__Context__Group__4__Impl2002 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Selector__Group__0__Impl_in_rule__Selector__Group__02045 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Selector__Group__1_in_rule__Selector__Group__02048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSum_in_rule__Selector__Group__0__Impl2075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Selector__Group__1__Impl_in_rule__Selector__Group__12104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__Selector__Group__1__Impl2133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Sum__Group__0__Impl_in_rule__Sum__Group__02170 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__Sum__Group__1_in_rule__Sum__Group__02173 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProduct_in_rule__Sum__Group__0__Impl2200 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Sum__Group__1__Impl_in_rule__Sum__Group__12229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Sum__Group_1__0_in_rule__Sum__Group__1__Impl2256 = new BitSet(new long[]{0x0000000000100002L});
+    public static final BitSet FOLLOW_rule__Sum__Group_1__0__Impl_in_rule__Sum__Group_1__02291 = new BitSet(new long[]{0x00000000120100C0L});
+    public static final BitSet FOLLOW_rule__Sum__Group_1__1_in_rule__Sum__Group_1__02294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__Sum__Group_1__0__Impl2322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Sum__Group_1__1__Impl_in_rule__Sum__Group_1__12353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProduct_in_rule__Sum__Group_1__1__Impl2380 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Term__Group__0__Impl_in_rule__Term__Group__02413 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_rule__Term__Group__1_in_rule__Term__Group__02416 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStep_in_rule__Term__Group__0__Impl2443 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Term__Group__1__Impl_in_rule__Term__Group__12472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Term__Group_1__0_in_rule__Term__Group__1__Impl2499 = new BitSet(new long[]{0x0000000000080002L});
+    public static final BitSet FOLLOW_rule__Term__Group_1__0__Impl_in_rule__Term__Group_1__02534 = new BitSet(new long[]{0x00000000000100C0L});
+    public static final BitSet FOLLOW_rule__Term__Group_1__1_in_rule__Term__Group_1__02537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__Term__Group_1__0__Impl2565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Term__Group_1__1__Impl_in_rule__Term__Group_1__12596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStep_in_rule__Term__Group_1__1__Impl2623 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Step__Group_1__0__Impl_in_rule__Step__Group_1__02656 = new BitSet(new long[]{0x00000000120100C0L});
+    public static final BitSet FOLLOW_rule__Step__Group_1__1_in_rule__Step__Group_1__02659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Step__Group_1__0__Impl2687 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Step__Group_1__1__Impl_in_rule__Step__Group_1__12718 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Step__Group_1__2_in_rule__Step__Group_1__12721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSum_in_rule__Step__Group_1__1__Impl2748 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Step__Group_1__2__Impl_in_rule__Step__Group_1__22777 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Step__Group_1__2__Impl2805 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__02842 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__02845 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Alternatives_0_in_rule__Rule__Group__0__Impl2872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__12902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__Rule__Group__1__Impl2931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Nested__Group__0__Impl_in_rule__Nested__Group__02968 = new BitSet(new long[]{0x0000000000600000L});
+    public static final BitSet FOLLOW_rule__Nested__Group__1_in_rule__Nested__Group__02971 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelector_in_rule__Nested__Group__0__Impl2998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Nested__Group__1__Impl_in_rule__Nested__Group__13027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Nested__Alternatives_1_in_rule__Nested__Group__1__Impl3054 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Nested__Group_1_0__0__Impl_in_rule__Nested__Group_1_0__03088 = new BitSet(new long[]{0x0000000012000080L});
+    public static final BitSet FOLLOW_rule__Nested__Group_1_0__1_in_rule__Nested__Group_1_0__03091 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Nested__Group_1_0__0__Impl3119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Nested__Group_1_0__1__Impl_in_rule__Nested__Group_1_0__13150 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Nested__Alternatives_1_0_1_in_rule__Nested__Group_1_0__1__Impl3177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Nested__Group_1_1__0__Impl_in_rule__Nested__Group_1_1__03211 = new BitSet(new long[]{0x00000000128100C0L});
+    public static final BitSet FOLLOW_rule__Nested__Group_1_1__1_in_rule__Nested__Group_1_1__03214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Nested__Group_1_1__0__Impl3242 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Nested__Group_1_1__1__Impl_in_rule__Nested__Group_1_1__13273 = new BitSet(new long[]{0x00000000128100C0L});
+    public static final BitSet FOLLOW_rule__Nested__Group_1_1__2_in_rule__Nested__Group_1_1__13276 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRule_in_rule__Nested__Group_1_1__1__Impl3304 = new BitSet(new long[]{0x00000000120100C2L});
+    public static final BitSet FOLLOW_rule__Nested__Group_1_1__2__Impl_in_rule__Nested__Group_1_1__23335 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Nested__Group_1_1__2__Impl3363 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Property__Group__0__Impl_in_rule__Property__Group__03400 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Property__Group__1_in_rule__Property__Group__03403 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Property__Group__0__Impl3430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Property__Group__1__Impl_in_rule__Property__Group__13459 = new BitSet(new long[]{0x0000000000006070L});
+    public static final BitSet FOLLOW_rule__Property__Group__2_in_rule__Property__Group__13462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Property__Group__1__Impl3490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Property__Group__2__Impl_in_rule__Property__Group__23521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__Property__Group__2__Impl3548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Constraint__Group__0__Impl_in_rule__Constraint__Group__03583 = new BitSet(new long[]{0x00000000000000C0L});
+    public static final BitSet FOLLOW_rule__Constraint__Group__1_in_rule__Constraint__Group__03586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Constraint__Group__0__Impl3614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Constraint__Group__1__Impl_in_rule__Constraint__Group__13645 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleStep_in_rule__Constraint__Group__1__Impl3672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SingleStep__Group__0__Impl_in_rule__SingleStep__Group__03705 = new BitSet(new long[]{0x000000000C000000L});
+    public static final BitSet FOLLOW_rule__SingleStep__Group__1_in_rule__SingleStep__Group__03708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_rule__SingleStep__Group__0__Impl3735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SingleStep__Group__1__Impl_in_rule__SingleStep__Group__13764 = new BitSet(new long[]{0x000000000C000000L});
+    public static final BitSet FOLLOW_rule__SingleStep__Group__2_in_rule__SingleStep__Group__13767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVals_in_rule__SingleStep__Group__1__Impl3795 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SingleStep__Group__2__Impl_in_rule__SingleStep__Group__23826 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleStepSuffix_in_rule__SingleStep__Group__2__Impl3854 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Vals__Group__0__Impl_in_rule__Vals__Group__03891 = new BitSet(new long[]{0x00000000000000C0L});
+    public static final BitSet FOLLOW_rule__Vals__Group__1_in_rule__Vals__Group__03894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Vals__Group__0__Impl3922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Vals__Group__1__Impl_in_rule__Vals__Group__13953 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_rule__Vals__Group__2_in_rule__Vals__Group__13956 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_rule__Vals__Group__1__Impl3983 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Vals__Group__2__Impl_in_rule__Vals__Group__24012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVals_in_rule__Vals__Group__2__Impl4040 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_rule__StepSuffix__Group__0__Impl_in_rule__StepSuffix__Group__04077 = new BitSet(new long[]{0x00000000000000C0L});
+    public static final BitSet FOLLOW_rule__StepSuffix__Group__1_in_rule__StepSuffix__Group__04080 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__StepSuffix__Group__0__Impl4108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__StepSuffix__Group__1__Impl_in_rule__StepSuffix__Group__14139 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSingleStep_in_rule__StepSuffix__Group__1__Impl4166 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__04199 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rule__Import__Group__1_in_rule__Import__Group__04202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__Import__Group__0__Impl4230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__14261 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Import__Group__1__Impl4288 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleContext_in_rule__RuleSet__ContextAssignment_04326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRule_in_rule__RuleSet__RulesAssignment_14357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSelector_in_rule__Context__SelectorAssignment_24388 = new BitSet(new long[]{0x0000000000000002L});
 
 }

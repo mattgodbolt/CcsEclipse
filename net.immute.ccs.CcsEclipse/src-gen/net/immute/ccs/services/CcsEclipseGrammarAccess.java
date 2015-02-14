@@ -51,15 +51,16 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cContextKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final RuleCall cSelectorParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cSelectorAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSelectorSelectorParserRuleCall_2_0 = (RuleCall)cSelectorAssignment_2.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Context:
-		//	"@context" "(" Selector ")" ";"?;
+		//	"@context" "(" selector=Selector ")" ";"?;
 		public ParserRule getRule() { return rule; }
 
-		//"@context" "(" Selector ")" ";"?
+		//"@context" "(" selector=Selector ")" ";"?
 		public Group getGroup() { return cGroup; }
 
 		//"@context"
@@ -68,8 +69,11 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
+		//selector=Selector
+		public Assignment getSelectorAssignment_2() { return cSelectorAssignment_2; }
+
 		//Selector
-		public RuleCall getSelectorParserRuleCall_2() { return cSelectorParserRuleCall_2; }
+		public RuleCall getSelectorSelectorParserRuleCall_2_0() { return cSelectorSelectorParserRuleCall_2_0; }
 
 		//")"
 		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
@@ -82,29 +86,20 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Selector");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cSumParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cGreaterThanSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cSumParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Keyword cGreaterThanSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
 		//Selector:
-		//	Sum (">" Sum)* // TODO: work out which has the higher precedence
-		//;
+		//	Sum ">"?;
 		public ParserRule getRule() { return rule; }
 
-		//Sum (">" Sum)* // TODO: work out which has the higher precedence
+		//Sum ">"?
 		public Group getGroup() { return cGroup; }
 
 		//Sum
 		public RuleCall getSumParserRuleCall_0() { return cSumParserRuleCall_0; }
 
-		//(">" Sum)*
-		public Group getGroup_1() { return cGroup_1; }
-
-		//">"
-		public Keyword getGreaterThanSignKeyword_1_0() { return cGreaterThanSignKeyword_1_0; }
-
-		//Sum
-		public RuleCall getSumParserRuleCall_1_1() { return cSumParserRuleCall_1_1; }
+		//">"?
+		public Keyword getGreaterThanSignKeyword_1() { return cGreaterThanSignKeyword_1; }
 	}
 
 	public class SumElements extends AbstractParserRuleElementFinder {
@@ -165,10 +160,10 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		//Step
 		public RuleCall getStepParserRuleCall_0() { return cStepParserRuleCall_0; }
 
-		//(=> ">" Step)*
+		//(">" Step)*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//=> ">"
+		//">"
 		public Keyword getGreaterThanSignKeyword_1_0() { return cGreaterThanSignKeyword_1_0; }
 
 		//Step
@@ -209,30 +204,38 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class RuleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Rule");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cImportParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cConstraintParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cPropertyParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cNestedParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final RuleCall cImportParserRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
+		private final RuleCall cConstraintParserRuleCall_0_1 = (RuleCall)cAlternatives_0.eContents().get(1);
+		private final RuleCall cPropertyParserRuleCall_0_2 = (RuleCall)cAlternatives_0.eContents().get(2);
+		private final RuleCall cNestedParserRuleCall_0_3 = (RuleCall)cAlternatives_0.eContents().get(3);
+		private final Keyword cSemicolonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
 		//Rule:
-		//	Import | Constraint | Property | Nested;
+		//	(Import | Constraint | Property | Nested) ";"?;
 		public ParserRule getRule() { return rule; }
 
+		//(Import | Constraint | Property | Nested) ";"?
+		public Group getGroup() { return cGroup; }
+
 		//Import | Constraint | Property | Nested
-		public Alternatives getAlternatives() { return cAlternatives; }
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//Import
-		public RuleCall getImportParserRuleCall_0() { return cImportParserRuleCall_0; }
+		public RuleCall getImportParserRuleCall_0_0() { return cImportParserRuleCall_0_0; }
 
 		//Constraint
-		public RuleCall getConstraintParserRuleCall_1() { return cConstraintParserRuleCall_1; }
+		public RuleCall getConstraintParserRuleCall_0_1() { return cConstraintParserRuleCall_0_1; }
 
 		//Property
-		public RuleCall getPropertyParserRuleCall_2() { return cPropertyParserRuleCall_2; }
+		public RuleCall getPropertyParserRuleCall_0_2() { return cPropertyParserRuleCall_0_2; }
 
 		//Nested
-		public RuleCall getNestedParserRuleCall_3() { return cNestedParserRuleCall_3; }
+		public RuleCall getNestedParserRuleCall_0_3() { return cNestedParserRuleCall_0_3; }
+
+		//";"?
+		public Keyword getSemicolonKeyword_1() { return cSemicolonKeyword_1; }
 	}
 
 	public class NestedElements extends AbstractParserRuleElementFinder {
@@ -319,36 +322,52 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getValueParserRuleCall_2() { return cValueParserRuleCall_2; }
 	}
 
+	public class BoolElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "bool");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cTrueKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cFalseKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		
+		//bool:
+		//	"true" | "false";
+		public ParserRule getRule() { return rule; }
+
+		//"true" | "false"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//"true"
+		public Keyword getTrueKeyword_0() { return cTrueKeyword_0; }
+
+		//"false"
+		public Keyword getFalseKeyword_1() { return cFalseKeyword_1; }
+	}
+
 	public class ValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Value");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cHEXINTTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cNUMBERTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cSTRINGTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final Keyword cTrueKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
-		private final Keyword cFalseKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
+		private final RuleCall cBoolParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//Value:
-		//	HEXINT | INT | STRING | "true" | "false";
+		//	HEXINT | NUMBER | STRING | bool;
 		public ParserRule getRule() { return rule; }
 
-		//HEXINT | INT | STRING | "true" | "false"
+		//HEXINT | NUMBER | STRING | bool
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//HEXINT
 		public RuleCall getHEXINTTerminalRuleCall_0() { return cHEXINTTerminalRuleCall_0; }
 
-		//INT
-		public RuleCall getINTTerminalRuleCall_1() { return cINTTerminalRuleCall_1; }
+		//NUMBER
+		public RuleCall getNUMBERTerminalRuleCall_1() { return cNUMBERTerminalRuleCall_1; }
 
 		//STRING
 		public RuleCall getSTRINGTerminalRuleCall_2() { return cSTRINGTerminalRuleCall_2; }
 
-		//"true"
-		public Keyword getTrueKeyword_3() { return cTrueKeyword_3; }
-
-		//"false"
-		public Keyword getFalseKeyword_4() { return cFalseKeyword_4; }
+		//bool
+		public RuleCall getBoolParserRuleCall_3() { return cBoolParserRuleCall_3; }
 	}
 
 	public class ConstraintElements extends AbstractParserRuleElementFinder {
@@ -491,6 +510,8 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 	private final NestedElements pNested;
 	private final PropertyElements pProperty;
 	private final TerminalRule tHEXINT;
+	private final TerminalRule tNUMBER;
+	private final BoolElements pBool;
 	private final ValueElements pValue;
 	private final ConstraintElements pConstraint;
 	private final SingleStepElements pSingleStep;
@@ -519,6 +540,8 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		this.pNested = new NestedElements();
 		this.pProperty = new PropertyElements();
 		this.tHEXINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "HEXINT");
+		this.tNUMBER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "NUMBER");
+		this.pBool = new BoolElements();
 		this.pValue = new ValueElements();
 		this.pConstraint = new ConstraintElements();
 		this.pSingleStep = new SingleStepElements();
@@ -566,7 +589,7 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Context:
-	//	"@context" "(" Selector ")" ";"?;
+	//	"@context" "(" selector=Selector ")" ";"?;
 	public ContextElements getContextAccess() {
 		return pContext;
 	}
@@ -576,8 +599,7 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Selector:
-	//	Sum (">" Sum)* // TODO: work out which has the higher precedence
-	//;
+	//	Sum ">"?;
 	public SelectorElements getSelectorAccess() {
 		return pSelector;
 	}
@@ -627,7 +649,7 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Rule:
-	//	Import | Constraint | Property | Nested;
+	//	(Import | Constraint | Property | Nested) ";"?;
 	public RuleElements getRuleAccess() {
 		return pRule;
 	}
@@ -656,14 +678,32 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		return getPropertyAccess().getRule();
 	}
 
-	//terminal HEXINT returns ecore::EInt:
+	//terminal HEXINT:
 	//	"0x" ("0".."9" | "a".."f" | "A".."F")+;
 	public TerminalRule getHEXINTRule() {
 		return tHEXINT;
 	} 
 
+	//// TODO interpolants
+	//// TODO a better float here, and maybe discriminate ints vs floats
+	//terminal NUMBER:
+	//	"-"? ("0".."9" | ".")+ (("e" | "E") "-"? "0".."9"+)?;
+	public TerminalRule getNUMBERRule() {
+		return tNUMBER;
+	} 
+
+	//bool:
+	//	"true" | "false";
+	public BoolElements getBoolAccess() {
+		return pBool;
+	}
+	
+	public ParserRule getBoolRule() {
+		return getBoolAccess().getRule();
+	}
+
 	//Value:
-	//	HEXINT | INT | STRING | "true" | "false";
+	//	HEXINT | NUMBER | STRING | bool;
 	public ValueElements getValueAccess() {
 		return pValue;
 	}

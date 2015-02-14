@@ -4,11 +4,13 @@ package net.immute.ccs.ccsEclipse.impl;
 
 import net.immute.ccs.ccsEclipse.CcsEclipseFactory;
 import net.immute.ccs.ccsEclipse.CcsEclipsePackage;
+import net.immute.ccs.ccsEclipse.Context;
 import net.immute.ccs.ccsEclipse.RuleSet;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
@@ -26,6 +28,13 @@ public class CcsEclipsePackageImpl extends EPackageImpl implements CcsEclipsePac
    * @generated
    */
   private EClass ruleSetEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass contextEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -105,9 +114,9 @@ public class CcsEclipsePackageImpl extends EPackageImpl implements CcsEclipsePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRuleSet_Context()
+  public EReference getRuleSet_Context()
   {
-    return (EAttribute)ruleSetEClass.getEStructuralFeatures().get(0);
+    return (EReference)ruleSetEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -118,6 +127,26 @@ public class CcsEclipsePackageImpl extends EPackageImpl implements CcsEclipsePac
   public EAttribute getRuleSet_Rules()
   {
     return (EAttribute)ruleSetEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getContext()
+  {
+    return contextEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getContext_Selector()
+  {
+    return (EAttribute)contextEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -151,8 +180,11 @@ public class CcsEclipsePackageImpl extends EPackageImpl implements CcsEclipsePac
 
     // Create classes and their features
     ruleSetEClass = createEClass(RULE_SET);
-    createEAttribute(ruleSetEClass, RULE_SET__CONTEXT);
+    createEReference(ruleSetEClass, RULE_SET__CONTEXT);
     createEAttribute(ruleSetEClass, RULE_SET__RULES);
+
+    contextEClass = createEClass(CONTEXT);
+    createEAttribute(contextEClass, CONTEXT__SELECTOR);
   }
 
   /**
@@ -187,8 +219,11 @@ public class CcsEclipsePackageImpl extends EPackageImpl implements CcsEclipsePac
 
     // Initialize classes and features; add operations and parameters
     initEClass(ruleSetEClass, RuleSet.class, "RuleSet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getRuleSet_Context(), ecorePackage.getEString(), "context", null, 0, 1, RuleSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRuleSet_Context(), this.getContext(), null, "context", null, 0, 1, RuleSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRuleSet_Rules(), ecorePackage.getEString(), "rules", null, 0, -1, RuleSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(contextEClass, Context.class, "Context", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getContext_Selector(), ecorePackage.getEString(), "selector", null, 0, 1, Context.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

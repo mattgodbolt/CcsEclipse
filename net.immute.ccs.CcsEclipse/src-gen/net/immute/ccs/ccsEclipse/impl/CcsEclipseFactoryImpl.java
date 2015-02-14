@@ -65,6 +65,7 @@ public class CcsEclipseFactoryImpl extends EFactoryImpl implements CcsEclipseFac
     switch (eClass.getClassifierID())
     {
       case CcsEclipsePackage.RULE_SET: return createRuleSet();
+      case CcsEclipsePackage.CONTEXT: return createContext();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -79,6 +80,17 @@ public class CcsEclipseFactoryImpl extends EFactoryImpl implements CcsEclipseFac
   {
     RuleSetImpl ruleSet = new RuleSetImpl();
     return ruleSet;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Context createContext()
+  {
+    ContextImpl context = new ContextImpl();
+    return context;
   }
 
   /**

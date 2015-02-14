@@ -2,33 +2,31 @@ grammar net.immute.ccs.CcsEclipse with org.eclipse.xtext.common.Terminals
 
 generate ccsEclipse "http://www.immute.net/ccs/CcsEclipse"
 
-import "http://www.eclipse.org/emf/2002/Ecore" as ecore
-
 RuleSet:
 	(context = Context?)
 	(rules += Rule)*
 	;
-	
+
 Context:
-	'@context' '(' Selector ')' ';'?
+	'@context' '(' selector=Selector ')' ';'?
 ;
 
 Selector:
-	Sum ('>' Sum)* // TODO: work out which has the higher precedence between this and the Term
+	Sum '>'?
 ;
 
 Sum: Product (',' Product)*;
 
 Product: Term+;
 
-Term: Step (=> '>' Step)*;
+Term: Step ('>' Step)*;
 
 Step:
 	SingleStep | '(' Sum ')'
 ;
 
 Rule:
-	Import | Constraint | Property | Nested
+	(Import | Constraint | Property | Nested) ';'?
 ;
 
 Nested:
@@ -41,14 +39,19 @@ Property:
 	ID '=' Value
 ;
 
-terminal HEXINT returns ecore::EInt: '0x'('0'..'9'|'a'..'f'|'A'..'F')+;
+
+terminal HEXINT : '0x' ('0'..'9'|'a'..'f'|'A'..'F')+;
+// TODO interpolants
+// TODO a better float here, and maybe discriminate ints vs floats
+terminal NUMBER : '-'? ('0'..'9'|'.')+ (('e'|'E') '-'? ('0'..'9')+)?;
+
+bool : 'true' | 'false';
 
 Value:
 	HEXINT
-	| INT
+	| NUMBER
 	| STRING
-	| 'true'
-	| 'false'
+	| bool
 ;
 
 Constraint:
@@ -66,3 +69,4 @@ Vals: '.' Ident Vals*;
 StepSuffix: '/' SingleStep;
 
 Import: '@import' STRING;
+

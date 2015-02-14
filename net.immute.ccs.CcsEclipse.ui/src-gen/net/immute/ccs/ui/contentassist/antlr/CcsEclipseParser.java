@@ -38,20 +38,21 @@ public class CcsEclipseParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getStepAccess().getAlternatives(), "rule__Step__Alternatives");
-					put(grammarAccess.getRuleAccess().getAlternatives(), "rule__Rule__Alternatives");
+					put(grammarAccess.getRuleAccess().getAlternatives_0(), "rule__Rule__Alternatives_0");
 					put(grammarAccess.getNestedAccess().getAlternatives_1(), "rule__Nested__Alternatives_1");
 					put(grammarAccess.getNestedAccess().getAlternatives_1_0_1(), "rule__Nested__Alternatives_1_0_1");
+					put(grammarAccess.getBoolAccess().getAlternatives(), "rule__Bool__Alternatives");
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
 					put(grammarAccess.getIdentAccess().getAlternatives(), "rule__Ident__Alternatives");
 					put(grammarAccess.getRuleSetAccess().getGroup(), "rule__RuleSet__Group__0");
 					put(grammarAccess.getContextAccess().getGroup(), "rule__Context__Group__0");
 					put(grammarAccess.getSelectorAccess().getGroup(), "rule__Selector__Group__0");
-					put(grammarAccess.getSelectorAccess().getGroup_1(), "rule__Selector__Group_1__0");
 					put(grammarAccess.getSumAccess().getGroup(), "rule__Sum__Group__0");
 					put(grammarAccess.getSumAccess().getGroup_1(), "rule__Sum__Group_1__0");
 					put(grammarAccess.getTermAccess().getGroup(), "rule__Term__Group__0");
 					put(grammarAccess.getTermAccess().getGroup_1(), "rule__Term__Group_1__0");
 					put(grammarAccess.getStepAccess().getGroup_1(), "rule__Step__Group_1__0");
+					put(grammarAccess.getRuleAccess().getGroup(), "rule__Rule__Group__0");
 					put(grammarAccess.getNestedAccess().getGroup(), "rule__Nested__Group__0");
 					put(grammarAccess.getNestedAccess().getGroup_1_0(), "rule__Nested__Group_1_0__0");
 					put(grammarAccess.getNestedAccess().getGroup_1_1(), "rule__Nested__Group_1_1__0");
@@ -63,6 +64,7 @@ public class CcsEclipseParser extends AbstractContentAssistParser {
 					put(grammarAccess.getImportAccess().getGroup(), "rule__Import__Group__0");
 					put(grammarAccess.getRuleSetAccess().getContextAssignment_0(), "rule__RuleSet__ContextAssignment_0");
 					put(grammarAccess.getRuleSetAccess().getRulesAssignment_1(), "rule__RuleSet__RulesAssignment_1");
+					put(grammarAccess.getContextAccess().getSelectorAssignment_2(), "rule__Context__SelectorAssignment_2");
 				}
 			};
 		}

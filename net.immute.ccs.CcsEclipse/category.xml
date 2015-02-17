@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/net.immute.ccs.CcsEclipse.sdk_1.0.0.qualifier.jar" id="net.immute.ccs.CcsEclipse.sdk" version="1.0.0.qualifier">
+      <category name="immute.net"/>
+   </feature>
+   <bundle id="net.immute.ccs.CcsEclipse" version="1.0.0.qualifier">
+      <category name="immute.net"/>
+   </bundle>
+   <category-def name="immute.net" label="Ccs plugin for Eclipse"/>
+</site>

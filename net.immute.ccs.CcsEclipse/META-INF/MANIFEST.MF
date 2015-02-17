@@ -4,7 +4,6 @@ Bundle-Name: net.immute.ccs.CcsEclipse
 Bundle-Vendor: Matt Hellige/Matt Godbolt
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: net.immute.ccs.CcsEclipse; singleton:=true
-Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
  org.eclipse.xtext.generator;resolution:=optional,
@@ -22,14 +21,14 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: net.immute.ccs,
- net.immute.ccs.services,
  net.immute.ccs.ccsEclipse,
  net.immute.ccs.ccsEclipse.impl,
  net.immute.ccs.ccsEclipse.util,
- net.immute.ccs.serializer,
- net.immute.ccs.parser.antlr,
- net.immute.ccs.parser.antlr.internal,
- net.immute.ccs.validation,
- net.immute.ccs.scoping,
+ net.immute.ccs.formatting,
  net.immute.ccs.generator,
- net.immute.ccs.formatting
+ net.immute.ccs.parser.antlr,
+ net.immute.ccs.parser.antlr.internal;x-internal:=true,
+ net.immute.ccs.scoping,
+ net.immute.ccs.serializer,
+ net.immute.ccs.services,
+ net.immute.ccs.validation

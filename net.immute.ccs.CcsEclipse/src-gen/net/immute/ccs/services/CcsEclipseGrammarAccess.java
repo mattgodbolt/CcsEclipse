@@ -298,28 +298,44 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightCurlyBracketKeyword_1_1_2() { return cRightCurlyBracketKeyword_1_1_2; }
 	}
 
+	public class ModifierElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Modifier");
+		private final Keyword cOverrideKeyword = (Keyword)rule.eContents().get(1);
+		
+		//Modifier:
+		//	"@override"?;
+		public ParserRule getRule() { return rule; }
+
+		//"@override"?
+		public Keyword getOverrideKeyword() { return cOverrideKeyword; }
+	}
+
 	public class PropertyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Property");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final RuleCall cValueParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final RuleCall cModifierParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final RuleCall cIDTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final RuleCall cValueParserRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
 		
 		//Property:
-		//	ID "=" Value;
+		//	Modifier ID "=" Value;
 		public ParserRule getRule() { return rule; }
 
-		//ID "=" Value
+		//Modifier ID "=" Value
 		public Group getGroup() { return cGroup; }
 
+		//Modifier
+		public RuleCall getModifierParserRuleCall_0() { return cModifierParserRuleCall_0; }
+
 		//ID
-		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
+		public RuleCall getIDTerminalRuleCall_1() { return cIDTerminalRuleCall_1; }
 
 		//"="
-		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
 
 		//Value
-		public RuleCall getValueParserRuleCall_2() { return cValueParserRuleCall_2; }
+		public RuleCall getValueParserRuleCall_3() { return cValueParserRuleCall_3; }
 	}
 
 	public class BoolElements extends AbstractParserRuleElementFinder {
@@ -508,6 +524,7 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 	private final StepElements pStep;
 	private final RuleElements pRule;
 	private final NestedElements pNested;
+	private final ModifierElements pModifier;
 	private final PropertyElements pProperty;
 	private final TerminalRule tHEXINT;
 	private final TerminalRule tNUMBER;
@@ -538,6 +555,7 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		this.pStep = new StepElements();
 		this.pRule = new RuleElements();
 		this.pNested = new NestedElements();
+		this.pModifier = new ModifierElements();
 		this.pProperty = new PropertyElements();
 		this.tHEXINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "HEXINT");
 		this.tNUMBER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "NUMBER");
@@ -668,8 +686,18 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		return getNestedAccess().getRule();
 	}
 
+	//Modifier:
+	//	"@override"?;
+	public ModifierElements getModifierAccess() {
+		return pModifier;
+	}
+	
+	public ParserRule getModifierRule() {
+		return getModifierAccess().getRule();
+	}
+
 	//Property:
-	//	ID "=" Value;
+	//	Modifier ID "=" Value;
 	public PropertyElements getPropertyAccess() {
 		return pProperty;
 	}
@@ -678,7 +706,7 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 		return getPropertyAccess().getRule();
 	}
 
-	//terminal HEXINT:
+	//terminal HEXINT returns ecore::EInt:
 	//	"0x" ("0".."9" | "a".."f" | "A".."F")+;
 	public TerminalRule getHEXINTRule() {
 		return tHEXINT;
@@ -686,8 +714,9 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// TODO interpolants
 	//// TODO a better float here, and maybe discriminate ints vs floats
-	//terminal NUMBER:
-	//	"-"? ("0".."9" | ".")+ (("e" | "E") "-"? "0".."9"+)?;
+	//// Also this is broken as it matches "foo.eabd = 1" incorrectly.
+	//terminal NUMBER returns ecore::EBigDecimal:
+	//	("0".."9"+ ("." "0".."9"*)? | "." "0".."9"+) (("e" | "E") ("+" | "-")? "0".."9"+)?;
 	public TerminalRule getNUMBERRule() {
 		return tNUMBER;
 	} 

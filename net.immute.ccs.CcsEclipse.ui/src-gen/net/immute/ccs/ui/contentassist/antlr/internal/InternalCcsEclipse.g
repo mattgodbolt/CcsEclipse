@@ -315,6 +315,36 @@ finally {
 
 
 
+// Entry rule entryRuleModifier
+entryRuleModifier 
+:
+{ before(grammarAccess.getModifierRule()); }
+	 ruleModifier
+{ after(grammarAccess.getModifierRule()); } 
+	 EOF 
+;
+
+// Rule Modifier
+ruleModifier
+    @init {
+		int stackSize = keepStackSize();
+    }
+	:
+(
+{ before(grammarAccess.getModifierAccess().getOverrideKeyword()); }
+(
+	'@override' 
+)?
+{ after(grammarAccess.getModifierAccess().getOverrideKeyword()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
 // Entry rule entryRuleProperty
 entryRuleProperty 
 :
@@ -1689,9 +1719,9 @@ rule__Property__Group__0__Impl
     }
 :
 (
-{ before(grammarAccess.getPropertyAccess().getIDTerminalRuleCall_0()); }
-	RULE_ID
-{ after(grammarAccess.getPropertyAccess().getIDTerminalRuleCall_0()); }
+{ before(grammarAccess.getPropertyAccess().getModifierParserRuleCall_0()); }
+	ruleModifier
+{ after(grammarAccess.getPropertyAccess().getModifierParserRuleCall_0()); }
 )
 
 ;
@@ -1718,11 +1748,9 @@ rule__Property__Group__1__Impl
     }
 :
 (
-{ before(grammarAccess.getPropertyAccess().getEqualsSignKeyword_1()); }
-
-	'=' 
-
-{ after(grammarAccess.getPropertyAccess().getEqualsSignKeyword_1()); }
+{ before(grammarAccess.getPropertyAccess().getIDTerminalRuleCall_1()); }
+	RULE_ID
+{ after(grammarAccess.getPropertyAccess().getIDTerminalRuleCall_1()); }
 )
 
 ;
@@ -1737,6 +1765,7 @@ rule__Property__Group__2
     }
 :
 	rule__Property__Group__2__Impl
+	rule__Property__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1748,15 +1777,47 @@ rule__Property__Group__2__Impl
     }
 :
 (
-{ before(grammarAccess.getPropertyAccess().getValueParserRuleCall_2()); }
-	ruleValue
-{ after(grammarAccess.getPropertyAccess().getValueParserRuleCall_2()); }
+{ before(grammarAccess.getPropertyAccess().getEqualsSignKeyword_2()); }
+
+	'=' 
+
+{ after(grammarAccess.getPropertyAccess().getEqualsSignKeyword_2()); }
 )
 
 ;
 finally {
 	restoreStackSize(stackSize);
 }
+
+
+rule__Property__Group__3
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__Property__Group__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Property__Group__3__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getPropertyAccess().getValueParserRuleCall_3()); }
+	ruleValue
+{ after(grammarAccess.getPropertyAccess().getValueParserRuleCall_3()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
 
 
 
@@ -2189,7 +2250,7 @@ finally {
 
 RULE_HEXINT : '0x' ('0'..'9'|'a'..'f'|'A'..'F')+;
 
-RULE_NUMBER : '-'? ('0'..'9'|'.')+ (('e'|'E') '-'? ('0'..'9')+)?;
+RULE_NUMBER : (('0'..'9')+ ('.' ('0'..'9')*)?|'.' ('0'..'9')+) (('e'|'E') ('+'|'-')? ('0'..'9')+)?;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

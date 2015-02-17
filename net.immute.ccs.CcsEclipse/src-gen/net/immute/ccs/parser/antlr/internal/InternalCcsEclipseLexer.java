@@ -13,6 +13,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalCcsEclipseLexer extends Lexer {
     public static final int RULE_ID=4;
+    public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
     public static final int T__26=26;
@@ -238,10 +239,11 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:20:7: ( '=' )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:20:9: '='
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:20:7: ( '@override' )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:20:9: '@override'
             {
-            match('='); 
+            match("@override"); 
+
 
             }
 
@@ -258,11 +260,10 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:21:7: ( 'true' )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:21:9: 'true'
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:21:7: ( '=' )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:21:9: '='
             {
-            match("true"); 
-
+            match('='); 
 
             }
 
@@ -279,10 +280,10 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:22:7: ( 'false' )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:22:9: 'false'
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:22:7: ( 'true' )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:22:9: 'true'
             {
-            match("false"); 
+            match("true"); 
 
 
             }
@@ -300,10 +301,10 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:23:7: ( '@constrain' )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:23:9: '@constrain'
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:23:7: ( 'false' )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:23:9: 'false'
             {
-            match("@constrain"); 
+            match("false"); 
 
 
             }
@@ -321,10 +322,11 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:24:7: ( '.' )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:24:9: '.'
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:24:7: ( '@constrain' )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:24:9: '@constrain'
             {
-            match('.'); 
+            match("@constrain"); 
+
 
             }
 
@@ -341,10 +343,10 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:25:7: ( '/' )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:25:9: '/'
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:25:7: ( '.' )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:25:9: '.'
             {
-            match('/'); 
+            match('.'); 
 
             }
 
@@ -361,8 +363,28 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:26:7: ( '@import' )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:26:9: '@import'
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:26:7: ( '/' )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:26:9: '/'
+            {
+            match('/'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__28"
+
+    // $ANTLR start "T__29"
+    public final void mT__29() throws RecognitionException {
+        try {
+            int _type = T__29;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:27:7: ( '@import' )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:27:9: '@import'
             {
             match("@import"); 
 
@@ -375,19 +397,19 @@ public class InternalCcsEclipseLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__28"
+    // $ANTLR end "T__29"
 
     // $ANTLR start "RULE_HEXINT"
     public final void mRULE_HEXINT() throws RecognitionException {
         try {
             int _type = RULE_HEXINT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:957:13: ( '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:957:15: '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:995:13: ( '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+ )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:995:15: '0x' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             {
             match("0x"); 
 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:957:20: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:995:20: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )+
             int cnt1=0;
             loop1:
             do {
@@ -441,104 +463,110 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = RULE_NUMBER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:959:13: ( ( '-' )? ( '0' .. '9' | '.' )+ ( ( 'e' | 'E' ) ( '-' )? ( '0' .. '9' )+ )? )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:959:15: ( '-' )? ( '0' .. '9' | '.' )+ ( ( 'e' | 'E' ) ( '-' )? ( '0' .. '9' )+ )?
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:13: ( ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* )? | '.' ( '0' .. '9' )+ ) ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )? )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:15: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* )? | '.' ( '0' .. '9' )+ ) ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )?
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:959:15: ( '-' )?
-            int alt2=2;
-            int LA2_0 = input.LA(1);
-
-            if ( (LA2_0=='-') ) {
-                alt2=1;
-            }
-            switch (alt2) {
-                case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:959:15: '-'
-                    {
-                    match('-'); 
-
-                    }
-                    break;
-
-            }
-
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:959:20: ( '0' .. '9' | '.' )+
-            int cnt3=0;
-            loop3:
-            do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
-
-                if ( (LA3_0=='.'||(LA3_0>='0' && LA3_0<='9')) ) {
-                    alt3=1;
-                }
-
-
-                switch (alt3) {
-            	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:
-            	    {
-            	    if ( input.LA(1)=='.'||(input.LA(1)>='0' && input.LA(1)<='9') ) {
-            	        input.consume();
-
-            	    }
-            	    else {
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        recover(mse);
-            	        throw mse;}
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    if ( cnt3 >= 1 ) break loop3;
-                        EarlyExitException eee =
-                            new EarlyExitException(3, input);
-                        throw eee;
-                }
-                cnt3++;
-            } while (true);
-
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:959:36: ( ( 'e' | 'E' ) ( '-' )? ( '0' .. '9' )+ )?
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:15: ( ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* )? | '.' ( '0' .. '9' )+ )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0=='E'||LA6_0=='e') ) {
+            if ( ((LA6_0>='0' && LA6_0<='9')) ) {
                 alt6=1;
+            }
+            else if ( (LA6_0=='.') ) {
+                alt6=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 6, 0, input);
+
+                throw nvae;
             }
             switch (alt6) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:959:37: ( 'e' | 'E' ) ( '-' )? ( '0' .. '9' )+
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:16: ( '0' .. '9' )+ ( '.' ( '0' .. '9' )* )?
                     {
-                    if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
-                        input.consume();
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:16: ( '0' .. '9' )+
+                    int cnt2=0;
+                    loop2:
+                    do {
+                        int alt2=2;
+                        int LA2_0 = input.LA(1);
 
-                    }
-                    else {
-                        MismatchedSetException mse = new MismatchedSetException(null,input);
-                        recover(mse);
-                        throw mse;}
+                        if ( ((LA2_0>='0' && LA2_0<='9')) ) {
+                            alt2=1;
+                        }
 
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:959:47: ( '-' )?
+
+                        switch (alt2) {
+                    	case 1 :
+                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:17: '0' .. '9'
+                    	    {
+                    	    matchRange('0','9'); 
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    if ( cnt2 >= 1 ) break loop2;
+                                EarlyExitException eee =
+                                    new EarlyExitException(2, input);
+                                throw eee;
+                        }
+                        cnt2++;
+                    } while (true);
+
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:28: ( '.' ( '0' .. '9' )* )?
                     int alt4=2;
                     int LA4_0 = input.LA(1);
 
-                    if ( (LA4_0=='-') ) {
+                    if ( (LA4_0=='.') ) {
                         alt4=1;
                     }
                     switch (alt4) {
                         case 1 :
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:959:47: '-'
+                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:29: '.' ( '0' .. '9' )*
                             {
-                            match('-'); 
+                            match('.'); 
+                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:33: ( '0' .. '9' )*
+                            loop3:
+                            do {
+                                int alt3=2;
+                                int LA3_0 = input.LA(1);
+
+                                if ( ((LA3_0>='0' && LA3_0<='9')) ) {
+                                    alt3=1;
+                                }
+
+
+                                switch (alt3) {
+                            	case 1 :
+                            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:34: '0' .. '9'
+                            	    {
+                            	    matchRange('0','9'); 
+
+                            	    }
+                            	    break;
+
+                            	default :
+                            	    break loop3;
+                                }
+                            } while (true);
+
 
                             }
                             break;
 
                     }
 
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:959:52: ( '0' .. '9' )+
+
+                    }
+                    break;
+                case 2 :
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:47: '.' ( '0' .. '9' )+
+                    {
+                    match('.'); 
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:51: ( '0' .. '9' )+
                     int cnt5=0;
                     loop5:
                     do {
@@ -552,7 +580,7 @@ public class InternalCcsEclipseLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:959:53: '0' .. '9'
+                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:52: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -566,6 +594,88 @@ public class InternalCcsEclipseLexer extends Lexer {
                                 throw eee;
                         }
                         cnt5++;
+                    } while (true);
+
+
+                    }
+                    break;
+
+            }
+
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:64: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
+
+            if ( (LA9_0=='E'||LA9_0=='e') ) {
+                alt9=1;
+            }
+            switch (alt9) {
+                case 1 :
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:65: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+                    {
+                    if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
+                        input.consume();
+
+                    }
+                    else {
+                        MismatchedSetException mse = new MismatchedSetException(null,input);
+                        recover(mse);
+                        throw mse;}
+
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:75: ( '+' | '-' )?
+                    int alt7=2;
+                    int LA7_0 = input.LA(1);
+
+                    if ( (LA7_0=='+'||LA7_0=='-') ) {
+                        alt7=1;
+                    }
+                    switch (alt7) {
+                        case 1 :
+                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:
+                            {
+                            if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
+                                input.consume();
+
+                            }
+                            else {
+                                MismatchedSetException mse = new MismatchedSetException(null,input);
+                                recover(mse);
+                                throw mse;}
+
+
+                            }
+                            break;
+
+                    }
+
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:86: ( '0' .. '9' )+
+                    int cnt8=0;
+                    loop8:
+                    do {
+                        int alt8=2;
+                        int LA8_0 = input.LA(1);
+
+                        if ( ((LA8_0>='0' && LA8_0<='9')) ) {
+                            alt8=1;
+                        }
+
+
+                        switch (alt8) {
+                    	case 1 :
+                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:87: '0' .. '9'
+                    	    {
+                    	    matchRange('0','9'); 
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    if ( cnt8 >= 1 ) break loop8;
+                                EarlyExitException eee =
+                                    new EarlyExitException(8, input);
+                                throw eee;
+                        }
+                        cnt8++;
                     } while (true);
 
 
@@ -590,19 +700,19 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:961:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:961:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:999:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:999:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:961:11: ( '^' )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:999:11: ( '^' )?
+            int alt10=2;
+            int LA10_0 = input.LA(1);
 
-            if ( (LA7_0=='^') ) {
-                alt7=1;
+            if ( (LA10_0=='^') ) {
+                alt10=1;
             }
-            switch (alt7) {
+            switch (alt10) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:961:11: '^'
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:999:11: '^'
                     {
                     match('^'); 
 
@@ -620,18 +730,18 @@ public class InternalCcsEclipseLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:961:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
-            loop8:
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:999:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            loop11:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( ((LA8_0>='0' && LA8_0<='9')||(LA8_0>='A' && LA8_0<='Z')||LA8_0=='_'||(LA8_0>='a' && LA8_0<='z')) ) {
-                    alt8=1;
+                if ( ((LA11_0>='0' && LA11_0<='9')||(LA11_0>='A' && LA11_0<='Z')||LA11_0=='_'||(LA11_0>='a' && LA11_0<='z')) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt11) {
             	case 1 :
             	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:
             	    {
@@ -649,7 +759,7 @@ public class InternalCcsEclipseLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop11;
                 }
             } while (true);
 
@@ -669,24 +779,24 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:963:10: ( ( '0' .. '9' )+ )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:963:12: ( '0' .. '9' )+
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1001:10: ( ( '0' .. '9' )+ )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1001:12: ( '0' .. '9' )+
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:963:12: ( '0' .. '9' )+
-            int cnt9=0;
-            loop9:
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1001:12: ( '0' .. '9' )+
+            int cnt12=0;
+            loop12:
             do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( ((LA9_0>='0' && LA9_0<='9')) ) {
-                    alt9=1;
+                if ( ((LA12_0>='0' && LA12_0<='9')) ) {
+                    alt12=1;
                 }
 
 
-                switch (alt9) {
+                switch (alt12) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:963:13: '0' .. '9'
+            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1001:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -694,12 +804,12 @@ public class InternalCcsEclipseLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt9 >= 1 ) break loop9;
+            	    if ( cnt12 >= 1 ) break loop12;
                         EarlyExitException eee =
-                            new EarlyExitException(9, input);
+                            new EarlyExitException(12, input);
                         throw eee;
                 }
-                cnt9++;
+                cnt12++;
             } while (true);
 
 
@@ -718,47 +828,47 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:965:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:965:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1003:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1003:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:965:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1003:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA12_0=='\"') ) {
-                alt12=1;
+            if ( (LA15_0=='\"') ) {
+                alt15=1;
             }
-            else if ( (LA12_0=='\'') ) {
-                alt12=2;
+            else if ( (LA15_0=='\'') ) {
+                alt15=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 12, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
-            switch (alt12) {
+            switch (alt15) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:965:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1003:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:965:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
-                    loop10:
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1003:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    loop13:
                     do {
-                        int alt10=3;
-                        int LA10_0 = input.LA(1);
+                        int alt13=3;
+                        int LA13_0 = input.LA(1);
 
-                        if ( (LA10_0=='\\') ) {
-                            alt10=1;
+                        if ( (LA13_0=='\\') ) {
+                            alt13=1;
                         }
-                        else if ( ((LA10_0>='\u0000' && LA10_0<='!')||(LA10_0>='#' && LA10_0<='[')||(LA10_0>=']' && LA10_0<='\uFFFF')) ) {
-                            alt10=2;
+                        else if ( ((LA13_0>='\u0000' && LA13_0<='!')||(LA13_0>='#' && LA13_0<='[')||(LA13_0>=']' && LA13_0<='\uFFFF')) ) {
+                            alt13=2;
                         }
 
 
-                        switch (alt10) {
+                        switch (alt13) {
                     	case 1 :
-                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:965:21: '\\\\' .
+                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1003:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -766,7 +876,7 @@ public class InternalCcsEclipseLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:965:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1003:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -782,7 +892,7 @@ public class InternalCcsEclipseLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop10;
+                    	    break loop13;
                         }
                     } while (true);
 
@@ -791,26 +901,26 @@ public class InternalCcsEclipseLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:965:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1003:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:965:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
-                    loop11:
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1003:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    loop14:
                     do {
-                        int alt11=3;
-                        int LA11_0 = input.LA(1);
+                        int alt14=3;
+                        int LA14_0 = input.LA(1);
 
-                        if ( (LA11_0=='\\') ) {
-                            alt11=1;
+                        if ( (LA14_0=='\\') ) {
+                            alt14=1;
                         }
-                        else if ( ((LA11_0>='\u0000' && LA11_0<='&')||(LA11_0>='(' && LA11_0<='[')||(LA11_0>=']' && LA11_0<='\uFFFF')) ) {
-                            alt11=2;
+                        else if ( ((LA14_0>='\u0000' && LA14_0<='&')||(LA14_0>='(' && LA14_0<='[')||(LA14_0>=']' && LA14_0<='\uFFFF')) ) {
+                            alt14=2;
                         }
 
 
-                        switch (alt11) {
+                        switch (alt14) {
                     	case 1 :
-                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:965:54: '\\\\' .
+                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1003:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -818,7 +928,7 @@ public class InternalCcsEclipseLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:965:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1003:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -834,7 +944,7 @@ public class InternalCcsEclipseLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop11;
+                    	    break loop14;
                         }
                     } while (true);
 
@@ -861,37 +971,37 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:967:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:967:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1005:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1005:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:967:24: ( options {greedy=false; } : . )*
-            loop13:
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1005:24: ( options {greedy=false; } : . )*
+            loop16:
             do {
-                int alt13=2;
-                int LA13_0 = input.LA(1);
+                int alt16=2;
+                int LA16_0 = input.LA(1);
 
-                if ( (LA13_0=='*') ) {
-                    int LA13_1 = input.LA(2);
+                if ( (LA16_0=='*') ) {
+                    int LA16_1 = input.LA(2);
 
-                    if ( (LA13_1=='/') ) {
-                        alt13=2;
+                    if ( (LA16_1=='/') ) {
+                        alt16=2;
                     }
-                    else if ( ((LA13_1>='\u0000' && LA13_1<='.')||(LA13_1>='0' && LA13_1<='\uFFFF')) ) {
-                        alt13=1;
+                    else if ( ((LA16_1>='\u0000' && LA16_1<='.')||(LA16_1>='0' && LA16_1<='\uFFFF')) ) {
+                        alt16=1;
                     }
 
 
                 }
-                else if ( ((LA13_0>='\u0000' && LA13_0<=')')||(LA13_0>='+' && LA13_0<='\uFFFF')) ) {
-                    alt13=1;
+                else if ( ((LA16_0>='\u0000' && LA16_0<=')')||(LA16_0>='+' && LA16_0<='\uFFFF')) ) {
+                    alt16=1;
                 }
 
 
-                switch (alt13) {
+                switch (alt16) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:967:52: .
+            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1005:52: .
             	    {
             	    matchAny(); 
 
@@ -899,7 +1009,7 @@ public class InternalCcsEclipseLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop13;
+            	    break loop16;
                 }
             } while (true);
 
@@ -921,25 +1031,25 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:969:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:969:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1007:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1007:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:969:24: (~ ( ( '\\n' | '\\r' ) ) )*
-            loop14:
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1007:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            loop17:
             do {
-                int alt14=2;
-                int LA14_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( ((LA14_0>='\u0000' && LA14_0<='\t')||(LA14_0>='\u000B' && LA14_0<='\f')||(LA14_0>='\u000E' && LA14_0<='\uFFFF')) ) {
-                    alt14=1;
+                if ( ((LA17_0>='\u0000' && LA17_0<='\t')||(LA17_0>='\u000B' && LA17_0<='\f')||(LA17_0>='\u000E' && LA17_0<='\uFFFF')) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt14) {
+                switch (alt17) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:969:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1007:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -955,31 +1065,31 @@ public class InternalCcsEclipseLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop14;
+            	    break loop17;
                 }
             } while (true);
 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:969:40: ( ( '\\r' )? '\\n' )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1007:40: ( ( '\\r' )? '\\n' )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA16_0=='\n'||LA16_0=='\r') ) {
-                alt16=1;
+            if ( (LA19_0=='\n'||LA19_0=='\r') ) {
+                alt19=1;
             }
-            switch (alt16) {
+            switch (alt19) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:969:41: ( '\\r' )? '\\n'
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1007:41: ( '\\r' )? '\\n'
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:969:41: ( '\\r' )?
-                    int alt15=2;
-                    int LA15_0 = input.LA(1);
+                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1007:41: ( '\\r' )?
+                    int alt18=2;
+                    int LA18_0 = input.LA(1);
 
-                    if ( (LA15_0=='\r') ) {
-                        alt15=1;
+                    if ( (LA18_0=='\r') ) {
+                        alt18=1;
                     }
-                    switch (alt15) {
+                    switch (alt18) {
                         case 1 :
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:969:41: '\\r'
+                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1007:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1011,22 +1121,22 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:971:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:971:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1009:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1009:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:971:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
-            int cnt17=0;
-            loop17:
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1009:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            int cnt20=0;
+            loop20:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt20=2;
+                int LA20_0 = input.LA(1);
 
-                if ( ((LA17_0>='\t' && LA17_0<='\n')||LA17_0=='\r'||LA17_0==' ') ) {
-                    alt17=1;
+                if ( ((LA20_0>='\t' && LA20_0<='\n')||LA20_0=='\r'||LA20_0==' ') ) {
+                    alt20=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt20) {
             	case 1 :
             	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:
             	    {
@@ -1044,12 +1154,12 @@ public class InternalCcsEclipseLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt17 >= 1 ) break loop17;
+            	    if ( cnt20 >= 1 ) break loop20;
                         EarlyExitException eee =
-                            new EarlyExitException(17, input);
+                            new EarlyExitException(20, input);
                         throw eee;
                 }
-                cnt17++;
+                cnt20++;
             } while (true);
 
 
@@ -1068,8 +1178,8 @@ public class InternalCcsEclipseLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:973:16: ( . )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:973:18: .
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1011:16: ( . )
+            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1011:18: .
             {
             matchAny(); 
 
@@ -1084,10 +1194,10 @@ public class InternalCcsEclipseLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | RULE_HEXINT | RULE_NUMBER | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt18=25;
-        alt18 = dfa18.predict(input);
-        switch (alt18) {
+        // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_HEXINT | RULE_NUMBER | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt21=26;
+        alt21 = dfa21.predict(input);
+        switch (alt21) {
             case 1 :
                 // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:10: T__13
                 {
@@ -1201,63 +1311,70 @@ public class InternalCcsEclipseLexer extends Lexer {
                 }
                 break;
             case 17 :
-                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:106: RULE_HEXINT
+                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:106: T__29
+                {
+                mT__29(); 
+
+                }
+                break;
+            case 18 :
+                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:112: RULE_HEXINT
                 {
                 mRULE_HEXINT(); 
 
                 }
                 break;
-            case 18 :
-                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:118: RULE_NUMBER
+            case 19 :
+                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:124: RULE_NUMBER
                 {
                 mRULE_NUMBER(); 
 
                 }
                 break;
-            case 19 :
-                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:130: RULE_ID
+            case 20 :
+                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:136: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 20 :
-                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:138: RULE_INT
+            case 21 :
+                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:144: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 21 :
-                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:147: RULE_STRING
+            case 22 :
+                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:153: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 22 :
-                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:159: RULE_ML_COMMENT
+            case 23 :
+                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:165: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 23 :
-                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:175: RULE_SL_COMMENT
+            case 24 :
+                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:181: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 24 :
-                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:191: RULE_WS
+            case 25 :
+                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:197: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 25 :
-                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:199: RULE_ANY_OTHER
+            case 26 :
+                // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1:205: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1269,22 +1386,22 @@ public class InternalCcsEclipseLexer extends Lexer {
     }
 
 
-    protected DFA18 dfa18 = new DFA18(this);
-    static final String DFA18_eotS =
-        "\1\uffff\1\27\11\uffff\2\44\1\46\1\52\1\47\1\27\1\47\1\27\1\uffff\2\27\15\uffff\1\44\1\uffff\1\44\6\uffff\1\47\3\uffff\2\44\1\uffff\1\67\1\44\3\uffff\1\71\1\uffff";
-    static final String DFA18_eofS =
+    protected DFA21 dfa21 = new DFA21(this);
+    static final String DFA21_eotS =
+        "\1\uffff\1\26\11\uffff\2\44\1\46\1\52\2\47\1\26\1\uffff\2\26\16\uffff\1\44\1\uffff\1\44\6\uffff\1\47\3\uffff\2\44\1\uffff\1\67\1\44\3\uffff\1\71\1\uffff";
+    static final String DFA21_eofS =
         "\72\uffff";
-    static final String DFA18_minS =
-        "\1\0\1\143\11\uffff\1\162\1\141\1\56\1\52\1\60\1\56\1\60\1\101\1\uffff\2\0\2\uffff\1\157\12\uffff\1\165\1\uffff\1\154\6\uffff\1\60\2\uffff\1\156\1\145\2\163\1\60\1\145\3\uffff\1\60\1\uffff";
-    static final String DFA18_maxS =
-        "\1\uffff\1\151\11\uffff\1\162\1\141\1\145\1\57\1\170\2\71\1\172\1\uffff\2\uffff\2\uffff\1\157\12\uffff\1\165\1\uffff\1\154\6\uffff\1\71\2\uffff\1\156\1\145\1\163\1\164\1\172\1\145\3\uffff\1\172\1\uffff";
-    static final String DFA18_acceptS =
-        "\2\uffff\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\10\uffff\1\23\2\uffff\1\30\1\31\1\uffff\1\20\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\uffff\1\23\1\uffff\1\16\1\22\1\26\1\27\1\17\1\21\1\uffff\1\25\1\30\6\uffff\1\1\1\15\1\13\1\uffff\1\14";
-    static final String DFA18_specialS =
-        "\1\1\23\uffff\1\0\1\2\44\uffff}>";
-    static final String[] DFA18_transitionS = {
-            "\11\27\2\26\2\27\1\26\22\27\1\26\1\27\1\24\4\27\1\25\1\2\1\3\2\27\1\6\1\20\1\15\1\16\1\17\11\21\1\7\1\4\1\27\1\12\1\5\1\27\1\1\32\23\3\27\1\22\1\23\1\27\5\23\1\14\15\23\1\13\6\23\1\10\1\27\1\11\uff82\27",
-            "\1\30\5\uffff\1\31",
+    static final String DFA21_minS =
+        "\1\0\1\143\11\uffff\1\162\1\141\1\60\1\52\2\60\1\101\1\uffff\2\0\2\uffff\1\157\13\uffff\1\165\1\uffff\1\154\6\uffff\1\60\2\uffff\1\156\1\145\2\163\1\60\1\145\3\uffff\1\60\1\uffff";
+    static final String DFA21_maxS =
+        "\1\uffff\1\157\11\uffff\1\162\1\141\1\71\1\57\1\170\1\71\1\172\1\uffff\2\uffff\2\uffff\1\157\13\uffff\1\165\1\uffff\1\154\6\uffff\1\71\2\uffff\1\156\1\145\1\163\1\164\1\172\1\145\3\uffff\1\172\1\uffff";
+    static final String DFA21_acceptS =
+        "\2\uffff\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\13\7\uffff\1\24\2\uffff\1\31\1\32\1\uffff\1\12\1\21\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\13\1\uffff\1\24\1\uffff\1\17\1\23\1\27\1\30\1\20\1\22\1\uffff\1\26\1\31\6\uffff\1\1\1\16\1\14\1\uffff\1\15";
+    static final String DFA21_specialS =
+        "\1\1\22\uffff\1\0\1\2\45\uffff}>";
+    static final String[] DFA21_transitionS = {
+            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\23\4\26\1\24\1\2\1\3\2\26\1\6\1\26\1\15\1\16\1\17\11\20\1\7\1\4\1\26\1\12\1\5\1\26\1\1\32\22\3\26\1\21\1\22\1\26\5\22\1\14\15\22\1\13\6\22\1\10\1\26\1\11\uff82\26",
+            "\1\27\5\uffff\1\31\5\uffff\1\30",
             "",
             "",
             "",
@@ -1296,10 +1413,9 @@ public class InternalCcsEclipseLexer extends Lexer {
             "",
             "\1\43",
             "\1\45",
-            "\1\47\1\uffff\12\47\13\uffff\1\47\37\uffff\1\47",
+            "\12\47",
             "\1\50\4\uffff\1\51",
             "\12\54\76\uffff\1\53",
-            "\1\47\1\uffff\12\47",
             "\12\54",
             "\32\44\4\uffff\1\44\1\uffff\32\44",
             "",
@@ -1308,6 +1424,7 @@ public class InternalCcsEclipseLexer extends Lexer {
             "",
             "",
             "\1\57",
+            "",
             "",
             "",
             "",
@@ -1343,117 +1460,115 @@ public class InternalCcsEclipseLexer extends Lexer {
             ""
     };
 
-    static final short[] DFA18_eot = DFA.unpackEncodedString(DFA18_eotS);
-    static final short[] DFA18_eof = DFA.unpackEncodedString(DFA18_eofS);
-    static final char[] DFA18_min = DFA.unpackEncodedStringToUnsignedChars(DFA18_minS);
-    static final char[] DFA18_max = DFA.unpackEncodedStringToUnsignedChars(DFA18_maxS);
-    static final short[] DFA18_accept = DFA.unpackEncodedString(DFA18_acceptS);
-    static final short[] DFA18_special = DFA.unpackEncodedString(DFA18_specialS);
-    static final short[][] DFA18_transition;
+    static final short[] DFA21_eot = DFA.unpackEncodedString(DFA21_eotS);
+    static final short[] DFA21_eof = DFA.unpackEncodedString(DFA21_eofS);
+    static final char[] DFA21_min = DFA.unpackEncodedStringToUnsignedChars(DFA21_minS);
+    static final char[] DFA21_max = DFA.unpackEncodedStringToUnsignedChars(DFA21_maxS);
+    static final short[] DFA21_accept = DFA.unpackEncodedString(DFA21_acceptS);
+    static final short[] DFA21_special = DFA.unpackEncodedString(DFA21_specialS);
+    static final short[][] DFA21_transition;
 
     static {
-        int numStates = DFA18_transitionS.length;
-        DFA18_transition = new short[numStates][];
+        int numStates = DFA21_transitionS.length;
+        DFA21_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA18_transition[i] = DFA.unpackEncodedString(DFA18_transitionS[i]);
+            DFA21_transition[i] = DFA.unpackEncodedString(DFA21_transitionS[i]);
         }
     }
 
-    class DFA18 extends DFA {
+    class DFA21 extends DFA {
 
-        public DFA18(BaseRecognizer recognizer) {
+        public DFA21(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 18;
-            this.eot = DFA18_eot;
-            this.eof = DFA18_eof;
-            this.min = DFA18_min;
-            this.max = DFA18_max;
-            this.accept = DFA18_accept;
-            this.special = DFA18_special;
-            this.transition = DFA18_transition;
+            this.decisionNumber = 21;
+            this.eot = DFA21_eot;
+            this.eof = DFA21_eof;
+            this.min = DFA21_min;
+            this.max = DFA21_max;
+            this.accept = DFA21_accept;
+            this.special = DFA21_special;
+            this.transition = DFA21_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | RULE_HEXINT | RULE_NUMBER | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_HEXINT | RULE_NUMBER | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA18_20 = input.LA(1);
+                        int LA21_19 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA18_20>='\u0000' && LA18_20<='\uFFFF')) ) {s = 45;}
+                        if ( ((LA21_19>='\u0000' && LA21_19<='\uFFFF')) ) {s = 45;}
 
-                        else s = 23;
+                        else s = 22;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA18_0 = input.LA(1);
+                        int LA21_0 = input.LA(1);
 
                         s = -1;
-                        if ( (LA18_0=='@') ) {s = 1;}
+                        if ( (LA21_0=='@') ) {s = 1;}
 
-                        else if ( (LA18_0=='(') ) {s = 2;}
+                        else if ( (LA21_0=='(') ) {s = 2;}
 
-                        else if ( (LA18_0==')') ) {s = 3;}
+                        else if ( (LA21_0==')') ) {s = 3;}
 
-                        else if ( (LA18_0==';') ) {s = 4;}
+                        else if ( (LA21_0==';') ) {s = 4;}
 
-                        else if ( (LA18_0=='>') ) {s = 5;}
+                        else if ( (LA21_0=='>') ) {s = 5;}
 
-                        else if ( (LA18_0==',') ) {s = 6;}
+                        else if ( (LA21_0==',') ) {s = 6;}
 
-                        else if ( (LA18_0==':') ) {s = 7;}
+                        else if ( (LA21_0==':') ) {s = 7;}
 
-                        else if ( (LA18_0=='{') ) {s = 8;}
+                        else if ( (LA21_0=='{') ) {s = 8;}
 
-                        else if ( (LA18_0=='}') ) {s = 9;}
+                        else if ( (LA21_0=='}') ) {s = 9;}
 
-                        else if ( (LA18_0=='=') ) {s = 10;}
+                        else if ( (LA21_0=='=') ) {s = 10;}
 
-                        else if ( (LA18_0=='t') ) {s = 11;}
+                        else if ( (LA21_0=='t') ) {s = 11;}
 
-                        else if ( (LA18_0=='f') ) {s = 12;}
+                        else if ( (LA21_0=='f') ) {s = 12;}
 
-                        else if ( (LA18_0=='.') ) {s = 13;}
+                        else if ( (LA21_0=='.') ) {s = 13;}
 
-                        else if ( (LA18_0=='/') ) {s = 14;}
+                        else if ( (LA21_0=='/') ) {s = 14;}
 
-                        else if ( (LA18_0=='0') ) {s = 15;}
+                        else if ( (LA21_0=='0') ) {s = 15;}
 
-                        else if ( (LA18_0=='-') ) {s = 16;}
+                        else if ( ((LA21_0>='1' && LA21_0<='9')) ) {s = 16;}
 
-                        else if ( ((LA18_0>='1' && LA18_0<='9')) ) {s = 17;}
+                        else if ( (LA21_0=='^') ) {s = 17;}
 
-                        else if ( (LA18_0=='^') ) {s = 18;}
+                        else if ( ((LA21_0>='A' && LA21_0<='Z')||LA21_0=='_'||(LA21_0>='a' && LA21_0<='e')||(LA21_0>='g' && LA21_0<='s')||(LA21_0>='u' && LA21_0<='z')) ) {s = 18;}
 
-                        else if ( ((LA18_0>='A' && LA18_0<='Z')||LA18_0=='_'||(LA18_0>='a' && LA18_0<='e')||(LA18_0>='g' && LA18_0<='s')||(LA18_0>='u' && LA18_0<='z')) ) {s = 19;}
+                        else if ( (LA21_0=='\"') ) {s = 19;}
 
-                        else if ( (LA18_0=='\"') ) {s = 20;}
+                        else if ( (LA21_0=='\'') ) {s = 20;}
 
-                        else if ( (LA18_0=='\'') ) {s = 21;}
+                        else if ( ((LA21_0>='\t' && LA21_0<='\n')||LA21_0=='\r'||LA21_0==' ') ) {s = 21;}
 
-                        else if ( ((LA18_0>='\t' && LA18_0<='\n')||LA18_0=='\r'||LA18_0==' ') ) {s = 22;}
-
-                        else if ( ((LA18_0>='\u0000' && LA18_0<='\b')||(LA18_0>='\u000B' && LA18_0<='\f')||(LA18_0>='\u000E' && LA18_0<='\u001F')||LA18_0=='!'||(LA18_0>='#' && LA18_0<='&')||(LA18_0>='*' && LA18_0<='+')||LA18_0=='<'||LA18_0=='?'||(LA18_0>='[' && LA18_0<=']')||LA18_0=='`'||LA18_0=='|'||(LA18_0>='~' && LA18_0<='\uFFFF')) ) {s = 23;}
+                        else if ( ((LA21_0>='\u0000' && LA21_0<='\b')||(LA21_0>='\u000B' && LA21_0<='\f')||(LA21_0>='\u000E' && LA21_0<='\u001F')||LA21_0=='!'||(LA21_0>='#' && LA21_0<='&')||(LA21_0>='*' && LA21_0<='+')||LA21_0=='-'||LA21_0=='<'||LA21_0=='?'||(LA21_0>='[' && LA21_0<=']')||LA21_0=='`'||LA21_0=='|'||(LA21_0>='~' && LA21_0<='\uFFFF')) ) {s = 22;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA18_21 = input.LA(1);
+                        int LA21_20 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA18_21>='\u0000' && LA18_21<='\uFFFF')) ) {s = 45;}
+                        if ( ((LA21_20>='\u0000' && LA21_20<='\uFFFF')) ) {s = 45;}
 
-                        else s = 23;
+                        else s = 22;
 
                         if ( s>=0 ) return s;
                         break;
             }
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 18, _s, input);
+                new NoViableAltException(getDescription(), 21, _s, input);
             error(nvae);
             throw nvae;
         }

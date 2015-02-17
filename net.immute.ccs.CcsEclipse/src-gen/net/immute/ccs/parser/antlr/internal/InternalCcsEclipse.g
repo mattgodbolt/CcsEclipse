@@ -570,6 +570,33 @@ ruleNested returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 
 
 
+// Entry rule entryRuleModifier
+entryRuleModifier returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getModifierRule()); } 
+	 iv_ruleModifier=ruleModifier 
+	 { $current=$iv_ruleModifier.current.getText(); }  
+	 EOF 
+;
+
+// Rule Modifier
+ruleModifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+	kw='@override' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getModifierAccess().getOverrideKeyword()); 
+    }
+)?
+    ;
+
+
+
+
+
 // Entry rule entryRuleProperty
 entryRuleProperty returns [String current=null] 
 	:
@@ -584,25 +611,36 @@ ruleProperty returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken(
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(    this_ID_0=RULE_ID    {
-		$current.merge(this_ID_0);
+(
+    { 
+        newCompositeNode(grammarAccess.getPropertyAccess().getModifierParserRuleCall_0()); 
+    }
+    this_Modifier_0=ruleModifier    {
+		$current.merge(this_Modifier_0);
     }
 
     { 
-    newLeafNode(this_ID_0, grammarAccess.getPropertyAccess().getIDTerminalRuleCall_0()); 
+        afterParserOrEnumRuleCall();
+    }
+    this_ID_1=RULE_ID    {
+		$current.merge(this_ID_1);
+    }
+
+    { 
+    newLeafNode(this_ID_1, grammarAccess.getPropertyAccess().getIDTerminalRuleCall_1()); 
     }
 
 	kw='=' 
     {
         $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getPropertyAccess().getEqualsSignKeyword_1()); 
+        newLeafNode(kw, grammarAccess.getPropertyAccess().getEqualsSignKeyword_2()); 
     }
 
     { 
-        newCompositeNode(grammarAccess.getPropertyAccess().getValueParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getPropertyAccess().getValueParserRuleCall_3()); 
     }
-    this_Value_2=ruleValue    {
-		$current.merge(this_Value_2);
+    this_Value_3=ruleValue    {
+		$current.merge(this_Value_3);
     }
 
     { 
@@ -956,7 +994,7 @@ ruleImport returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 
 RULE_HEXINT : '0x' ('0'..'9'|'a'..'f'|'A'..'F')+;
 
-RULE_NUMBER : '-'? ('0'..'9'|'.')+ (('e'|'E') '-'? ('0'..'9')+)?;
+RULE_NUMBER : (('0'..'9')+ ('.' ('0'..'9')*)?|'.' ('0'..'9')+) (('e'|'E') ('+'|'-')? ('0'..'9')+)?;
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

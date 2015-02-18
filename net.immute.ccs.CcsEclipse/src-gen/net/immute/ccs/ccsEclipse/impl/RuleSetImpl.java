@@ -6,6 +6,7 @@ import java.util.Collection;
 
 import net.immute.ccs.ccsEclipse.CcsEclipsePackage;
 import net.immute.ccs.ccsEclipse.Context;
+import net.immute.ccs.ccsEclipse.Rule;
 import net.immute.ccs.ccsEclipse.RuleSet;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -19,7 +20,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -48,14 +50,14 @@ public class RuleSetImpl extends MinimalEObjectImpl.Container implements RuleSet
   protected Context context;
 
   /**
-   * The cached value of the '{@link #getRules() <em>Rules</em>}' attribute list.
+   * The cached value of the '{@link #getRules() <em>Rules</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getRules()
    * @generated
    * @ordered
    */
-  protected EList<String> rules;
+  protected EList<Rule> rules;
 
   /**
    * <!-- begin-user-doc -->
@@ -131,11 +133,11 @@ public class RuleSetImpl extends MinimalEObjectImpl.Container implements RuleSet
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getRules()
+  public EList<Rule> getRules()
   {
     if (rules == null)
     {
-      rules = new EDataTypeEList<String>(String.class, this, CcsEclipsePackage.RULE_SET__RULES);
+      rules = new EObjectContainmentEList<Rule>(Rule.class, this, CcsEclipsePackage.RULE_SET__RULES);
     }
     return rules;
   }
@@ -152,6 +154,8 @@ public class RuleSetImpl extends MinimalEObjectImpl.Container implements RuleSet
     {
       case CcsEclipsePackage.RULE_SET__CONTEXT:
         return basicSetContext(null, msgs);
+      case CcsEclipsePackage.RULE_SET__RULES:
+        return ((InternalEList<?>)getRules()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -190,7 +194,7 @@ public class RuleSetImpl extends MinimalEObjectImpl.Container implements RuleSet
         return;
       case CcsEclipsePackage.RULE_SET__RULES:
         getRules().clear();
-        getRules().addAll((Collection<? extends String>)newValue);
+        getRules().addAll((Collection<? extends Rule>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -232,23 +236,6 @@ public class RuleSetImpl extends MinimalEObjectImpl.Container implements RuleSet
         return rules != null && !rules.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (rules: ");
-    result.append(rules);
-    result.append(')');
-    return result.toString();
   }
 
 } //RuleSetImpl

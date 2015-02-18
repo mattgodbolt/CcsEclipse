@@ -18,11 +18,15 @@ public class CcsEclipseSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected CcsEclipseGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_Context_SemicolonKeyword_4_q;
+	protected AbstractElementAlias match_Rule_SemicolonKeyword_1_q;
+	protected AbstractElementAlias match_Selector_GreaterThanSignKeyword_1_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (CcsEclipseGrammarAccess) access;
 		match_Context_SemicolonKeyword_4_q = new TokenAlias(false, true, grammarAccess.getContextAccess().getSemicolonKeyword_4());
+		match_Rule_SemicolonKeyword_1_q = new TokenAlias(false, true, grammarAccess.getRuleAccess().getSemicolonKeyword_1());
+		match_Selector_GreaterThanSignKeyword_1_q = new TokenAlias(false, true, grammarAccess.getSelectorAccess().getGreaterThanSignKeyword_1());
 	}
 	
 	@Override
@@ -39,6 +43,10 @@ public class CcsEclipseSyntacticSequencer extends AbstractSyntacticSequencer {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
 			if(match_Context_SemicolonKeyword_4_q.equals(syntax))
 				emit_Context_SemicolonKeyword_4_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Rule_SemicolonKeyword_1_q.equals(syntax))
+				emit_Rule_SemicolonKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Selector_GreaterThanSignKeyword_1_q.equals(syntax))
+				emit_Selector_GreaterThanSignKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -48,6 +56,22 @@ public class CcsEclipseSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ';'?
 	 */
 	protected void emit_Context_SemicolonKeyword_4_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     ';'?
+	 */
+	protected void emit_Rule_SemicolonKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     '>'?
+	 */
+	protected void emit_Selector_GreaterThanSignKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

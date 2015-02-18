@@ -23,29 +23,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Context extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Selector</b></em>' attribute.
+   * Returns the value of the '<em><b>Selector</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Selector</em>' attribute isn't clear,
+   * If the meaning of the '<em>Selector</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Selector</em>' attribute.
-   * @see #setSelector(String)
+   * @return the value of the '<em>Selector</em>' containment reference.
+   * @see #setSelector(Selector)
    * @see net.immute.ccs.ccsEclipse.CcsEclipsePackage#getContext_Selector()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getSelector();
+  Selector getSelector();
 
   /**
-   * Sets the value of the '{@link net.immute.ccs.ccsEclipse.Context#getSelector <em>Selector</em>}' attribute.
+   * Sets the value of the '{@link net.immute.ccs.ccsEclipse.Context#getSelector <em>Selector</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Selector</em>' attribute.
+   * @param value the new value of the '<em>Selector</em>' containment reference.
    * @see #getSelector()
    * @generated
    */
-  void setSelector(String value);
+  void setSelector(Selector value);
 
 } // Context

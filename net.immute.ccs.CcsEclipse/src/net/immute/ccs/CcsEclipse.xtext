@@ -13,7 +13,7 @@ Context:
 ;
 
 Selector:
-	Sum '>'?
+	sum=Sum '>'?
 ;
 
 Sum: Product (',' Product)*;
@@ -27,21 +27,21 @@ Step:
 ;
 
 Rule:
-	(Import | Constraint | Property | Nested) ';'?
+	(^import=Import | constraint=Constraint | property=Property | nested=Nested) ';'?
 ;
 
 Nested:
-	Selector (
-		(':' (Import | Constraint | Property)) 
-		| '{' Rule* '}')
+	selector=Selector (
+		(':' (^import=Import | constraint=Constraint | property=Property)) 
+		| '{' (rules += Rule)* '}')
 ;
 
-Modifier: ("@override")?;
+
+Modifier: (override ?= "@override");
 
 Property:
-	Modifier ID '=' Value
+	(modifiers+=Modifier*) name=ID '=' value=Value
 ;
-
 
 terminal HEXINT returns ecore::EInt: '0x' ('0'..'9'|'a'..'f'|'A'..'F')+;
 // TODO interpolants
@@ -49,13 +49,13 @@ terminal NUMBER returns ecore::EBigDecimal:
     (('0'..'9')+ ('.' ('0'..'9')*)? | 
     '.' ('0'..'9')+) (('e' | 'E') ('+' | '-')? ('0'..'9')+)?;
     
-bool : 'true' | 'false';
+Boolean : 'true' | 'false';
 
 Value:
 	HEXINT
 	| NUMBER
 	| STRING
-	| bool
+	| Boolean
 ;
 
 Constraint:
@@ -72,5 +72,5 @@ Vals: '.' Ident Vals*;
 
 StepSuffix: '/' SingleStep;
 
-Import: '@import' STRING;
+Import: '@import' importURI=STRING;
 

@@ -4,10 +4,13 @@ package net.immute.ccs.ccsEclipse.impl;
 
 import net.immute.ccs.ccsEclipse.CcsEclipsePackage;
 import net.immute.ccs.ccsEclipse.Context;
+import net.immute.ccs.ccsEclipse.Selector;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -28,24 +31,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class ContextImpl extends MinimalEObjectImpl.Container implements Context
 {
   /**
-   * The default value of the '{@link #getSelector() <em>Selector</em>}' attribute.
+   * The cached value of the '{@link #getSelector() <em>Selector</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getSelector()
    * @generated
    * @ordered
    */
-  protected static final String SELECTOR_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getSelector() <em>Selector</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSelector()
-   * @generated
-   * @ordered
-   */
-  protected String selector = SELECTOR_EDEFAULT;
+  protected Selector selector;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,7 +66,7 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getSelector()
+  public Selector getSelector()
   {
     return selector;
   }
@@ -83,12 +76,53 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSelector(String newSelector)
+  public NotificationChain basicSetSelector(Selector newSelector, NotificationChain msgs)
   {
-    String oldSelector = selector;
+    Selector oldSelector = selector;
     selector = newSelector;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CcsEclipsePackage.CONTEXT__SELECTOR, oldSelector, selector));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CcsEclipsePackage.CONTEXT__SELECTOR, oldSelector, newSelector);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSelector(Selector newSelector)
+  {
+    if (newSelector != selector)
+    {
+      NotificationChain msgs = null;
+      if (selector != null)
+        msgs = ((InternalEObject)selector).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CcsEclipsePackage.CONTEXT__SELECTOR, null, msgs);
+      if (newSelector != null)
+        msgs = ((InternalEObject)newSelector).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CcsEclipsePackage.CONTEXT__SELECTOR, null, msgs);
+      msgs = basicSetSelector(newSelector, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CcsEclipsePackage.CONTEXT__SELECTOR, newSelector, newSelector));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case CcsEclipsePackage.CONTEXT__SELECTOR:
+        return basicSetSelector(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -118,7 +152,7 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
     switch (featureID)
     {
       case CcsEclipsePackage.CONTEXT__SELECTOR:
-        setSelector((String)newValue);
+        setSelector((Selector)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -135,7 +169,7 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
     switch (featureID)
     {
       case CcsEclipsePackage.CONTEXT__SELECTOR:
-        setSelector(SELECTOR_EDEFAULT);
+        setSelector((Selector)null);
         return;
     }
     super.eUnset(featureID);
@@ -152,26 +186,9 @@ public class ContextImpl extends MinimalEObjectImpl.Container implements Context
     switch (featureID)
     {
       case CcsEclipsePackage.CONTEXT__SELECTOR:
-        return SELECTOR_EDEFAULT == null ? selector != null : !SELECTOR_EDEFAULT.equals(selector);
+        return selector != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (selector: ");
-    result.append(selector);
-    result.append(')');
-    return result.toString();
   }
 
 } //ContextImpl

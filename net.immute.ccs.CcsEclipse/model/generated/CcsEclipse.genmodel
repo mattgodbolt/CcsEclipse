@@ -9,10 +9,37 @@
       fileExtensions="ccs" ecorePackage="CcsEclipse.ecore#/">
     <genClasses ecoreClass="CcsEclipse.ecore#//RuleSet">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CcsEclipse.ecore#//RuleSet/context"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//RuleSet/rules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CcsEclipse.ecore#//RuleSet/rules"/>
     </genClasses>
     <genClasses ecoreClass="CcsEclipse.ecore#//Context">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//Context/selector"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CcsEclipse.ecore#//Context/selector"/>
+    </genClasses>
+    <genClasses ecoreClass="CcsEclipse.ecore#//Selector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//Selector/sum"/>
+    </genClasses>
+    <genClasses ecoreClass="CcsEclipse.ecore#//Rule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CcsEclipse.ecore#//Rule/import"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//Rule/constraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CcsEclipse.ecore#//Rule/property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CcsEclipse.ecore#//Rule/nested"/>
+    </genClasses>
+    <genClasses ecoreClass="CcsEclipse.ecore#//Nested">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CcsEclipse.ecore#//Nested/selector"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CcsEclipse.ecore#//Nested/import"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//Nested/constraint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CcsEclipse.ecore#//Nested/property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CcsEclipse.ecore#//Nested/rules"/>
+    </genClasses>
+    <genClasses ecoreClass="CcsEclipse.ecore#//Modifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//Modifier/override"/>
+    </genClasses>
+    <genClasses ecoreClass="CcsEclipse.ecore#//Property">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CcsEclipse.ecore#//Property/modifiers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//Property/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//Property/value"/>
+    </genClasses>
+    <genClasses ecoreClass="CcsEclipse.ecore#//Import">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//Import/importURI"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

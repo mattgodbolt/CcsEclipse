@@ -41,7 +41,7 @@ public class CcsEclipseParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRuleAccess().getAlternatives_0(), "rule__Rule__Alternatives_0");
 					put(grammarAccess.getNestedAccess().getAlternatives_1(), "rule__Nested__Alternatives_1");
 					put(grammarAccess.getNestedAccess().getAlternatives_1_0_1(), "rule__Nested__Alternatives_1_0_1");
-					put(grammarAccess.getBoolAccess().getAlternatives(), "rule__Bool__Alternatives");
+					put(grammarAccess.getBooleanAccess().getAlternatives(), "rule__Boolean__Alternatives");
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
 					put(grammarAccess.getIdentAccess().getAlternatives(), "rule__Ident__Alternatives");
 					put(grammarAccess.getRuleSetAccess().getGroup(), "rule__RuleSet__Group__0");
@@ -65,6 +65,21 @@ public class CcsEclipseParser extends AbstractContentAssistParser {
 					put(grammarAccess.getRuleSetAccess().getContextAssignment_0(), "rule__RuleSet__ContextAssignment_0");
 					put(grammarAccess.getRuleSetAccess().getRulesAssignment_1(), "rule__RuleSet__RulesAssignment_1");
 					put(grammarAccess.getContextAccess().getSelectorAssignment_2(), "rule__Context__SelectorAssignment_2");
+					put(grammarAccess.getSelectorAccess().getSumAssignment_0(), "rule__Selector__SumAssignment_0");
+					put(grammarAccess.getRuleAccess().getImportAssignment_0_0(), "rule__Rule__ImportAssignment_0_0");
+					put(grammarAccess.getRuleAccess().getConstraintAssignment_0_1(), "rule__Rule__ConstraintAssignment_0_1");
+					put(grammarAccess.getRuleAccess().getPropertyAssignment_0_2(), "rule__Rule__PropertyAssignment_0_2");
+					put(grammarAccess.getRuleAccess().getNestedAssignment_0_3(), "rule__Rule__NestedAssignment_0_3");
+					put(grammarAccess.getNestedAccess().getSelectorAssignment_0(), "rule__Nested__SelectorAssignment_0");
+					put(grammarAccess.getNestedAccess().getImportAssignment_1_0_1_0(), "rule__Nested__ImportAssignment_1_0_1_0");
+					put(grammarAccess.getNestedAccess().getConstraintAssignment_1_0_1_1(), "rule__Nested__ConstraintAssignment_1_0_1_1");
+					put(grammarAccess.getNestedAccess().getPropertyAssignment_1_0_1_2(), "rule__Nested__PropertyAssignment_1_0_1_2");
+					put(grammarAccess.getNestedAccess().getRulesAssignment_1_1_1(), "rule__Nested__RulesAssignment_1_1_1");
+					put(grammarAccess.getModifierAccess().getOverrideAssignment(), "rule__Modifier__OverrideAssignment");
+					put(grammarAccess.getPropertyAccess().getModifiersAssignment_0(), "rule__Property__ModifiersAssignment_0");
+					put(grammarAccess.getPropertyAccess().getNameAssignment_1(), "rule__Property__NameAssignment_1");
+					put(grammarAccess.getPropertyAccess().getValueAssignment_3(), "rule__Property__ValueAssignment_3");
+					put(grammarAccess.getImportAccess().getImportURIAssignment_1(), "rule__Import__ImportURIAssignment_1");
 				}
 			};
 		}

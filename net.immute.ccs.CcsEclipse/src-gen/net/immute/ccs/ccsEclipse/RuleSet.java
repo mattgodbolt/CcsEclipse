@@ -52,19 +52,19 @@ public interface RuleSet extends EObject
   void setContext(Context value);
 
   /**
-   * Returns the value of the '<em><b>Rules</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Rules</b></em>' containment reference list.
+   * The list contents are of type {@link net.immute.ccs.ccsEclipse.Rule}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Rules</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Rules</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Rules</em>' attribute list.
+   * @return the value of the '<em>Rules</em>' containment reference list.
    * @see net.immute.ccs.ccsEclipse.CcsEclipsePackage#getRuleSet_Rules()
-   * @model unique="false"
+   * @model containment="true"
    * @generated
    */
-  EList<String> getRules();
+  EList<Rule> getRules();
 
 } // RuleSet

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/net.immute.ccs.CcsEclipse.sdk_1.0.0.201502171251.jar" id="net.immute.ccs.CcsEclipse.sdk" version="1.0.0.201502171251"/>
+   <feature url="features/net.immute.ccs.CcsEclipse.sdk_1.0.0.201502190952.jar" id="net.immute.ccs.CcsEclipse.sdk" version="1.0.0.201502190952"/>
 </site>

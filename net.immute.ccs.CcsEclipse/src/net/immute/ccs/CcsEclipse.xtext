@@ -46,7 +46,7 @@ Property:
 terminal HEXINT returns ecore::EInt: '0x' ('0'..'9'|'a'..'f'|'A'..'F')+;
 // TODO interpolants
 terminal NUMBER returns ecore::EBigDecimal:
-    (('0'..'9')+ ('.' ('0'..'9')*)? | 
+    '-'? (('0'..'9')+ ('.' ('0'..'9')*)? | 
     '.' ('0'..'9')+) (('e' | 'E') ('+' | '-')? ('0'..'9')+)?;
     
 Boolean : 'true' | 'false';

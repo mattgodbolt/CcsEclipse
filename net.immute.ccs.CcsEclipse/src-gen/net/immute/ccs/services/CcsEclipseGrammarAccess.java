@@ -774,7 +774,7 @@ public class CcsEclipseGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// TODO interpolants
 	//terminal NUMBER returns ecore::EBigDecimal:
-	//	("0".."9"+ ("." "0".."9"*)? | "." "0".."9"+) (("e" | "E") ("+" | "-")? "0".."9"+)?;
+	//	"-"? ("0".."9"+ ("." "0".."9"*)? | "." "0".."9"+) (("e" | "E") ("+" | "-")? "0".."9"+)?;
 	public TerminalRule getNUMBERRule() {
 		return tNUMBER;
 	} 

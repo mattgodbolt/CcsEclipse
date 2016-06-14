@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link net.immute.ccs.ccsEclipse.Import#getImportURI <em>Import URI</em>}</li>
+ *   <li>{@link net.immute.ccs.ccsEclipse.Import#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,29 +23,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface Import extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Import URI</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Import URI</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Import URI</em>' attribute.
-   * @see #setImportURI(String)
-   * @see net.immute.ccs.ccsEclipse.CcsEclipsePackage#getImport_ImportURI()
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see net.immute.ccs.ccsEclipse.CcsEclipsePackage#getImport_Name()
    * @model
    * @generated
    */
-  String getImportURI();
+  String getName();
 
   /**
-   * Sets the value of the '{@link net.immute.ccs.ccsEclipse.Import#getImportURI <em>Import URI</em>}' attribute.
+   * Sets the value of the '{@link net.immute.ccs.ccsEclipse.Import#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Import URI</em>' attribute.
-   * @see #getImportURI()
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
    * @generated
    */
-  void setImportURI(String value);
+  void setName(String value);
 
 } // Import

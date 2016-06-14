@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/net.immute.ccs.CcsEclipse/src-gen" editDirectory="/net.immute.ccs.CcsEclipse.edit/src"
     editorDirectory="/net.immute.ccs.CcsEclipse.editor/src" modelPluginID="net.immute.ccs.CcsEclipse"
     forceOverwrite="true" modelName="CcsEclipse" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    complianceLevel="5.0" copyrightFields="false" editPluginID="net.immute.ccs.CcsEclipse.edit"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="net.immute.ccs.CcsEclipse.edit"
     editorPluginID="net.immute.ccs.CcsEclipse.editor" runtimeVersion="2.10">
   <genPackages prefix="CcsEclipse" basePackage="net.immute.ccs" disposableProviderFactory="true"
       fileExtensions="ccs" ecorePackage="CcsEclipse.ecore#/">
@@ -39,7 +39,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//Property/value"/>
     </genClasses>
     <genClasses ecoreClass="CcsEclipse.ecore#//Import">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//Import/importURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CcsEclipse.ecore#//Import/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

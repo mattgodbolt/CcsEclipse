@@ -21,35 +21,34 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_HEXINT", "RULE_NUMBER", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'@context'", "'('", "')'", "';'", "'>'", "','", "':'", "'{'", "'}'", "'@override'", "'='", "'true'", "'false'", "'@constrain'", "'.'", "'/'", "'@import'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_HEXINT", "RULE_NUMBER", "RULE_STRING", "RULE_NUM_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "'@context'", "'('", "')'", "';'", "'>'", "','", "':'", "'{'", "'}'", "'@override'", "'='", "'true'", "'false'", "'@constrain'", "'.'", "'/'", "'@import'"
     };
-    public static final int RULE_ID=4;
-    public static final int T__29=29;
-    public static final int T__28=28;
-    public static final int T__27=27;
-    public static final int T__26=26;
-    public static final int T__25=25;
-    public static final int T__24=24;
-    public static final int T__23=23;
-    public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=12;
-    public static final int T__21=21;
-    public static final int T__20=20;
-    public static final int RULE_SL_COMMENT=10;
-    public static final int EOF=-1;
-    public static final int RULE_HEXINT=5;
-    public static final int RULE_ML_COMMENT=9;
-    public static final int T__19=19;
     public static final int RULE_STRING=7;
-    public static final int T__16=16;
+    public static final int RULE_SL_COMMENT=10;
+    public static final int T__19=19;
     public static final int T__15=15;
-    public static final int T__18=18;
+    public static final int T__16=16;
     public static final int T__17=17;
-    public static final int RULE_NUMBER=6;
-    public static final int T__14=14;
+    public static final int T__18=18;
+    public static final int T__12=12;
     public static final int T__13=13;
-    public static final int RULE_INT=8;
+    public static final int T__14=14;
+    public static final int EOF=-1;
+    public static final int RULE_ID=4;
     public static final int RULE_WS=11;
+    public static final int RULE_NUMBER=6;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int RULE_NUM_ID=8;
+    public static final int T__28=28;
+    public static final int T__22=22;
+    public static final int RULE_ML_COMMENT=9;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
+    public static final int RULE_HEXINT=5;
 
     // delegates
     // delegators
@@ -65,7 +64,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
         
 
     public String[] getTokenNames() { return InternalCcsEclipseParser.tokenNames; }
-    public String getGrammarFileName() { return "../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g"; }
+    public String getGrammarFileName() { return "InternalCcsEclipse.g"; }
 
 
 
@@ -90,25 +89,28 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRuleSet"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:67:1: entryRuleRuleSet returns [EObject current=null] : iv_ruleRuleSet= ruleRuleSet EOF ;
+    // InternalCcsEclipse.g:67:1: entryRuleRuleSet returns [EObject current=null] : iv_ruleRuleSet= ruleRuleSet EOF ;
     public final EObject entryRuleRuleSet() throws RecognitionException {
         EObject current = null;
 
         EObject iv_ruleRuleSet = null;
 
 
+         
+        		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT");
+        	
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:68:2: (iv_ruleRuleSet= ruleRuleSet EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:69:2: iv_ruleRuleSet= ruleRuleSet EOF
+            // InternalCcsEclipse.g:71:2: (iv_ruleRuleSet= ruleRuleSet EOF )
+            // InternalCcsEclipse.g:72:2: iv_ruleRuleSet= ruleRuleSet EOF
             {
              newCompositeNode(grammarAccess.getRuleSetRule()); 
-            pushFollow(FOLLOW_ruleRuleSet_in_entryRuleRuleSet75);
+            pushFollow(FOLLOW_1);
             iv_ruleRuleSet=ruleRuleSet();
 
             state._fsp--;
 
              current =iv_ruleRuleSet; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRuleSet85); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -119,6 +121,9 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                 appendSkippedTokens();
             } 
         finally {
+
+            	myHiddenTokenState.restore();
+
         }
         return current;
     }
@@ -126,7 +131,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRuleSet"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:76:1: ruleRuleSet returns [EObject current=null] : ( ( (lv_context_0_0= ruleContext ) )? ( (lv_rules_1_0= ruleRule ) )* ) ;
+    // InternalCcsEclipse.g:82:1: ruleRuleSet returns [EObject current=null] : ( ( (lv_context_0_0= ruleContext ) )? ( (lv_rules_1_0= ruleRule ) )* ) ;
     public final EObject ruleRuleSet() throws RecognitionException {
         EObject current = null;
 
@@ -136,32 +141,33 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
          enterRule(); 
+        		HiddenTokens myHiddenTokenState = ((XtextTokenStream)input).setHiddenTokens("RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT");
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:79:28: ( ( ( (lv_context_0_0= ruleContext ) )? ( (lv_rules_1_0= ruleRule ) )* ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:80:1: ( ( (lv_context_0_0= ruleContext ) )? ( (lv_rules_1_0= ruleRule ) )* )
+            // InternalCcsEclipse.g:86:28: ( ( ( (lv_context_0_0= ruleContext ) )? ( (lv_rules_1_0= ruleRule ) )* ) )
+            // InternalCcsEclipse.g:87:1: ( ( (lv_context_0_0= ruleContext ) )? ( (lv_rules_1_0= ruleRule ) )* )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:80:1: ( ( (lv_context_0_0= ruleContext ) )? ( (lv_rules_1_0= ruleRule ) )* )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:80:2: ( (lv_context_0_0= ruleContext ) )? ( (lv_rules_1_0= ruleRule ) )*
+            // InternalCcsEclipse.g:87:1: ( ( (lv_context_0_0= ruleContext ) )? ( (lv_rules_1_0= ruleRule ) )* )
+            // InternalCcsEclipse.g:87:2: ( (lv_context_0_0= ruleContext ) )? ( (lv_rules_1_0= ruleRule ) )*
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:80:2: ( (lv_context_0_0= ruleContext ) )?
+            // InternalCcsEclipse.g:87:2: ( (lv_context_0_0= ruleContext ) )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==13) ) {
+            if ( (LA1_0==12) ) {
                 alt1=1;
             }
             switch (alt1) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:81:1: (lv_context_0_0= ruleContext )
+                    // InternalCcsEclipse.g:88:1: (lv_context_0_0= ruleContext )
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:81:1: (lv_context_0_0= ruleContext )
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:82:3: lv_context_0_0= ruleContext
+                    // InternalCcsEclipse.g:88:1: (lv_context_0_0= ruleContext )
+                    // InternalCcsEclipse.g:89:3: lv_context_0_0= ruleContext
                     {
                      
                     	        newCompositeNode(grammarAccess.getRuleSetAccess().getContextContextParserRuleCall_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleContext_in_ruleRuleSet131);
+                    pushFollow(FOLLOW_3);
                     lv_context_0_0=ruleContext();
 
                     state._fsp--;
@@ -174,7 +180,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"context",
                             		lv_context_0_0, 
-                            		"Context");
+                            		"net.immute.ccs.CcsEclipse.Context");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -186,28 +192,28 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:98:3: ( (lv_rules_1_0= ruleRule ) )*
+            // InternalCcsEclipse.g:105:3: ( (lv_rules_1_0= ruleRule ) )*
             loop2:
             do {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==RULE_ID||LA2_0==RULE_STRING||LA2_0==14||LA2_0==22||LA2_0==26||LA2_0==29) ) {
+                if ( (LA2_0==RULE_ID||LA2_0==RULE_STRING||LA2_0==13||LA2_0==21||LA2_0==25||LA2_0==28) ) {
                     alt2=1;
                 }
 
 
                 switch (alt2) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:99:1: (lv_rules_1_0= ruleRule )
+            	    // InternalCcsEclipse.g:106:1: (lv_rules_1_0= ruleRule )
             	    {
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:99:1: (lv_rules_1_0= ruleRule )
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:100:3: lv_rules_1_0= ruleRule
+            	    // InternalCcsEclipse.g:106:1: (lv_rules_1_0= ruleRule )
+            	    // InternalCcsEclipse.g:107:3: lv_rules_1_0= ruleRule
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getRuleSetAccess().getRulesRuleParserRuleCall_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleRule_in_ruleRuleSet153);
+            	    pushFollow(FOLLOW_3);
             	    lv_rules_1_0=ruleRule();
 
             	    state._fsp--;
@@ -220,7 +226,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
             	           			current, 
             	           			"rules",
             	            		lv_rules_1_0, 
-            	            		"Rule");
+            	            		"net.immute.ccs.CcsEclipse.Rule");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -249,6 +255,9 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                 appendSkippedTokens();
             } 
         finally {
+
+            	myHiddenTokenState.restore();
+
         }
         return current;
     }
@@ -256,7 +265,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleContext"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:124:1: entryRuleContext returns [EObject current=null] : iv_ruleContext= ruleContext EOF ;
+    // InternalCcsEclipse.g:134:1: entryRuleContext returns [EObject current=null] : iv_ruleContext= ruleContext EOF ;
     public final EObject entryRuleContext() throws RecognitionException {
         EObject current = null;
 
@@ -264,17 +273,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:125:2: (iv_ruleContext= ruleContext EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:126:2: iv_ruleContext= ruleContext EOF
+            // InternalCcsEclipse.g:135:2: (iv_ruleContext= ruleContext EOF )
+            // InternalCcsEclipse.g:136:2: iv_ruleContext= ruleContext EOF
             {
              newCompositeNode(grammarAccess.getContextRule()); 
-            pushFollow(FOLLOW_ruleContext_in_entryRuleContext190);
+            pushFollow(FOLLOW_1);
             iv_ruleContext=ruleContext();
 
             state._fsp--;
 
              current =iv_ruleContext; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleContext200); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -292,7 +301,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleContext"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:133:1: ruleContext returns [EObject current=null] : (otherlv_0= '@context' otherlv_1= '(' ( (lv_selector_2_0= ruleSelector ) ) otherlv_3= ')' (otherlv_4= ';' )? ) ;
+    // InternalCcsEclipse.g:143:1: ruleContext returns [EObject current=null] : (otherlv_0= '@context' otherlv_1= '(' ( (lv_selector_2_0= ruleSelector ) ) otherlv_3= ')' (otherlv_4= ';' )? ) ;
     public final EObject ruleContext() throws RecognitionException {
         EObject current = null;
 
@@ -306,30 +315,30 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:136:28: ( (otherlv_0= '@context' otherlv_1= '(' ( (lv_selector_2_0= ruleSelector ) ) otherlv_3= ')' (otherlv_4= ';' )? ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:137:1: (otherlv_0= '@context' otherlv_1= '(' ( (lv_selector_2_0= ruleSelector ) ) otherlv_3= ')' (otherlv_4= ';' )? )
+            // InternalCcsEclipse.g:146:28: ( (otherlv_0= '@context' otherlv_1= '(' ( (lv_selector_2_0= ruleSelector ) ) otherlv_3= ')' (otherlv_4= ';' )? ) )
+            // InternalCcsEclipse.g:147:1: (otherlv_0= '@context' otherlv_1= '(' ( (lv_selector_2_0= ruleSelector ) ) otherlv_3= ')' (otherlv_4= ';' )? )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:137:1: (otherlv_0= '@context' otherlv_1= '(' ( (lv_selector_2_0= ruleSelector ) ) otherlv_3= ')' (otherlv_4= ';' )? )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:137:3: otherlv_0= '@context' otherlv_1= '(' ( (lv_selector_2_0= ruleSelector ) ) otherlv_3= ')' (otherlv_4= ';' )?
+            // InternalCcsEclipse.g:147:1: (otherlv_0= '@context' otherlv_1= '(' ( (lv_selector_2_0= ruleSelector ) ) otherlv_3= ')' (otherlv_4= ';' )? )
+            // InternalCcsEclipse.g:147:3: otherlv_0= '@context' otherlv_1= '(' ( (lv_selector_2_0= ruleSelector ) ) otherlv_3= ')' (otherlv_4= ';' )?
             {
-            otherlv_0=(Token)match(input,13,FOLLOW_13_in_ruleContext237); 
+            otherlv_0=(Token)match(input,12,FOLLOW_4); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getContextAccess().getContextKeyword_0());
                 
-            otherlv_1=(Token)match(input,14,FOLLOW_14_in_ruleContext249); 
+            otherlv_1=(Token)match(input,13,FOLLOW_5); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getContextAccess().getLeftParenthesisKeyword_1());
                 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:145:1: ( (lv_selector_2_0= ruleSelector ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:146:1: (lv_selector_2_0= ruleSelector )
+            // InternalCcsEclipse.g:155:1: ( (lv_selector_2_0= ruleSelector ) )
+            // InternalCcsEclipse.g:156:1: (lv_selector_2_0= ruleSelector )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:146:1: (lv_selector_2_0= ruleSelector )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:147:3: lv_selector_2_0= ruleSelector
+            // InternalCcsEclipse.g:156:1: (lv_selector_2_0= ruleSelector )
+            // InternalCcsEclipse.g:157:3: lv_selector_2_0= ruleSelector
             {
              
             	        newCompositeNode(grammarAccess.getContextAccess().getSelectorSelectorParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleSelector_in_ruleContext270);
+            pushFollow(FOLLOW_6);
             lv_selector_2_0=ruleSelector();
 
             state._fsp--;
@@ -342,7 +351,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"selector",
                     		lv_selector_2_0, 
-                    		"Selector");
+                    		"net.immute.ccs.CcsEclipse.Selector");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -351,22 +360,22 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleContext282); 
+            otherlv_3=(Token)match(input,14,FOLLOW_7); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getContextAccess().getRightParenthesisKeyword_3());
                 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:167:1: (otherlv_4= ';' )?
+            // InternalCcsEclipse.g:177:1: (otherlv_4= ';' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==16) ) {
+            if ( (LA3_0==15) ) {
                 alt3=1;
             }
             switch (alt3) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:167:3: otherlv_4= ';'
+                    // InternalCcsEclipse.g:177:3: otherlv_4= ';'
                     {
-                    otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleContext295); 
+                    otherlv_4=(Token)match(input,15,FOLLOW_2); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getContextAccess().getSemicolonKeyword_4());
                         
@@ -397,7 +406,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSelector"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:179:1: entryRuleSelector returns [EObject current=null] : iv_ruleSelector= ruleSelector EOF ;
+    // InternalCcsEclipse.g:189:1: entryRuleSelector returns [EObject current=null] : iv_ruleSelector= ruleSelector EOF ;
     public final EObject entryRuleSelector() throws RecognitionException {
         EObject current = null;
 
@@ -405,17 +414,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:180:2: (iv_ruleSelector= ruleSelector EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:181:2: iv_ruleSelector= ruleSelector EOF
+            // InternalCcsEclipse.g:190:2: (iv_ruleSelector= ruleSelector EOF )
+            // InternalCcsEclipse.g:191:2: iv_ruleSelector= ruleSelector EOF
             {
              newCompositeNode(grammarAccess.getSelectorRule()); 
-            pushFollow(FOLLOW_ruleSelector_in_entryRuleSelector333);
+            pushFollow(FOLLOW_1);
             iv_ruleSelector=ruleSelector();
 
             state._fsp--;
 
              current =iv_ruleSelector; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSelector343); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -433,7 +442,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSelector"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:188:1: ruleSelector returns [EObject current=null] : ( ( (lv_sum_0_0= ruleSum ) ) (otherlv_1= '>' )? ) ;
+    // InternalCcsEclipse.g:198:1: ruleSelector returns [EObject current=null] : ( ( (lv_sum_0_0= ruleSum ) ) (otherlv_1= '>' )? ) ;
     public final EObject ruleSelector() throws RecognitionException {
         EObject current = null;
 
@@ -444,22 +453,22 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:191:28: ( ( ( (lv_sum_0_0= ruleSum ) ) (otherlv_1= '>' )? ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:192:1: ( ( (lv_sum_0_0= ruleSum ) ) (otherlv_1= '>' )? )
+            // InternalCcsEclipse.g:201:28: ( ( ( (lv_sum_0_0= ruleSum ) ) (otherlv_1= '>' )? ) )
+            // InternalCcsEclipse.g:202:1: ( ( (lv_sum_0_0= ruleSum ) ) (otherlv_1= '>' )? )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:192:1: ( ( (lv_sum_0_0= ruleSum ) ) (otherlv_1= '>' )? )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:192:2: ( (lv_sum_0_0= ruleSum ) ) (otherlv_1= '>' )?
+            // InternalCcsEclipse.g:202:1: ( ( (lv_sum_0_0= ruleSum ) ) (otherlv_1= '>' )? )
+            // InternalCcsEclipse.g:202:2: ( (lv_sum_0_0= ruleSum ) ) (otherlv_1= '>' )?
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:192:2: ( (lv_sum_0_0= ruleSum ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:193:1: (lv_sum_0_0= ruleSum )
+            // InternalCcsEclipse.g:202:2: ( (lv_sum_0_0= ruleSum ) )
+            // InternalCcsEclipse.g:203:1: (lv_sum_0_0= ruleSum )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:193:1: (lv_sum_0_0= ruleSum )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:194:3: lv_sum_0_0= ruleSum
+            // InternalCcsEclipse.g:203:1: (lv_sum_0_0= ruleSum )
+            // InternalCcsEclipse.g:204:3: lv_sum_0_0= ruleSum
             {
              
             	        newCompositeNode(grammarAccess.getSelectorAccess().getSumSumParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleSum_in_ruleSelector389);
+            pushFollow(FOLLOW_8);
             lv_sum_0_0=ruleSum();
 
             state._fsp--;
@@ -472,7 +481,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"sum",
                     		lv_sum_0_0, 
-                    		"Sum");
+                    		"net.immute.ccs.CcsEclipse.Sum");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -481,18 +490,18 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:210:2: (otherlv_1= '>' )?
+            // InternalCcsEclipse.g:220:2: (otherlv_1= '>' )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==17) ) {
+            if ( (LA4_0==16) ) {
                 alt4=1;
             }
             switch (alt4) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:210:4: otherlv_1= '>'
+                    // InternalCcsEclipse.g:220:4: otherlv_1= '>'
                     {
-                    otherlv_1=(Token)match(input,17,FOLLOW_17_in_ruleSelector402); 
+                    otherlv_1=(Token)match(input,16,FOLLOW_2); 
 
                         	newLeafNode(otherlv_1, grammarAccess.getSelectorAccess().getGreaterThanSignKeyword_1());
                         
@@ -523,7 +532,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSum"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:222:1: entryRuleSum returns [String current=null] : iv_ruleSum= ruleSum EOF ;
+    // InternalCcsEclipse.g:232:1: entryRuleSum returns [String current=null] : iv_ruleSum= ruleSum EOF ;
     public final String entryRuleSum() throws RecognitionException {
         String current = null;
 
@@ -531,17 +540,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:223:2: (iv_ruleSum= ruleSum EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:224:2: iv_ruleSum= ruleSum EOF
+            // InternalCcsEclipse.g:233:2: (iv_ruleSum= ruleSum EOF )
+            // InternalCcsEclipse.g:234:2: iv_ruleSum= ruleSum EOF
             {
              newCompositeNode(grammarAccess.getSumRule()); 
-            pushFollow(FOLLOW_ruleSum_in_entryRuleSum441);
+            pushFollow(FOLLOW_1);
             iv_ruleSum=ruleSum();
 
             state._fsp--;
 
              current =iv_ruleSum.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSum452); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -559,7 +568,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSum"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:231:1: ruleSum returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Product_0= ruleProduct (kw= ',' this_Product_2= ruleProduct )* ) ;
+    // InternalCcsEclipse.g:241:1: ruleSum returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Product_0= ruleProduct (kw= ',' this_Product_2= ruleProduct )* ) ;
     public final AntlrDatatypeRuleToken ruleSum() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -572,16 +581,16 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:234:28: ( (this_Product_0= ruleProduct (kw= ',' this_Product_2= ruleProduct )* ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:235:1: (this_Product_0= ruleProduct (kw= ',' this_Product_2= ruleProduct )* )
+            // InternalCcsEclipse.g:244:28: ( (this_Product_0= ruleProduct (kw= ',' this_Product_2= ruleProduct )* ) )
+            // InternalCcsEclipse.g:245:1: (this_Product_0= ruleProduct (kw= ',' this_Product_2= ruleProduct )* )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:235:1: (this_Product_0= ruleProduct (kw= ',' this_Product_2= ruleProduct )* )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:236:5: this_Product_0= ruleProduct (kw= ',' this_Product_2= ruleProduct )*
+            // InternalCcsEclipse.g:245:1: (this_Product_0= ruleProduct (kw= ',' this_Product_2= ruleProduct )* )
+            // InternalCcsEclipse.g:246:5: this_Product_0= ruleProduct (kw= ',' this_Product_2= ruleProduct )*
             {
              
                     newCompositeNode(grammarAccess.getSumAccess().getProductParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleProduct_in_ruleSum499);
+            pushFollow(FOLLOW_9);
             this_Product_0=ruleProduct();
 
             state._fsp--;
@@ -592,22 +601,22 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:246:1: (kw= ',' this_Product_2= ruleProduct )*
+            // InternalCcsEclipse.g:256:1: (kw= ',' this_Product_2= ruleProduct )*
             loop5:
             do {
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( (LA5_0==18) ) {
+                if ( (LA5_0==17) ) {
                     alt5=1;
                 }
 
 
                 switch (alt5) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:247:2: kw= ',' this_Product_2= ruleProduct
+            	    // InternalCcsEclipse.g:257:2: kw= ',' this_Product_2= ruleProduct
             	    {
-            	    kw=(Token)match(input,18,FOLLOW_18_in_ruleSum518); 
+            	    kw=(Token)match(input,17,FOLLOW_5); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getSumAccess().getCommaKeyword_1_0()); 
@@ -615,7 +624,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
             	     
             	            newCompositeNode(grammarAccess.getSumAccess().getProductParserRuleCall_1_1()); 
             	        
-            	    pushFollow(FOLLOW_ruleProduct_in_ruleSum540);
+            	    pushFollow(FOLLOW_9);
             	    this_Product_2=ruleProduct();
 
             	    state._fsp--;
@@ -656,7 +665,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleProduct"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:271:1: entryRuleProduct returns [String current=null] : iv_ruleProduct= ruleProduct EOF ;
+    // InternalCcsEclipse.g:281:1: entryRuleProduct returns [String current=null] : iv_ruleProduct= ruleProduct EOF ;
     public final String entryRuleProduct() throws RecognitionException {
         String current = null;
 
@@ -664,17 +673,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:272:2: (iv_ruleProduct= ruleProduct EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:273:2: iv_ruleProduct= ruleProduct EOF
+            // InternalCcsEclipse.g:282:2: (iv_ruleProduct= ruleProduct EOF )
+            // InternalCcsEclipse.g:283:2: iv_ruleProduct= ruleProduct EOF
             {
              newCompositeNode(grammarAccess.getProductRule()); 
-            pushFollow(FOLLOW_ruleProduct_in_entryRuleProduct588);
+            pushFollow(FOLLOW_1);
             iv_ruleProduct=ruleProduct();
 
             state._fsp--;
 
              current =iv_ruleProduct.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProduct599); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -692,7 +701,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProduct"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:280:1: ruleProduct returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Term_0= ruleTerm )+ ;
+    // InternalCcsEclipse.g:290:1: ruleProduct returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Term_0= ruleTerm )+ ;
     public final AntlrDatatypeRuleToken ruleProduct() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -702,29 +711,29 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:283:28: ( (this_Term_0= ruleTerm )+ )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:284:1: (this_Term_0= ruleTerm )+
+            // InternalCcsEclipse.g:293:28: ( (this_Term_0= ruleTerm )+ )
+            // InternalCcsEclipse.g:294:1: (this_Term_0= ruleTerm )+
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:284:1: (this_Term_0= ruleTerm )+
+            // InternalCcsEclipse.g:294:1: (this_Term_0= ruleTerm )+
             int cnt6=0;
             loop6:
             do {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
-                if ( (LA6_0==RULE_ID||LA6_0==RULE_STRING||LA6_0==14) ) {
+                if ( (LA6_0==RULE_ID||LA6_0==RULE_STRING||LA6_0==13) ) {
                     alt6=1;
                 }
 
 
                 switch (alt6) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:285:5: this_Term_0= ruleTerm
+            	    // InternalCcsEclipse.g:295:5: this_Term_0= ruleTerm
             	    {
             	     
             	            newCompositeNode(grammarAccess.getProductAccess().getTermParserRuleCall()); 
             	        
-            	    pushFollow(FOLLOW_ruleTerm_in_ruleProduct646);
+            	    pushFollow(FOLLOW_3);
             	    this_Term_0=ruleTerm();
 
             	    state._fsp--;
@@ -766,7 +775,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTerm"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:303:1: entryRuleTerm returns [String current=null] : iv_ruleTerm= ruleTerm EOF ;
+    // InternalCcsEclipse.g:313:1: entryRuleTerm returns [String current=null] : iv_ruleTerm= ruleTerm EOF ;
     public final String entryRuleTerm() throws RecognitionException {
         String current = null;
 
@@ -774,17 +783,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:304:2: (iv_ruleTerm= ruleTerm EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:305:2: iv_ruleTerm= ruleTerm EOF
+            // InternalCcsEclipse.g:314:2: (iv_ruleTerm= ruleTerm EOF )
+            // InternalCcsEclipse.g:315:2: iv_ruleTerm= ruleTerm EOF
             {
              newCompositeNode(grammarAccess.getTermRule()); 
-            pushFollow(FOLLOW_ruleTerm_in_entryRuleTerm693);
+            pushFollow(FOLLOW_1);
             iv_ruleTerm=ruleTerm();
 
             state._fsp--;
 
              current =iv_ruleTerm.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTerm704); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -802,7 +811,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTerm"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:312:1: ruleTerm returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Step_0= ruleStep (kw= '>' this_Step_2= ruleStep )* ) ;
+    // InternalCcsEclipse.g:322:1: ruleTerm returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Step_0= ruleStep (kw= '>' this_Step_2= ruleStep )* ) ;
     public final AntlrDatatypeRuleToken ruleTerm() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -815,16 +824,16 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:315:28: ( (this_Step_0= ruleStep (kw= '>' this_Step_2= ruleStep )* ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:316:1: (this_Step_0= ruleStep (kw= '>' this_Step_2= ruleStep )* )
+            // InternalCcsEclipse.g:325:28: ( (this_Step_0= ruleStep (kw= '>' this_Step_2= ruleStep )* ) )
+            // InternalCcsEclipse.g:326:1: (this_Step_0= ruleStep (kw= '>' this_Step_2= ruleStep )* )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:316:1: (this_Step_0= ruleStep (kw= '>' this_Step_2= ruleStep )* )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:317:5: this_Step_0= ruleStep (kw= '>' this_Step_2= ruleStep )*
+            // InternalCcsEclipse.g:326:1: (this_Step_0= ruleStep (kw= '>' this_Step_2= ruleStep )* )
+            // InternalCcsEclipse.g:327:5: this_Step_0= ruleStep (kw= '>' this_Step_2= ruleStep )*
             {
              
                     newCompositeNode(grammarAccess.getTermAccess().getStepParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleStep_in_ruleTerm751);
+            pushFollow(FOLLOW_8);
             this_Step_0=ruleStep();
 
             state._fsp--;
@@ -835,16 +844,16 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:327:1: (kw= '>' this_Step_2= ruleStep )*
+            // InternalCcsEclipse.g:337:1: (kw= '>' this_Step_2= ruleStep )*
             loop7:
             do {
                 int alt7=2;
                 int LA7_0 = input.LA(1);
 
-                if ( (LA7_0==17) ) {
+                if ( (LA7_0==16) ) {
                     int LA7_2 = input.LA(2);
 
-                    if ( (LA7_2==RULE_ID||LA7_2==RULE_STRING||LA7_2==14) ) {
+                    if ( (LA7_2==RULE_ID||LA7_2==RULE_STRING||LA7_2==13) ) {
                         alt7=1;
                     }
 
@@ -854,9 +863,9 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:328:2: kw= '>' this_Step_2= ruleStep
+            	    // InternalCcsEclipse.g:338:2: kw= '>' this_Step_2= ruleStep
             	    {
-            	    kw=(Token)match(input,17,FOLLOW_17_in_ruleTerm770); 
+            	    kw=(Token)match(input,16,FOLLOW_5); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getTermAccess().getGreaterThanSignKeyword_1_0()); 
@@ -864,7 +873,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
             	     
             	            newCompositeNode(grammarAccess.getTermAccess().getStepParserRuleCall_1_1()); 
             	        
-            	    pushFollow(FOLLOW_ruleStep_in_ruleTerm792);
+            	    pushFollow(FOLLOW_8);
             	    this_Step_2=ruleStep();
 
             	    state._fsp--;
@@ -905,7 +914,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStep"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:352:1: entryRuleStep returns [String current=null] : iv_ruleStep= ruleStep EOF ;
+    // InternalCcsEclipse.g:362:1: entryRuleStep returns [String current=null] : iv_ruleStep= ruleStep EOF ;
     public final String entryRuleStep() throws RecognitionException {
         String current = null;
 
@@ -913,17 +922,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:353:2: (iv_ruleStep= ruleStep EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:354:2: iv_ruleStep= ruleStep EOF
+            // InternalCcsEclipse.g:363:2: (iv_ruleStep= ruleStep EOF )
+            // InternalCcsEclipse.g:364:2: iv_ruleStep= ruleStep EOF
             {
              newCompositeNode(grammarAccess.getStepRule()); 
-            pushFollow(FOLLOW_ruleStep_in_entryRuleStep840);
+            pushFollow(FOLLOW_1);
             iv_ruleStep=ruleStep();
 
             state._fsp--;
 
              current =iv_ruleStep.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStep851); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -941,7 +950,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStep"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:361:1: ruleStep returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_SingleStep_0= ruleSingleStep | (kw= '(' this_Sum_2= ruleSum kw= ')' ) ) ;
+    // InternalCcsEclipse.g:371:1: ruleStep returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_SingleStep_0= ruleSingleStep | (kw= '(' this_Sum_2= ruleSum kw= ')' ) ) ;
     public final AntlrDatatypeRuleToken ruleStep() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -954,17 +963,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:364:28: ( (this_SingleStep_0= ruleSingleStep | (kw= '(' this_Sum_2= ruleSum kw= ')' ) ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:365:1: (this_SingleStep_0= ruleSingleStep | (kw= '(' this_Sum_2= ruleSum kw= ')' ) )
+            // InternalCcsEclipse.g:374:28: ( (this_SingleStep_0= ruleSingleStep | (kw= '(' this_Sum_2= ruleSum kw= ')' ) ) )
+            // InternalCcsEclipse.g:375:1: (this_SingleStep_0= ruleSingleStep | (kw= '(' this_Sum_2= ruleSum kw= ')' ) )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:365:1: (this_SingleStep_0= ruleSingleStep | (kw= '(' this_Sum_2= ruleSum kw= ')' ) )
+            // InternalCcsEclipse.g:375:1: (this_SingleStep_0= ruleSingleStep | (kw= '(' this_Sum_2= ruleSum kw= ')' ) )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
             if ( (LA8_0==RULE_ID||LA8_0==RULE_STRING) ) {
                 alt8=1;
             }
-            else if ( (LA8_0==14) ) {
+            else if ( (LA8_0==13) ) {
                 alt8=2;
             }
             else {
@@ -975,12 +984,12 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
             }
             switch (alt8) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:366:5: this_SingleStep_0= ruleSingleStep
+                    // InternalCcsEclipse.g:376:5: this_SingleStep_0= ruleSingleStep
                     {
                      
                             newCompositeNode(grammarAccess.getStepAccess().getSingleStepParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleSingleStep_in_ruleStep898);
+                    pushFollow(FOLLOW_2);
                     this_SingleStep_0=ruleSingleStep();
 
                     state._fsp--;
@@ -995,12 +1004,12 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:377:6: (kw= '(' this_Sum_2= ruleSum kw= ')' )
+                    // InternalCcsEclipse.g:387:6: (kw= '(' this_Sum_2= ruleSum kw= ')' )
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:377:6: (kw= '(' this_Sum_2= ruleSum kw= ')' )
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:378:2: kw= '(' this_Sum_2= ruleSum kw= ')'
+                    // InternalCcsEclipse.g:387:6: (kw= '(' this_Sum_2= ruleSum kw= ')' )
+                    // InternalCcsEclipse.g:388:2: kw= '(' this_Sum_2= ruleSum kw= ')'
                     {
-                    kw=(Token)match(input,14,FOLLOW_14_in_ruleStep923); 
+                    kw=(Token)match(input,13,FOLLOW_5); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getStepAccess().getLeftParenthesisKeyword_1_0()); 
@@ -1008,7 +1017,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                      
                             newCompositeNode(grammarAccess.getStepAccess().getSumParserRuleCall_1_1()); 
                         
-                    pushFollow(FOLLOW_ruleSum_in_ruleStep945);
+                    pushFollow(FOLLOW_6);
                     this_Sum_2=ruleSum();
 
                     state._fsp--;
@@ -1019,7 +1028,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                      
                             afterParserOrEnumRuleCall();
                         
-                    kw=(Token)match(input,15,FOLLOW_15_in_ruleStep963); 
+                    kw=(Token)match(input,14,FOLLOW_2); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getStepAccess().getRightParenthesisKeyword_1_2()); 
@@ -1051,7 +1060,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRule"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:408:1: entryRuleRule returns [EObject current=null] : iv_ruleRule= ruleRule EOF ;
+    // InternalCcsEclipse.g:418:1: entryRuleRule returns [EObject current=null] : iv_ruleRule= ruleRule EOF ;
     public final EObject entryRuleRule() throws RecognitionException {
         EObject current = null;
 
@@ -1059,17 +1068,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:409:2: (iv_ruleRule= ruleRule EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:410:2: iv_ruleRule= ruleRule EOF
+            // InternalCcsEclipse.g:419:2: (iv_ruleRule= ruleRule EOF )
+            // InternalCcsEclipse.g:420:2: iv_ruleRule= ruleRule EOF
             {
              newCompositeNode(grammarAccess.getRuleRule()); 
-            pushFollow(FOLLOW_ruleRule_in_entryRuleRule1004);
+            pushFollow(FOLLOW_1);
             iv_ruleRule=ruleRule();
 
             state._fsp--;
 
              current =iv_ruleRule; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRule1014); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1087,7 +1096,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRule"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:417:1: ruleRule returns [EObject current=null] : ( ( ( (lv_import_0_0= ruleImport ) ) | ( (lv_constraint_1_0= ruleConstraint ) ) | ( (lv_property_2_0= ruleProperty ) ) | ( (lv_nested_3_0= ruleNested ) ) ) (otherlv_4= ';' )? ) ;
+    // InternalCcsEclipse.g:427:1: ruleRule returns [EObject current=null] : ( ( ( (lv_import_0_0= ruleImport ) ) | ( (lv_constraint_1_0= ruleConstraint ) ) | ( (lv_property_2_0= ruleProperty ) ) | ( (lv_nested_3_0= ruleNested ) ) ) (otherlv_4= ';' )? ) ;
     public final EObject ruleRule() throws RecognitionException {
         EObject current = null;
 
@@ -1104,26 +1113,26 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:420:28: ( ( ( ( (lv_import_0_0= ruleImport ) ) | ( (lv_constraint_1_0= ruleConstraint ) ) | ( (lv_property_2_0= ruleProperty ) ) | ( (lv_nested_3_0= ruleNested ) ) ) (otherlv_4= ';' )? ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:421:1: ( ( ( (lv_import_0_0= ruleImport ) ) | ( (lv_constraint_1_0= ruleConstraint ) ) | ( (lv_property_2_0= ruleProperty ) ) | ( (lv_nested_3_0= ruleNested ) ) ) (otherlv_4= ';' )? )
+            // InternalCcsEclipse.g:430:28: ( ( ( ( (lv_import_0_0= ruleImport ) ) | ( (lv_constraint_1_0= ruleConstraint ) ) | ( (lv_property_2_0= ruleProperty ) ) | ( (lv_nested_3_0= ruleNested ) ) ) (otherlv_4= ';' )? ) )
+            // InternalCcsEclipse.g:431:1: ( ( ( (lv_import_0_0= ruleImport ) ) | ( (lv_constraint_1_0= ruleConstraint ) ) | ( (lv_property_2_0= ruleProperty ) ) | ( (lv_nested_3_0= ruleNested ) ) ) (otherlv_4= ';' )? )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:421:1: ( ( ( (lv_import_0_0= ruleImport ) ) | ( (lv_constraint_1_0= ruleConstraint ) ) | ( (lv_property_2_0= ruleProperty ) ) | ( (lv_nested_3_0= ruleNested ) ) ) (otherlv_4= ';' )? )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:421:2: ( ( (lv_import_0_0= ruleImport ) ) | ( (lv_constraint_1_0= ruleConstraint ) ) | ( (lv_property_2_0= ruleProperty ) ) | ( (lv_nested_3_0= ruleNested ) ) ) (otherlv_4= ';' )?
+            // InternalCcsEclipse.g:431:1: ( ( ( (lv_import_0_0= ruleImport ) ) | ( (lv_constraint_1_0= ruleConstraint ) ) | ( (lv_property_2_0= ruleProperty ) ) | ( (lv_nested_3_0= ruleNested ) ) ) (otherlv_4= ';' )? )
+            // InternalCcsEclipse.g:431:2: ( ( (lv_import_0_0= ruleImport ) ) | ( (lv_constraint_1_0= ruleConstraint ) ) | ( (lv_property_2_0= ruleProperty ) ) | ( (lv_nested_3_0= ruleNested ) ) ) (otherlv_4= ';' )?
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:421:2: ( ( (lv_import_0_0= ruleImport ) ) | ( (lv_constraint_1_0= ruleConstraint ) ) | ( (lv_property_2_0= ruleProperty ) ) | ( (lv_nested_3_0= ruleNested ) ) )
+            // InternalCcsEclipse.g:431:2: ( ( (lv_import_0_0= ruleImport ) ) | ( (lv_constraint_1_0= ruleConstraint ) ) | ( (lv_property_2_0= ruleProperty ) ) | ( (lv_nested_3_0= ruleNested ) ) )
             int alt9=4;
             switch ( input.LA(1) ) {
-            case 29:
+            case 28:
                 {
                 alt9=1;
                 }
                 break;
-            case 26:
+            case 25:
                 {
                 alt9=2;
                 }
                 break;
-            case 22:
+            case 21:
                 {
                 alt9=3;
                 }
@@ -1132,11 +1141,11 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                 {
                 int LA9_4 = input.LA(2);
 
-                if ( (LA9_4==23) ) {
-                    alt9=3;
-                }
-                else if ( (LA9_4==RULE_ID||LA9_4==RULE_STRING||LA9_4==14||(LA9_4>=17 && LA9_4<=20)||(LA9_4>=27 && LA9_4<=28)) ) {
+                if ( (LA9_4==RULE_ID||LA9_4==RULE_STRING||LA9_4==13||(LA9_4>=16 && LA9_4<=19)||(LA9_4>=26 && LA9_4<=27)) ) {
                     alt9=4;
+                }
+                else if ( (LA9_4==22) ) {
+                    alt9=3;
                 }
                 else {
                     NoViableAltException nvae =
@@ -1147,7 +1156,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                 }
                 break;
             case RULE_STRING:
-            case 14:
+            case 13:
                 {
                 alt9=4;
                 }
@@ -1161,18 +1170,18 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
             switch (alt9) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:421:3: ( (lv_import_0_0= ruleImport ) )
+                    // InternalCcsEclipse.g:431:3: ( (lv_import_0_0= ruleImport ) )
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:421:3: ( (lv_import_0_0= ruleImport ) )
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:422:1: (lv_import_0_0= ruleImport )
+                    // InternalCcsEclipse.g:431:3: ( (lv_import_0_0= ruleImport ) )
+                    // InternalCcsEclipse.g:432:1: (lv_import_0_0= ruleImport )
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:422:1: (lv_import_0_0= ruleImport )
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:423:3: lv_import_0_0= ruleImport
+                    // InternalCcsEclipse.g:432:1: (lv_import_0_0= ruleImport )
+                    // InternalCcsEclipse.g:433:3: lv_import_0_0= ruleImport
                     {
                      
                     	        newCompositeNode(grammarAccess.getRuleAccess().getImportImportParserRuleCall_0_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleImport_in_ruleRule1061);
+                    pushFollow(FOLLOW_7);
                     lv_import_0_0=ruleImport();
 
                     state._fsp--;
@@ -1185,7 +1194,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"import",
                             		lv_import_0_0, 
-                            		"Import");
+                            		"net.immute.ccs.CcsEclipse.Import");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1198,18 +1207,18 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:440:6: ( (lv_constraint_1_0= ruleConstraint ) )
+                    // InternalCcsEclipse.g:450:6: ( (lv_constraint_1_0= ruleConstraint ) )
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:440:6: ( (lv_constraint_1_0= ruleConstraint ) )
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:441:1: (lv_constraint_1_0= ruleConstraint )
+                    // InternalCcsEclipse.g:450:6: ( (lv_constraint_1_0= ruleConstraint ) )
+                    // InternalCcsEclipse.g:451:1: (lv_constraint_1_0= ruleConstraint )
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:441:1: (lv_constraint_1_0= ruleConstraint )
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:442:3: lv_constraint_1_0= ruleConstraint
+                    // InternalCcsEclipse.g:451:1: (lv_constraint_1_0= ruleConstraint )
+                    // InternalCcsEclipse.g:452:3: lv_constraint_1_0= ruleConstraint
                     {
                      
                     	        newCompositeNode(grammarAccess.getRuleAccess().getConstraintConstraintParserRuleCall_0_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleConstraint_in_ruleRule1088);
+                    pushFollow(FOLLOW_7);
                     lv_constraint_1_0=ruleConstraint();
 
                     state._fsp--;
@@ -1222,7 +1231,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"constraint",
                             		lv_constraint_1_0, 
-                            		"Constraint");
+                            		"net.immute.ccs.CcsEclipse.Constraint");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1235,18 +1244,18 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:459:6: ( (lv_property_2_0= ruleProperty ) )
+                    // InternalCcsEclipse.g:469:6: ( (lv_property_2_0= ruleProperty ) )
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:459:6: ( (lv_property_2_0= ruleProperty ) )
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:460:1: (lv_property_2_0= ruleProperty )
+                    // InternalCcsEclipse.g:469:6: ( (lv_property_2_0= ruleProperty ) )
+                    // InternalCcsEclipse.g:470:1: (lv_property_2_0= ruleProperty )
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:460:1: (lv_property_2_0= ruleProperty )
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:461:3: lv_property_2_0= ruleProperty
+                    // InternalCcsEclipse.g:470:1: (lv_property_2_0= ruleProperty )
+                    // InternalCcsEclipse.g:471:3: lv_property_2_0= ruleProperty
                     {
                      
                     	        newCompositeNode(grammarAccess.getRuleAccess().getPropertyPropertyParserRuleCall_0_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleProperty_in_ruleRule1115);
+                    pushFollow(FOLLOW_7);
                     lv_property_2_0=ruleProperty();
 
                     state._fsp--;
@@ -1259,7 +1268,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"property",
                             		lv_property_2_0, 
-                            		"Property");
+                            		"net.immute.ccs.CcsEclipse.Property");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1272,18 +1281,18 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:478:6: ( (lv_nested_3_0= ruleNested ) )
+                    // InternalCcsEclipse.g:488:6: ( (lv_nested_3_0= ruleNested ) )
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:478:6: ( (lv_nested_3_0= ruleNested ) )
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:479:1: (lv_nested_3_0= ruleNested )
+                    // InternalCcsEclipse.g:488:6: ( (lv_nested_3_0= ruleNested ) )
+                    // InternalCcsEclipse.g:489:1: (lv_nested_3_0= ruleNested )
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:479:1: (lv_nested_3_0= ruleNested )
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:480:3: lv_nested_3_0= ruleNested
+                    // InternalCcsEclipse.g:489:1: (lv_nested_3_0= ruleNested )
+                    // InternalCcsEclipse.g:490:3: lv_nested_3_0= ruleNested
                     {
                      
                     	        newCompositeNode(grammarAccess.getRuleAccess().getNestedNestedParserRuleCall_0_3_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleNested_in_ruleRule1142);
+                    pushFollow(FOLLOW_7);
                     lv_nested_3_0=ruleNested();
 
                     state._fsp--;
@@ -1296,7 +1305,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                            			current, 
                            			"nested",
                             		lv_nested_3_0, 
-                            		"Nested");
+                            		"net.immute.ccs.CcsEclipse.Nested");
                     	        afterParserOrEnumRuleCall();
                     	    
 
@@ -1311,18 +1320,18 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:496:3: (otherlv_4= ';' )?
+            // InternalCcsEclipse.g:506:3: (otherlv_4= ';' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==16) ) {
+            if ( (LA10_0==15) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:496:5: otherlv_4= ';'
+                    // InternalCcsEclipse.g:506:5: otherlv_4= ';'
                     {
-                    otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleRule1156); 
+                    otherlv_4=(Token)match(input,15,FOLLOW_2); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getRuleAccess().getSemicolonKeyword_1());
                         
@@ -1353,7 +1362,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNested"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:508:1: entryRuleNested returns [EObject current=null] : iv_ruleNested= ruleNested EOF ;
+    // InternalCcsEclipse.g:518:1: entryRuleNested returns [EObject current=null] : iv_ruleNested= ruleNested EOF ;
     public final EObject entryRuleNested() throws RecognitionException {
         EObject current = null;
 
@@ -1361,17 +1370,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:509:2: (iv_ruleNested= ruleNested EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:510:2: iv_ruleNested= ruleNested EOF
+            // InternalCcsEclipse.g:519:2: (iv_ruleNested= ruleNested EOF )
+            // InternalCcsEclipse.g:520:2: iv_ruleNested= ruleNested EOF
             {
              newCompositeNode(grammarAccess.getNestedRule()); 
-            pushFollow(FOLLOW_ruleNested_in_entryRuleNested1194);
+            pushFollow(FOLLOW_1);
             iv_ruleNested=ruleNested();
 
             state._fsp--;
 
              current =iv_ruleNested; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNested1204); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1389,7 +1398,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNested"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:517:1: ruleNested returns [EObject current=null] : ( ( (lv_selector_0_0= ruleSelector ) ) ( (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) ) | (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' ) ) ) ;
+    // InternalCcsEclipse.g:527:1: ruleNested returns [EObject current=null] : ( ( (lv_selector_0_0= ruleSelector ) ) ( (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) ) | (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' ) ) ) ;
     public final EObject ruleNested() throws RecognitionException {
         EObject current = null;
 
@@ -1410,22 +1419,22 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:520:28: ( ( ( (lv_selector_0_0= ruleSelector ) ) ( (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) ) | (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' ) ) ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:521:1: ( ( (lv_selector_0_0= ruleSelector ) ) ( (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) ) | (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' ) ) )
+            // InternalCcsEclipse.g:530:28: ( ( ( (lv_selector_0_0= ruleSelector ) ) ( (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) ) | (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' ) ) ) )
+            // InternalCcsEclipse.g:531:1: ( ( (lv_selector_0_0= ruleSelector ) ) ( (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) ) | (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' ) ) )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:521:1: ( ( (lv_selector_0_0= ruleSelector ) ) ( (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) ) | (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' ) ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:521:2: ( (lv_selector_0_0= ruleSelector ) ) ( (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) ) | (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' ) )
+            // InternalCcsEclipse.g:531:1: ( ( (lv_selector_0_0= ruleSelector ) ) ( (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) ) | (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' ) ) )
+            // InternalCcsEclipse.g:531:2: ( (lv_selector_0_0= ruleSelector ) ) ( (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) ) | (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' ) )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:521:2: ( (lv_selector_0_0= ruleSelector ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:522:1: (lv_selector_0_0= ruleSelector )
+            // InternalCcsEclipse.g:531:2: ( (lv_selector_0_0= ruleSelector ) )
+            // InternalCcsEclipse.g:532:1: (lv_selector_0_0= ruleSelector )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:522:1: (lv_selector_0_0= ruleSelector )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:523:3: lv_selector_0_0= ruleSelector
+            // InternalCcsEclipse.g:532:1: (lv_selector_0_0= ruleSelector )
+            // InternalCcsEclipse.g:533:3: lv_selector_0_0= ruleSelector
             {
              
             	        newCompositeNode(grammarAccess.getNestedAccess().getSelectorSelectorParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleSelector_in_ruleNested1250);
+            pushFollow(FOLLOW_10);
             lv_selector_0_0=ruleSelector();
 
             state._fsp--;
@@ -1438,7 +1447,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"selector",
                     		lv_selector_0_0, 
-                    		"Selector");
+                    		"net.immute.ccs.CcsEclipse.Selector");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -1447,14 +1456,14 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:539:2: ( (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) ) | (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' ) )
+            // InternalCcsEclipse.g:549:2: ( (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) ) | (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' ) )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
-            if ( (LA13_0==19) ) {
+            if ( (LA13_0==18) ) {
                 alt13=1;
             }
-            else if ( (LA13_0==20) ) {
+            else if ( (LA13_0==19) ) {
                 alt13=2;
             }
             else {
@@ -1465,30 +1474,30 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
             }
             switch (alt13) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:539:3: (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) )
+                    // InternalCcsEclipse.g:549:3: (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) )
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:539:3: (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) )
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:539:5: otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) )
+                    // InternalCcsEclipse.g:549:3: (otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) ) )
+                    // InternalCcsEclipse.g:549:5: otherlv_1= ':' ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) )
                     {
-                    otherlv_1=(Token)match(input,19,FOLLOW_19_in_ruleNested1264); 
+                    otherlv_1=(Token)match(input,18,FOLLOW_11); 
 
                         	newLeafNode(otherlv_1, grammarAccess.getNestedAccess().getColonKeyword_1_0_0());
                         
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:543:1: ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) )
+                    // InternalCcsEclipse.g:553:1: ( ( (lv_import_2_0= ruleImport ) ) | ( (lv_constraint_3_0= ruleConstraint ) ) | ( (lv_property_4_0= ruleProperty ) ) )
                     int alt11=3;
                     switch ( input.LA(1) ) {
-                    case 29:
+                    case 28:
                         {
                         alt11=1;
                         }
                         break;
-                    case 26:
+                    case 25:
                         {
                         alt11=2;
                         }
                         break;
                     case RULE_ID:
-                    case 22:
+                    case 21:
                         {
                         alt11=3;
                         }
@@ -1502,18 +1511,18 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
                     switch (alt11) {
                         case 1 :
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:543:2: ( (lv_import_2_0= ruleImport ) )
+                            // InternalCcsEclipse.g:553:2: ( (lv_import_2_0= ruleImport ) )
                             {
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:543:2: ( (lv_import_2_0= ruleImport ) )
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:544:1: (lv_import_2_0= ruleImport )
+                            // InternalCcsEclipse.g:553:2: ( (lv_import_2_0= ruleImport ) )
+                            // InternalCcsEclipse.g:554:1: (lv_import_2_0= ruleImport )
                             {
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:544:1: (lv_import_2_0= ruleImport )
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:545:3: lv_import_2_0= ruleImport
+                            // InternalCcsEclipse.g:554:1: (lv_import_2_0= ruleImport )
+                            // InternalCcsEclipse.g:555:3: lv_import_2_0= ruleImport
                             {
                              
                             	        newCompositeNode(grammarAccess.getNestedAccess().getImportImportParserRuleCall_1_0_1_0_0()); 
                             	    
-                            pushFollow(FOLLOW_ruleImport_in_ruleNested1286);
+                            pushFollow(FOLLOW_2);
                             lv_import_2_0=ruleImport();
 
                             state._fsp--;
@@ -1526,7 +1535,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                                    			current, 
                                    			"import",
                                     		lv_import_2_0, 
-                                    		"Import");
+                                    		"net.immute.ccs.CcsEclipse.Import");
                             	        afterParserOrEnumRuleCall();
                             	    
 
@@ -1539,18 +1548,18 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:562:6: ( (lv_constraint_3_0= ruleConstraint ) )
+                            // InternalCcsEclipse.g:572:6: ( (lv_constraint_3_0= ruleConstraint ) )
                             {
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:562:6: ( (lv_constraint_3_0= ruleConstraint ) )
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:563:1: (lv_constraint_3_0= ruleConstraint )
+                            // InternalCcsEclipse.g:572:6: ( (lv_constraint_3_0= ruleConstraint ) )
+                            // InternalCcsEclipse.g:573:1: (lv_constraint_3_0= ruleConstraint )
                             {
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:563:1: (lv_constraint_3_0= ruleConstraint )
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:564:3: lv_constraint_3_0= ruleConstraint
+                            // InternalCcsEclipse.g:573:1: (lv_constraint_3_0= ruleConstraint )
+                            // InternalCcsEclipse.g:574:3: lv_constraint_3_0= ruleConstraint
                             {
                              
                             	        newCompositeNode(grammarAccess.getNestedAccess().getConstraintConstraintParserRuleCall_1_0_1_1_0()); 
                             	    
-                            pushFollow(FOLLOW_ruleConstraint_in_ruleNested1313);
+                            pushFollow(FOLLOW_2);
                             lv_constraint_3_0=ruleConstraint();
 
                             state._fsp--;
@@ -1563,7 +1572,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                                    			current, 
                                    			"constraint",
                                     		lv_constraint_3_0, 
-                                    		"Constraint");
+                                    		"net.immute.ccs.CcsEclipse.Constraint");
                             	        afterParserOrEnumRuleCall();
                             	    
 
@@ -1576,18 +1585,18 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 3 :
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:581:6: ( (lv_property_4_0= ruleProperty ) )
+                            // InternalCcsEclipse.g:591:6: ( (lv_property_4_0= ruleProperty ) )
                             {
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:581:6: ( (lv_property_4_0= ruleProperty ) )
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:582:1: (lv_property_4_0= ruleProperty )
+                            // InternalCcsEclipse.g:591:6: ( (lv_property_4_0= ruleProperty ) )
+                            // InternalCcsEclipse.g:592:1: (lv_property_4_0= ruleProperty )
                             {
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:582:1: (lv_property_4_0= ruleProperty )
-                            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:583:3: lv_property_4_0= ruleProperty
+                            // InternalCcsEclipse.g:592:1: (lv_property_4_0= ruleProperty )
+                            // InternalCcsEclipse.g:593:3: lv_property_4_0= ruleProperty
                             {
                              
                             	        newCompositeNode(grammarAccess.getNestedAccess().getPropertyPropertyParserRuleCall_1_0_1_2_0()); 
                             	    
-                            pushFollow(FOLLOW_ruleProperty_in_ruleNested1340);
+                            pushFollow(FOLLOW_2);
                             lv_property_4_0=ruleProperty();
 
                             state._fsp--;
@@ -1600,7 +1609,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                                    			current, 
                                    			"property",
                                     		lv_property_4_0, 
-                                    		"Property");
+                                    		"net.immute.ccs.CcsEclipse.Property");
                             	        afterParserOrEnumRuleCall();
                             	    
 
@@ -1622,37 +1631,37 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:600:6: (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' )
+                    // InternalCcsEclipse.g:610:6: (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' )
                     {
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:600:6: (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' )
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:600:8: otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}'
+                    // InternalCcsEclipse.g:610:6: (otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}' )
+                    // InternalCcsEclipse.g:610:8: otherlv_5= '{' ( (lv_rules_6_0= ruleRule ) )* otherlv_7= '}'
                     {
-                    otherlv_5=(Token)match(input,20,FOLLOW_20_in_ruleNested1361); 
+                    otherlv_5=(Token)match(input,19,FOLLOW_12); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getNestedAccess().getLeftCurlyBracketKeyword_1_1_0());
                         
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:604:1: ( (lv_rules_6_0= ruleRule ) )*
+                    // InternalCcsEclipse.g:614:1: ( (lv_rules_6_0= ruleRule ) )*
                     loop12:
                     do {
                         int alt12=2;
                         int LA12_0 = input.LA(1);
 
-                        if ( (LA12_0==RULE_ID||LA12_0==RULE_STRING||LA12_0==14||LA12_0==22||LA12_0==26||LA12_0==29) ) {
+                        if ( (LA12_0==RULE_ID||LA12_0==RULE_STRING||LA12_0==13||LA12_0==21||LA12_0==25||LA12_0==28) ) {
                             alt12=1;
                         }
 
 
                         switch (alt12) {
                     	case 1 :
-                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:605:1: (lv_rules_6_0= ruleRule )
+                    	    // InternalCcsEclipse.g:615:1: (lv_rules_6_0= ruleRule )
                     	    {
-                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:605:1: (lv_rules_6_0= ruleRule )
-                    	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:606:3: lv_rules_6_0= ruleRule
+                    	    // InternalCcsEclipse.g:615:1: (lv_rules_6_0= ruleRule )
+                    	    // InternalCcsEclipse.g:616:3: lv_rules_6_0= ruleRule
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getNestedAccess().getRulesRuleParserRuleCall_1_1_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_ruleRule_in_ruleNested1382);
+                    	    pushFollow(FOLLOW_12);
                     	    lv_rules_6_0=ruleRule();
 
                     	    state._fsp--;
@@ -1665,7 +1674,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                     	           			current, 
                     	           			"rules",
                     	            		lv_rules_6_0, 
-                    	            		"Rule");
+                    	            		"net.immute.ccs.CcsEclipse.Rule");
                     	    	        afterParserOrEnumRuleCall();
                     	    	    
 
@@ -1680,7 +1689,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_7=(Token)match(input,21,FOLLOW_21_in_ruleNested1395); 
+                    otherlv_7=(Token)match(input,20,FOLLOW_2); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getNestedAccess().getRightCurlyBracketKeyword_1_1_2());
                         
@@ -1714,7 +1723,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleModifier"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:634:1: entryRuleModifier returns [EObject current=null] : iv_ruleModifier= ruleModifier EOF ;
+    // InternalCcsEclipse.g:644:1: entryRuleModifier returns [EObject current=null] : iv_ruleModifier= ruleModifier EOF ;
     public final EObject entryRuleModifier() throws RecognitionException {
         EObject current = null;
 
@@ -1722,17 +1731,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:635:2: (iv_ruleModifier= ruleModifier EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:636:2: iv_ruleModifier= ruleModifier EOF
+            // InternalCcsEclipse.g:645:2: (iv_ruleModifier= ruleModifier EOF )
+            // InternalCcsEclipse.g:646:2: iv_ruleModifier= ruleModifier EOF
             {
              newCompositeNode(grammarAccess.getModifierRule()); 
-            pushFollow(FOLLOW_ruleModifier_in_entryRuleModifier1433);
+            pushFollow(FOLLOW_1);
             iv_ruleModifier=ruleModifier();
 
             state._fsp--;
 
              current =iv_ruleModifier; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleModifier1443); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1750,7 +1759,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModifier"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:643:1: ruleModifier returns [EObject current=null] : ( (lv_override_0_0= '@override' ) ) ;
+    // InternalCcsEclipse.g:653:1: ruleModifier returns [EObject current=null] : ( (lv_override_0_0= '@override' ) ) ;
     public final EObject ruleModifier() throws RecognitionException {
         EObject current = null;
 
@@ -1759,16 +1768,16 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:646:28: ( ( (lv_override_0_0= '@override' ) ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:647:1: ( (lv_override_0_0= '@override' ) )
+            // InternalCcsEclipse.g:656:28: ( ( (lv_override_0_0= '@override' ) ) )
+            // InternalCcsEclipse.g:657:1: ( (lv_override_0_0= '@override' ) )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:647:1: ( (lv_override_0_0= '@override' ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:648:1: (lv_override_0_0= '@override' )
+            // InternalCcsEclipse.g:657:1: ( (lv_override_0_0= '@override' ) )
+            // InternalCcsEclipse.g:658:1: (lv_override_0_0= '@override' )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:648:1: (lv_override_0_0= '@override' )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:649:3: lv_override_0_0= '@override'
+            // InternalCcsEclipse.g:658:1: (lv_override_0_0= '@override' )
+            // InternalCcsEclipse.g:659:3: lv_override_0_0= '@override'
             {
-            lv_override_0_0=(Token)match(input,22,FOLLOW_22_in_ruleModifier1485); 
+            lv_override_0_0=(Token)match(input,21,FOLLOW_2); 
 
                     newLeafNode(lv_override_0_0, grammarAccess.getModifierAccess().getOverrideOverrideKeyword_0());
                 
@@ -1802,7 +1811,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleProperty"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:670:1: entryRuleProperty returns [EObject current=null] : iv_ruleProperty= ruleProperty EOF ;
+    // InternalCcsEclipse.g:680:1: entryRuleProperty returns [EObject current=null] : iv_ruleProperty= ruleProperty EOF ;
     public final EObject entryRuleProperty() throws RecognitionException {
         EObject current = null;
 
@@ -1810,17 +1819,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:671:2: (iv_ruleProperty= ruleProperty EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:672:2: iv_ruleProperty= ruleProperty EOF
+            // InternalCcsEclipse.g:681:2: (iv_ruleProperty= ruleProperty EOF )
+            // InternalCcsEclipse.g:682:2: iv_ruleProperty= ruleProperty EOF
             {
              newCompositeNode(grammarAccess.getPropertyRule()); 
-            pushFollow(FOLLOW_ruleProperty_in_entryRuleProperty1533);
+            pushFollow(FOLLOW_1);
             iv_ruleProperty=ruleProperty();
 
             state._fsp--;
 
              current =iv_ruleProperty; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProperty1543); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -1838,7 +1847,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProperty"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:679:1: ruleProperty returns [EObject current=null] : ( ( (lv_modifiers_0_0= ruleModifier ) )* ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleValue ) ) ) ;
+    // InternalCcsEclipse.g:689:1: ruleProperty returns [EObject current=null] : ( ( (lv_modifiers_0_0= ruleModifier ) )* ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleValue ) ) ) ;
     public final EObject ruleProperty() throws RecognitionException {
         EObject current = null;
 
@@ -1852,34 +1861,34 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:682:28: ( ( ( (lv_modifiers_0_0= ruleModifier ) )* ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleValue ) ) ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:683:1: ( ( (lv_modifiers_0_0= ruleModifier ) )* ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleValue ) ) )
+            // InternalCcsEclipse.g:692:28: ( ( ( (lv_modifiers_0_0= ruleModifier ) )* ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleValue ) ) ) )
+            // InternalCcsEclipse.g:693:1: ( ( (lv_modifiers_0_0= ruleModifier ) )* ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleValue ) ) )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:683:1: ( ( (lv_modifiers_0_0= ruleModifier ) )* ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleValue ) ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:683:2: ( (lv_modifiers_0_0= ruleModifier ) )* ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleValue ) )
+            // InternalCcsEclipse.g:693:1: ( ( (lv_modifiers_0_0= ruleModifier ) )* ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleValue ) ) )
+            // InternalCcsEclipse.g:693:2: ( (lv_modifiers_0_0= ruleModifier ) )* ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '=' ( (lv_value_3_0= ruleValue ) )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:683:2: ( (lv_modifiers_0_0= ruleModifier ) )*
+            // InternalCcsEclipse.g:693:2: ( (lv_modifiers_0_0= ruleModifier ) )*
             loop14:
             do {
                 int alt14=2;
                 int LA14_0 = input.LA(1);
 
-                if ( (LA14_0==22) ) {
+                if ( (LA14_0==21) ) {
                     alt14=1;
                 }
 
 
                 switch (alt14) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:684:1: (lv_modifiers_0_0= ruleModifier )
+            	    // InternalCcsEclipse.g:694:1: (lv_modifiers_0_0= ruleModifier )
             	    {
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:684:1: (lv_modifiers_0_0= ruleModifier )
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:685:3: lv_modifiers_0_0= ruleModifier
+            	    // InternalCcsEclipse.g:694:1: (lv_modifiers_0_0= ruleModifier )
+            	    // InternalCcsEclipse.g:695:3: lv_modifiers_0_0= ruleModifier
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getPropertyAccess().getModifiersModifierParserRuleCall_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleModifier_in_ruleProperty1589);
+            	    pushFollow(FOLLOW_13);
             	    lv_modifiers_0_0=ruleModifier();
 
             	    state._fsp--;
@@ -1892,7 +1901,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
             	           			current, 
             	           			"modifiers",
             	            		lv_modifiers_0_0, 
-            	            		"Modifier");
+            	            		"net.immute.ccs.CcsEclipse.Modifier");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -1907,13 +1916,13 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:701:3: ( (lv_name_1_0= RULE_ID ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:702:1: (lv_name_1_0= RULE_ID )
+            // InternalCcsEclipse.g:711:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalCcsEclipse.g:712:1: (lv_name_1_0= RULE_ID )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:702:1: (lv_name_1_0= RULE_ID )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:703:3: lv_name_1_0= RULE_ID
+            // InternalCcsEclipse.g:712:1: (lv_name_1_0= RULE_ID )
+            // InternalCcsEclipse.g:713:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleProperty1607); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_14); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getPropertyAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1925,7 +1934,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"name",
                     		lv_name_1_0, 
-                    		"ID");
+                    		"net.immute.ccs.CcsEclipse.ID");
             	    
 
             }
@@ -1933,20 +1942,20 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,23,FOLLOW_23_in_ruleProperty1624); 
+            otherlv_2=(Token)match(input,22,FOLLOW_15); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getPropertyAccess().getEqualsSignKeyword_2());
                 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:723:1: ( (lv_value_3_0= ruleValue ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:724:1: (lv_value_3_0= ruleValue )
+            // InternalCcsEclipse.g:733:1: ( (lv_value_3_0= ruleValue ) )
+            // InternalCcsEclipse.g:734:1: (lv_value_3_0= ruleValue )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:724:1: (lv_value_3_0= ruleValue )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:725:3: lv_value_3_0= ruleValue
+            // InternalCcsEclipse.g:734:1: (lv_value_3_0= ruleValue )
+            // InternalCcsEclipse.g:735:3: lv_value_3_0= ruleValue
             {
              
             	        newCompositeNode(grammarAccess.getPropertyAccess().getValueValueParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleValue_in_ruleProperty1645);
+            pushFollow(FOLLOW_2);
             lv_value_3_0=ruleValue();
 
             state._fsp--;
@@ -1959,7 +1968,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                    			current, 
                    			"value",
                     		lv_value_3_0, 
-                    		"Value");
+                    		"net.immute.ccs.CcsEclipse.Value");
             	        afterParserOrEnumRuleCall();
             	    
 
@@ -1989,7 +1998,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBoolean"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:749:1: entryRuleBoolean returns [String current=null] : iv_ruleBoolean= ruleBoolean EOF ;
+    // InternalCcsEclipse.g:759:1: entryRuleBoolean returns [String current=null] : iv_ruleBoolean= ruleBoolean EOF ;
     public final String entryRuleBoolean() throws RecognitionException {
         String current = null;
 
@@ -1997,17 +2006,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:750:2: (iv_ruleBoolean= ruleBoolean EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:751:2: iv_ruleBoolean= ruleBoolean EOF
+            // InternalCcsEclipse.g:760:2: (iv_ruleBoolean= ruleBoolean EOF )
+            // InternalCcsEclipse.g:761:2: iv_ruleBoolean= ruleBoolean EOF
             {
              newCompositeNode(grammarAccess.getBooleanRule()); 
-            pushFollow(FOLLOW_ruleBoolean_in_entryRuleBoolean1682);
+            pushFollow(FOLLOW_1);
             iv_ruleBoolean=ruleBoolean();
 
             state._fsp--;
 
              current =iv_ruleBoolean.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolean1693); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2025,7 +2034,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoolean"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:758:1: ruleBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
+    // InternalCcsEclipse.g:768:1: ruleBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
     public final AntlrDatatypeRuleToken ruleBoolean() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2034,17 +2043,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:761:28: ( (kw= 'true' | kw= 'false' ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:762:1: (kw= 'true' | kw= 'false' )
+            // InternalCcsEclipse.g:771:28: ( (kw= 'true' | kw= 'false' ) )
+            // InternalCcsEclipse.g:772:1: (kw= 'true' | kw= 'false' )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:762:1: (kw= 'true' | kw= 'false' )
+            // InternalCcsEclipse.g:772:1: (kw= 'true' | kw= 'false' )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
-            if ( (LA15_0==24) ) {
+            if ( (LA15_0==23) ) {
                 alt15=1;
             }
-            else if ( (LA15_0==25) ) {
+            else if ( (LA15_0==24) ) {
                 alt15=2;
             }
             else {
@@ -2055,9 +2064,9 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
             }
             switch (alt15) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:763:2: kw= 'true'
+                    // InternalCcsEclipse.g:773:2: kw= 'true'
                     {
-                    kw=(Token)match(input,24,FOLLOW_24_in_ruleBoolean1731); 
+                    kw=(Token)match(input,23,FOLLOW_2); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getBooleanAccess().getTrueKeyword_0()); 
@@ -2066,9 +2075,9 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:770:2: kw= 'false'
+                    // InternalCcsEclipse.g:780:2: kw= 'false'
                     {
-                    kw=(Token)match(input,25,FOLLOW_25_in_ruleBoolean1750); 
+                    kw=(Token)match(input,24,FOLLOW_2); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getBooleanAccess().getFalseKeyword_1()); 
@@ -2097,7 +2106,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleValue"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:783:1: entryRuleValue returns [String current=null] : iv_ruleValue= ruleValue EOF ;
+    // InternalCcsEclipse.g:793:1: entryRuleValue returns [String current=null] : iv_ruleValue= ruleValue EOF ;
     public final String entryRuleValue() throws RecognitionException {
         String current = null;
 
@@ -2105,17 +2114,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:784:2: (iv_ruleValue= ruleValue EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:785:2: iv_ruleValue= ruleValue EOF
+            // InternalCcsEclipse.g:794:2: (iv_ruleValue= ruleValue EOF )
+            // InternalCcsEclipse.g:795:2: iv_ruleValue= ruleValue EOF
             {
              newCompositeNode(grammarAccess.getValueRule()); 
-            pushFollow(FOLLOW_ruleValue_in_entryRuleValue1791);
+            pushFollow(FOLLOW_1);
             iv_ruleValue=ruleValue();
 
             state._fsp--;
 
              current =iv_ruleValue.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleValue1802); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2133,24 +2142,26 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleValue"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:792:1: ruleValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_HEXINT_0= RULE_HEXINT | this_NUMBER_1= RULE_NUMBER | this_STRING_2= RULE_STRING | this_Boolean_3= ruleBoolean ) ;
+    // InternalCcsEclipse.g:802:1: ruleValue returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_HEXINT_0= RULE_HEXINT | this_NUMBER_1= RULE_NUMBER | this_STRING_2= RULE_STRING | this_Boolean_3= ruleBoolean | this_ID_4= RULE_ID | this_NUM_ID_5= RULE_NUM_ID ) ;
     public final AntlrDatatypeRuleToken ruleValue() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token this_HEXINT_0=null;
         Token this_NUMBER_1=null;
         Token this_STRING_2=null;
+        Token this_ID_4=null;
+        Token this_NUM_ID_5=null;
         AntlrDatatypeRuleToken this_Boolean_3 = null;
 
 
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:795:28: ( (this_HEXINT_0= RULE_HEXINT | this_NUMBER_1= RULE_NUMBER | this_STRING_2= RULE_STRING | this_Boolean_3= ruleBoolean ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:796:1: (this_HEXINT_0= RULE_HEXINT | this_NUMBER_1= RULE_NUMBER | this_STRING_2= RULE_STRING | this_Boolean_3= ruleBoolean )
+            // InternalCcsEclipse.g:805:28: ( (this_HEXINT_0= RULE_HEXINT | this_NUMBER_1= RULE_NUMBER | this_STRING_2= RULE_STRING | this_Boolean_3= ruleBoolean | this_ID_4= RULE_ID | this_NUM_ID_5= RULE_NUM_ID ) )
+            // InternalCcsEclipse.g:806:1: (this_HEXINT_0= RULE_HEXINT | this_NUMBER_1= RULE_NUMBER | this_STRING_2= RULE_STRING | this_Boolean_3= ruleBoolean | this_ID_4= RULE_ID | this_NUM_ID_5= RULE_NUM_ID )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:796:1: (this_HEXINT_0= RULE_HEXINT | this_NUMBER_1= RULE_NUMBER | this_STRING_2= RULE_STRING | this_Boolean_3= ruleBoolean )
-            int alt16=4;
+            // InternalCcsEclipse.g:806:1: (this_HEXINT_0= RULE_HEXINT | this_NUMBER_1= RULE_NUMBER | this_STRING_2= RULE_STRING | this_Boolean_3= ruleBoolean | this_ID_4= RULE_ID | this_NUM_ID_5= RULE_NUM_ID )
+            int alt16=6;
             switch ( input.LA(1) ) {
             case RULE_HEXINT:
                 {
@@ -2167,10 +2178,20 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                 alt16=3;
                 }
                 break;
+            case 23:
             case 24:
-            case 25:
                 {
                 alt16=4;
+                }
+                break;
+            case RULE_ID:
+                {
+                alt16=5;
+                }
+                break;
+            case RULE_NUM_ID:
+                {
+                alt16=6;
                 }
                 break;
             default:
@@ -2182,9 +2203,9 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
             switch (alt16) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:796:6: this_HEXINT_0= RULE_HEXINT
+                    // InternalCcsEclipse.g:806:6: this_HEXINT_0= RULE_HEXINT
                     {
-                    this_HEXINT_0=(Token)match(input,RULE_HEXINT,FOLLOW_RULE_HEXINT_in_ruleValue1842); 
+                    this_HEXINT_0=(Token)match(input,RULE_HEXINT,FOLLOW_2); 
 
                     		current.merge(this_HEXINT_0);
                         
@@ -2195,9 +2216,9 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:804:10: this_NUMBER_1= RULE_NUMBER
+                    // InternalCcsEclipse.g:814:10: this_NUMBER_1= RULE_NUMBER
                     {
-                    this_NUMBER_1=(Token)match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_ruleValue1868); 
+                    this_NUMBER_1=(Token)match(input,RULE_NUMBER,FOLLOW_2); 
 
                     		current.merge(this_NUMBER_1);
                         
@@ -2208,9 +2229,9 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:812:10: this_STRING_2= RULE_STRING
+                    // InternalCcsEclipse.g:822:10: this_STRING_2= RULE_STRING
                     {
-                    this_STRING_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleValue1894); 
+                    this_STRING_2=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
                     		current.merge(this_STRING_2);
                         
@@ -2221,12 +2242,12 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:821:5: this_Boolean_3= ruleBoolean
+                    // InternalCcsEclipse.g:831:5: this_Boolean_3= ruleBoolean
                     {
                      
                             newCompositeNode(grammarAccess.getValueAccess().getBooleanParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleBoolean_in_ruleValue1927);
+                    pushFollow(FOLLOW_2);
                     this_Boolean_3=ruleBoolean();
 
                     state._fsp--;
@@ -2236,6 +2257,32 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                         
                      
                             afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+                case 5 :
+                    // InternalCcsEclipse.g:842:10: this_ID_4= RULE_ID
+                    {
+                    this_ID_4=(Token)match(input,RULE_ID,FOLLOW_2); 
+
+                    		current.merge(this_ID_4);
+                        
+                     
+                        newLeafNode(this_ID_4, grammarAccess.getValueAccess().getIDTerminalRuleCall_4()); 
+                        
+
+                    }
+                    break;
+                case 6 :
+                    // InternalCcsEclipse.g:850:10: this_NUM_ID_5= RULE_NUM_ID
+                    {
+                    this_NUM_ID_5=(Token)match(input,RULE_NUM_ID,FOLLOW_2); 
+
+                    		current.merge(this_NUM_ID_5);
+                        
+                     
+                        newLeafNode(this_NUM_ID_5, grammarAccess.getValueAccess().getNUM_IDTerminalRuleCall_5()); 
                         
 
                     }
@@ -2261,7 +2308,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleConstraint"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:839:1: entryRuleConstraint returns [String current=null] : iv_ruleConstraint= ruleConstraint EOF ;
+    // InternalCcsEclipse.g:865:1: entryRuleConstraint returns [String current=null] : iv_ruleConstraint= ruleConstraint EOF ;
     public final String entryRuleConstraint() throws RecognitionException {
         String current = null;
 
@@ -2269,17 +2316,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:840:2: (iv_ruleConstraint= ruleConstraint EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:841:2: iv_ruleConstraint= ruleConstraint EOF
+            // InternalCcsEclipse.g:866:2: (iv_ruleConstraint= ruleConstraint EOF )
+            // InternalCcsEclipse.g:867:2: iv_ruleConstraint= ruleConstraint EOF
             {
              newCompositeNode(grammarAccess.getConstraintRule()); 
-            pushFollow(FOLLOW_ruleConstraint_in_entryRuleConstraint1973);
+            pushFollow(FOLLOW_1);
             iv_ruleConstraint=ruleConstraint();
 
             state._fsp--;
 
              current =iv_ruleConstraint.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleConstraint1984); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2297,7 +2344,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleConstraint"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:848:1: ruleConstraint returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '@constrain' this_SingleStep_1= ruleSingleStep ) ;
+    // InternalCcsEclipse.g:874:1: ruleConstraint returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '@constrain' this_SingleStep_1= ruleSingleStep ) ;
     public final AntlrDatatypeRuleToken ruleConstraint() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2308,13 +2355,13 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:851:28: ( (kw= '@constrain' this_SingleStep_1= ruleSingleStep ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:852:1: (kw= '@constrain' this_SingleStep_1= ruleSingleStep )
+            // InternalCcsEclipse.g:877:28: ( (kw= '@constrain' this_SingleStep_1= ruleSingleStep ) )
+            // InternalCcsEclipse.g:878:1: (kw= '@constrain' this_SingleStep_1= ruleSingleStep )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:852:1: (kw= '@constrain' this_SingleStep_1= ruleSingleStep )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:853:2: kw= '@constrain' this_SingleStep_1= ruleSingleStep
+            // InternalCcsEclipse.g:878:1: (kw= '@constrain' this_SingleStep_1= ruleSingleStep )
+            // InternalCcsEclipse.g:879:2: kw= '@constrain' this_SingleStep_1= ruleSingleStep
             {
-            kw=(Token)match(input,26,FOLLOW_26_in_ruleConstraint2022); 
+            kw=(Token)match(input,25,FOLLOW_16); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getConstraintAccess().getConstrainKeyword_0()); 
@@ -2322,7 +2369,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
              
                     newCompositeNode(grammarAccess.getConstraintAccess().getSingleStepParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleSingleStep_in_ruleConstraint2044);
+            pushFollow(FOLLOW_2);
             this_SingleStep_1=ruleSingleStep();
 
             state._fsp--;
@@ -2354,7 +2401,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSingleStep"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:877:1: entryRuleSingleStep returns [String current=null] : iv_ruleSingleStep= ruleSingleStep EOF ;
+    // InternalCcsEclipse.g:903:1: entryRuleSingleStep returns [String current=null] : iv_ruleSingleStep= ruleSingleStep EOF ;
     public final String entryRuleSingleStep() throws RecognitionException {
         String current = null;
 
@@ -2362,17 +2409,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:878:2: (iv_ruleSingleStep= ruleSingleStep EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:879:2: iv_ruleSingleStep= ruleSingleStep EOF
+            // InternalCcsEclipse.g:904:2: (iv_ruleSingleStep= ruleSingleStep EOF )
+            // InternalCcsEclipse.g:905:2: iv_ruleSingleStep= ruleSingleStep EOF
             {
              newCompositeNode(grammarAccess.getSingleStepRule()); 
-            pushFollow(FOLLOW_ruleSingleStep_in_entryRuleSingleStep2090);
+            pushFollow(FOLLOW_1);
             iv_ruleSingleStep=ruleSingleStep();
 
             state._fsp--;
 
              current =iv_ruleSingleStep.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSingleStep2101); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2390,7 +2437,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSingleStep"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:886:1: ruleSingleStep returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Ident_0= ruleIdent (this_Vals_1= ruleVals )? (this_StepSuffix_2= ruleStepSuffix )? ) ;
+    // InternalCcsEclipse.g:912:1: ruleSingleStep returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Ident_0= ruleIdent (this_Vals_1= ruleVals )? (this_StepSuffix_2= ruleStepSuffix )? ) ;
     public final AntlrDatatypeRuleToken ruleSingleStep() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2404,16 +2451,16 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:889:28: ( (this_Ident_0= ruleIdent (this_Vals_1= ruleVals )? (this_StepSuffix_2= ruleStepSuffix )? ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:890:1: (this_Ident_0= ruleIdent (this_Vals_1= ruleVals )? (this_StepSuffix_2= ruleStepSuffix )? )
+            // InternalCcsEclipse.g:915:28: ( (this_Ident_0= ruleIdent (this_Vals_1= ruleVals )? (this_StepSuffix_2= ruleStepSuffix )? ) )
+            // InternalCcsEclipse.g:916:1: (this_Ident_0= ruleIdent (this_Vals_1= ruleVals )? (this_StepSuffix_2= ruleStepSuffix )? )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:890:1: (this_Ident_0= ruleIdent (this_Vals_1= ruleVals )? (this_StepSuffix_2= ruleStepSuffix )? )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:891:5: this_Ident_0= ruleIdent (this_Vals_1= ruleVals )? (this_StepSuffix_2= ruleStepSuffix )?
+            // InternalCcsEclipse.g:916:1: (this_Ident_0= ruleIdent (this_Vals_1= ruleVals )? (this_StepSuffix_2= ruleStepSuffix )? )
+            // InternalCcsEclipse.g:917:5: this_Ident_0= ruleIdent (this_Vals_1= ruleVals )? (this_StepSuffix_2= ruleStepSuffix )?
             {
              
                     newCompositeNode(grammarAccess.getSingleStepAccess().getIdentParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleIdent_in_ruleSingleStep2148);
+            pushFollow(FOLLOW_17);
             this_Ident_0=ruleIdent();
 
             state._fsp--;
@@ -2424,21 +2471,21 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:901:1: (this_Vals_1= ruleVals )?
+            // InternalCcsEclipse.g:927:1: (this_Vals_1= ruleVals )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
-            if ( (LA17_0==27) ) {
+            if ( (LA17_0==26) ) {
                 alt17=1;
             }
             switch (alt17) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:902:5: this_Vals_1= ruleVals
+                    // InternalCcsEclipse.g:928:5: this_Vals_1= ruleVals
                     {
                      
                             newCompositeNode(grammarAccess.getSingleStepAccess().getValsParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleVals_in_ruleSingleStep2176);
+                    pushFollow(FOLLOW_18);
                     this_Vals_1=ruleVals();
 
                     state._fsp--;
@@ -2455,21 +2502,21 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:912:3: (this_StepSuffix_2= ruleStepSuffix )?
+            // InternalCcsEclipse.g:938:3: (this_StepSuffix_2= ruleStepSuffix )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
-            if ( (LA18_0==28) ) {
+            if ( (LA18_0==27) ) {
                 alt18=1;
             }
             switch (alt18) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:913:5: this_StepSuffix_2= ruleStepSuffix
+                    // InternalCcsEclipse.g:939:5: this_StepSuffix_2= ruleStepSuffix
                     {
                      
                             newCompositeNode(grammarAccess.getSingleStepAccess().getStepSuffixParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleStepSuffix_in_ruleSingleStep2206);
+                    pushFollow(FOLLOW_2);
                     this_StepSuffix_2=ruleStepSuffix();
 
                     state._fsp--;
@@ -2507,7 +2554,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIdent"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:931:1: entryRuleIdent returns [String current=null] : iv_ruleIdent= ruleIdent EOF ;
+    // InternalCcsEclipse.g:957:1: entryRuleIdent returns [String current=null] : iv_ruleIdent= ruleIdent EOF ;
     public final String entryRuleIdent() throws RecognitionException {
         String current = null;
 
@@ -2515,17 +2562,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:932:2: (iv_ruleIdent= ruleIdent EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:933:2: iv_ruleIdent= ruleIdent EOF
+            // InternalCcsEclipse.g:958:2: (iv_ruleIdent= ruleIdent EOF )
+            // InternalCcsEclipse.g:959:2: iv_ruleIdent= ruleIdent EOF
             {
              newCompositeNode(grammarAccess.getIdentRule()); 
-            pushFollow(FOLLOW_ruleIdent_in_entryRuleIdent2254);
+            pushFollow(FOLLOW_1);
             iv_ruleIdent=ruleIdent();
 
             state._fsp--;
 
              current =iv_ruleIdent.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIdent2265); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2543,7 +2590,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIdent"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:940:1: ruleIdent returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING ) ;
+    // InternalCcsEclipse.g:966:1: ruleIdent returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING ) ;
     public final AntlrDatatypeRuleToken ruleIdent() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2553,10 +2600,10 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:943:28: ( (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:944:1: (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING )
+            // InternalCcsEclipse.g:969:28: ( (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING ) )
+            // InternalCcsEclipse.g:970:1: (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:944:1: (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING )
+            // InternalCcsEclipse.g:970:1: (this_ID_0= RULE_ID | this_STRING_1= RULE_STRING )
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -2574,9 +2621,9 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
             }
             switch (alt19) {
                 case 1 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:944:6: this_ID_0= RULE_ID
+                    // InternalCcsEclipse.g:970:6: this_ID_0= RULE_ID
                     {
-                    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleIdent2305); 
+                    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
                     		current.merge(this_ID_0);
                         
@@ -2587,9 +2634,9 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:952:10: this_STRING_1= RULE_STRING
+                    // InternalCcsEclipse.g:978:10: this_STRING_1= RULE_STRING
                     {
-                    this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleIdent2331); 
+                    this_STRING_1=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
                     		current.merge(this_STRING_1);
                         
@@ -2620,7 +2667,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVals"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:967:1: entryRuleVals returns [String current=null] : iv_ruleVals= ruleVals EOF ;
+    // InternalCcsEclipse.g:993:1: entryRuleVals returns [String current=null] : iv_ruleVals= ruleVals EOF ;
     public final String entryRuleVals() throws RecognitionException {
         String current = null;
 
@@ -2628,17 +2675,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:968:2: (iv_ruleVals= ruleVals EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:969:2: iv_ruleVals= ruleVals EOF
+            // InternalCcsEclipse.g:994:2: (iv_ruleVals= ruleVals EOF )
+            // InternalCcsEclipse.g:995:2: iv_ruleVals= ruleVals EOF
             {
              newCompositeNode(grammarAccess.getValsRule()); 
-            pushFollow(FOLLOW_ruleVals_in_entryRuleVals2377);
+            pushFollow(FOLLOW_1);
             iv_ruleVals=ruleVals();
 
             state._fsp--;
 
              current =iv_ruleVals.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVals2388); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2656,7 +2703,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVals"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:976:1: ruleVals returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '.' this_Ident_1= ruleIdent (this_Vals_2= ruleVals )* ) ;
+    // InternalCcsEclipse.g:1002:1: ruleVals returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '.' this_Ident_1= ruleIdent (this_Vals_2= ruleVals )* ) ;
     public final AntlrDatatypeRuleToken ruleVals() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2669,13 +2716,13 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:979:28: ( (kw= '.' this_Ident_1= ruleIdent (this_Vals_2= ruleVals )* ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:980:1: (kw= '.' this_Ident_1= ruleIdent (this_Vals_2= ruleVals )* )
+            // InternalCcsEclipse.g:1005:28: ( (kw= '.' this_Ident_1= ruleIdent (this_Vals_2= ruleVals )* ) )
+            // InternalCcsEclipse.g:1006:1: (kw= '.' this_Ident_1= ruleIdent (this_Vals_2= ruleVals )* )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:980:1: (kw= '.' this_Ident_1= ruleIdent (this_Vals_2= ruleVals )* )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:981:2: kw= '.' this_Ident_1= ruleIdent (this_Vals_2= ruleVals )*
+            // InternalCcsEclipse.g:1006:1: (kw= '.' this_Ident_1= ruleIdent (this_Vals_2= ruleVals )* )
+            // InternalCcsEclipse.g:1007:2: kw= '.' this_Ident_1= ruleIdent (this_Vals_2= ruleVals )*
             {
-            kw=(Token)match(input,27,FOLLOW_27_in_ruleVals2426); 
+            kw=(Token)match(input,26,FOLLOW_16); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getValsAccess().getFullStopKeyword_0()); 
@@ -2683,7 +2730,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
              
                     newCompositeNode(grammarAccess.getValsAccess().getIdentParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleIdent_in_ruleVals2448);
+            pushFollow(FOLLOW_19);
             this_Ident_1=ruleIdent();
 
             state._fsp--;
@@ -2694,25 +2741,25 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
              
                     afterParserOrEnumRuleCall();
                 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:997:1: (this_Vals_2= ruleVals )*
+            // InternalCcsEclipse.g:1023:1: (this_Vals_2= ruleVals )*
             loop20:
             do {
                 int alt20=2;
                 int LA20_0 = input.LA(1);
 
-                if ( (LA20_0==27) ) {
+                if ( (LA20_0==26) ) {
                     alt20=1;
                 }
 
 
                 switch (alt20) {
             	case 1 :
-            	    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:998:5: this_Vals_2= ruleVals
+            	    // InternalCcsEclipse.g:1024:5: this_Vals_2= ruleVals
             	    {
             	     
             	            newCompositeNode(grammarAccess.getValsAccess().getValsParserRuleCall_2()); 
             	        
-            	    pushFollow(FOLLOW_ruleVals_in_ruleVals2476);
+            	    pushFollow(FOLLOW_19);
             	    this_Vals_2=ruleVals();
 
             	    state._fsp--;
@@ -2753,7 +2800,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleStepSuffix"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1016:1: entryRuleStepSuffix returns [String current=null] : iv_ruleStepSuffix= ruleStepSuffix EOF ;
+    // InternalCcsEclipse.g:1042:1: entryRuleStepSuffix returns [String current=null] : iv_ruleStepSuffix= ruleStepSuffix EOF ;
     public final String entryRuleStepSuffix() throws RecognitionException {
         String current = null;
 
@@ -2761,17 +2808,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1017:2: (iv_ruleStepSuffix= ruleStepSuffix EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1018:2: iv_ruleStepSuffix= ruleStepSuffix EOF
+            // InternalCcsEclipse.g:1043:2: (iv_ruleStepSuffix= ruleStepSuffix EOF )
+            // InternalCcsEclipse.g:1044:2: iv_ruleStepSuffix= ruleStepSuffix EOF
             {
              newCompositeNode(grammarAccess.getStepSuffixRule()); 
-            pushFollow(FOLLOW_ruleStepSuffix_in_entryRuleStepSuffix2524);
+            pushFollow(FOLLOW_1);
             iv_ruleStepSuffix=ruleStepSuffix();
 
             state._fsp--;
 
              current =iv_ruleStepSuffix.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStepSuffix2535); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2789,7 +2836,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleStepSuffix"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1025:1: ruleStepSuffix returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '/' this_SingleStep_1= ruleSingleStep ) ;
+    // InternalCcsEclipse.g:1051:1: ruleStepSuffix returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '/' this_SingleStep_1= ruleSingleStep ) ;
     public final AntlrDatatypeRuleToken ruleStepSuffix() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -2800,13 +2847,13 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1028:28: ( (kw= '/' this_SingleStep_1= ruleSingleStep ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1029:1: (kw= '/' this_SingleStep_1= ruleSingleStep )
+            // InternalCcsEclipse.g:1054:28: ( (kw= '/' this_SingleStep_1= ruleSingleStep ) )
+            // InternalCcsEclipse.g:1055:1: (kw= '/' this_SingleStep_1= ruleSingleStep )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1029:1: (kw= '/' this_SingleStep_1= ruleSingleStep )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1030:2: kw= '/' this_SingleStep_1= ruleSingleStep
+            // InternalCcsEclipse.g:1055:1: (kw= '/' this_SingleStep_1= ruleSingleStep )
+            // InternalCcsEclipse.g:1056:2: kw= '/' this_SingleStep_1= ruleSingleStep
             {
-            kw=(Token)match(input,28,FOLLOW_28_in_ruleStepSuffix2573); 
+            kw=(Token)match(input,27,FOLLOW_16); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getStepSuffixAccess().getSolidusKeyword_0()); 
@@ -2814,7 +2861,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
              
                     newCompositeNode(grammarAccess.getStepSuffixAccess().getSingleStepParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_ruleSingleStep_in_ruleStepSuffix2595);
+            pushFollow(FOLLOW_2);
             this_SingleStep_1=ruleSingleStep();
 
             state._fsp--;
@@ -2846,7 +2893,7 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImport"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1054:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
+    // InternalCcsEclipse.g:1080:1: entryRuleImport returns [EObject current=null] : iv_ruleImport= ruleImport EOF ;
     public final EObject entryRuleImport() throws RecognitionException {
         EObject current = null;
 
@@ -2854,17 +2901,17 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1055:2: (iv_ruleImport= ruleImport EOF )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1056:2: iv_ruleImport= ruleImport EOF
+            // InternalCcsEclipse.g:1081:2: (iv_ruleImport= ruleImport EOF )
+            // InternalCcsEclipse.g:1082:2: iv_ruleImport= ruleImport EOF
             {
              newCompositeNode(grammarAccess.getImportRule()); 
-            pushFollow(FOLLOW_ruleImport_in_entryRuleImport2640);
+            pushFollow(FOLLOW_1);
             iv_ruleImport=ruleImport();
 
             state._fsp--;
 
              current =iv_ruleImport; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleImport2650); 
+            match(input,EOF,FOLLOW_2); 
 
             }
 
@@ -2882,35 +2929,35 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImport"
-    // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1063:1: ruleImport returns [EObject current=null] : (otherlv_0= '@import' ( (lv_importURI_1_0= RULE_STRING ) ) ) ;
+    // InternalCcsEclipse.g:1089:1: ruleImport returns [EObject current=null] : (otherlv_0= '@import' ( (lv_name_1_0= RULE_STRING ) ) ) ;
     public final EObject ruleImport() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
-        Token lv_importURI_1_0=null;
+        Token lv_name_1_0=null;
 
          enterRule(); 
             
         try {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1066:28: ( (otherlv_0= '@import' ( (lv_importURI_1_0= RULE_STRING ) ) ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1067:1: (otherlv_0= '@import' ( (lv_importURI_1_0= RULE_STRING ) ) )
+            // InternalCcsEclipse.g:1092:28: ( (otherlv_0= '@import' ( (lv_name_1_0= RULE_STRING ) ) ) )
+            // InternalCcsEclipse.g:1093:1: (otherlv_0= '@import' ( (lv_name_1_0= RULE_STRING ) ) )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1067:1: (otherlv_0= '@import' ( (lv_importURI_1_0= RULE_STRING ) ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1067:3: otherlv_0= '@import' ( (lv_importURI_1_0= RULE_STRING ) )
+            // InternalCcsEclipse.g:1093:1: (otherlv_0= '@import' ( (lv_name_1_0= RULE_STRING ) ) )
+            // InternalCcsEclipse.g:1093:3: otherlv_0= '@import' ( (lv_name_1_0= RULE_STRING ) )
             {
-            otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleImport2687); 
+            otherlv_0=(Token)match(input,28,FOLLOW_20); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getImportAccess().getImportKeyword_0());
                 
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1071:1: ( (lv_importURI_1_0= RULE_STRING ) )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1072:1: (lv_importURI_1_0= RULE_STRING )
+            // InternalCcsEclipse.g:1097:1: ( (lv_name_1_0= RULE_STRING ) )
+            // InternalCcsEclipse.g:1098:1: (lv_name_1_0= RULE_STRING )
             {
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1072:1: (lv_importURI_1_0= RULE_STRING )
-            // ../net.immute.ccs.CcsEclipse/src-gen/net/immute/ccs/parser/antlr/internal/InternalCcsEclipse.g:1073:3: lv_importURI_1_0= RULE_STRING
+            // InternalCcsEclipse.g:1098:1: (lv_name_1_0= RULE_STRING )
+            // InternalCcsEclipse.g:1099:3: lv_name_1_0= RULE_STRING
             {
-            lv_importURI_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleImport2704); 
+            lv_name_1_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
-            			newLeafNode(lv_importURI_1_0, grammarAccess.getImportAccess().getImportURISTRINGTerminalRuleCall_1_0()); 
+            			newLeafNode(lv_name_1_0, grammarAccess.getImportAccess().getNameSTRINGTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
@@ -2918,9 +2965,9 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
             	        }
                    		setWithLastConsumed(
                    			current, 
-                   			"importURI",
-                    		lv_importURI_1_0, 
-                    		"STRING");
+                   			"name",
+                    		lv_name_1_0, 
+                    		"net.immute.ccs.CcsEclipse.STRING");
             	    
 
             }
@@ -2952,101 +2999,25 @@ public class InternalCcsEclipseParser extends AbstractInternalAntlrParser {
 
  
 
-    public static final BitSet FOLLOW_ruleRuleSet_in_entryRuleRuleSet75 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRuleSet85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleContext_in_ruleRuleSet131 = new BitSet(new long[]{0x0000000024404092L});
-    public static final BitSet FOLLOW_ruleRule_in_ruleRuleSet153 = new BitSet(new long[]{0x0000000024404092L});
-    public static final BitSet FOLLOW_ruleContext_in_entryRuleContext190 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleContext200 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleContext237 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleContext249 = new BitSet(new long[]{0x0000000024404090L});
-    public static final BitSet FOLLOW_ruleSelector_in_ruleContext270 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleContext282 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_16_in_ruleContext295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelector_in_entryRuleSelector333 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSelector343 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSum_in_ruleSelector389 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_17_in_ruleSelector402 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSum_in_entryRuleSum441 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSum452 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProduct_in_ruleSum499 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_18_in_ruleSum518 = new BitSet(new long[]{0x0000000024404090L});
-    public static final BitSet FOLLOW_ruleProduct_in_ruleSum540 = new BitSet(new long[]{0x0000000000040002L});
-    public static final BitSet FOLLOW_ruleProduct_in_entryRuleProduct588 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProduct599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerm_in_ruleProduct646 = new BitSet(new long[]{0x0000000024404092L});
-    public static final BitSet FOLLOW_ruleTerm_in_entryRuleTerm693 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTerm704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStep_in_ruleTerm751 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_17_in_ruleTerm770 = new BitSet(new long[]{0x0000000024404090L});
-    public static final BitSet FOLLOW_ruleStep_in_ruleTerm792 = new BitSet(new long[]{0x0000000000020002L});
-    public static final BitSet FOLLOW_ruleStep_in_entryRuleStep840 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStep851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleStep_in_ruleStep898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleStep923 = new BitSet(new long[]{0x0000000024404090L});
-    public static final BitSet FOLLOW_ruleSum_in_ruleStep945 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleStep963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRule_in_entryRuleRule1004 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRule1014 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_ruleRule1061 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_ruleConstraint_in_ruleRule1088 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_ruleProperty_in_ruleRule1115 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_ruleNested_in_ruleRule1142 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_16_in_ruleRule1156 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNested_in_entryRuleNested1194 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNested1204 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSelector_in_ruleNested1250 = new BitSet(new long[]{0x0000000000180000L});
-    public static final BitSet FOLLOW_19_in_ruleNested1264 = new BitSet(new long[]{0x0000000024400010L});
-    public static final BitSet FOLLOW_ruleImport_in_ruleNested1286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstraint_in_ruleNested1313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperty_in_ruleNested1340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleNested1361 = new BitSet(new long[]{0x0000000024604090L});
-    public static final BitSet FOLLOW_ruleRule_in_ruleNested1382 = new BitSet(new long[]{0x0000000024604090L});
-    public static final BitSet FOLLOW_21_in_ruleNested1395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleModifier_in_entryRuleModifier1433 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleModifier1443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleModifier1485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProperty_in_entryRuleProperty1533 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProperty1543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleModifier_in_ruleProperty1589 = new BitSet(new long[]{0x0000000000400010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleProperty1607 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_23_in_ruleProperty1624 = new BitSet(new long[]{0x00000000030000E0L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleProperty1645 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolean_in_entryRuleBoolean1682 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBoolean1693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleBoolean1731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleBoolean1750 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_entryRuleValue1791 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleValue1802 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_HEXINT_in_ruleValue1842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NUMBER_in_ruleValue1868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleValue1894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolean_in_ruleValue1927 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleConstraint_in_entryRuleConstraint1973 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleConstraint1984 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleConstraint2022 = new BitSet(new long[]{0x0000000000000090L});
-    public static final BitSet FOLLOW_ruleSingleStep_in_ruleConstraint2044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSingleStep_in_entryRuleSingleStep2090 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSingleStep2101 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleSingleStep2148 = new BitSet(new long[]{0x0000000018000002L});
-    public static final BitSet FOLLOW_ruleVals_in_ruleSingleStep2176 = new BitSet(new long[]{0x0000000010000002L});
-    public static final BitSet FOLLOW_ruleStepSuffix_in_ruleSingleStep2206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_entryRuleIdent2254 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIdent2265 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleIdent2305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleIdent2331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVals_in_entryRuleVals2377 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVals2388 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_ruleVals2426 = new BitSet(new long[]{0x0000000000000090L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleVals2448 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_ruleVals_in_ruleVals2476 = new BitSet(new long[]{0x0000000008000002L});
-    public static final BitSet FOLLOW_ruleStepSuffix_in_entryRuleStepSuffix2524 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStepSuffix2535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_ruleStepSuffix2573 = new BitSet(new long[]{0x0000000000000090L});
-    public static final BitSet FOLLOW_ruleSingleStep_in_ruleStepSuffix2595 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImport_in_entryRuleImport2640 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleImport2650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleImport2687 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleImport2704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000012202092L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000012202090L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000020002L});
+    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x00000000000C0000L});
+    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000012200010L});
+    public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000012302090L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000200010L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x00000000018001F0L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000090L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x000000000C000002L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000004000002L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000000080L});
 
 }

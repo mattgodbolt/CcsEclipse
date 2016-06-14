@@ -402,7 +402,7 @@ public class CcsEclipsePackageImpl extends EPackageImpl implements CcsEclipsePac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImport_ImportURI()
+  public EAttribute getImport_Name()
   {
     return (EAttribute)importEClass.getEStructuralFeatures().get(0);
   }
@@ -469,7 +469,7 @@ public class CcsEclipsePackageImpl extends EPackageImpl implements CcsEclipsePac
     createEAttribute(propertyEClass, PROPERTY__VALUE);
 
     importEClass = createEClass(IMPORT);
-    createEAttribute(importEClass, IMPORT__IMPORT_URI);
+    createEAttribute(importEClass, IMPORT__NAME);
   }
 
   /**
@@ -535,7 +535,7 @@ public class CcsEclipsePackageImpl extends EPackageImpl implements CcsEclipsePac
     initEAttribute(getProperty_Value(), ecorePackage.getEString(), "value", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(importEClass, Import.class, "Import", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getImport_ImportURI(), ecorePackage.getEString(), "importURI", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getImport_Name(), ecorePackage.getEString(), "name", null, 0, 1, Import.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

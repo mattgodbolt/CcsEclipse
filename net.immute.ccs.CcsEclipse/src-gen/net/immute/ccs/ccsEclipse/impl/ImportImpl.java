@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link net.immute.ccs.ccsEclipse.impl.ImportImpl#getImportURI <em>Import URI</em>}</li>
+ *   <li>{@link net.immute.ccs.ccsEclipse.impl.ImportImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,24 +28,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class ImportImpl extends MinimalEObjectImpl.Container implements Import
 {
   /**
-   * The default value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getImportURI()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String IMPORT_URI_EDEFAULT = null;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getImportURI() <em>Import URI</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getImportURI()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected String importURI = IMPORT_URI_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +73,9 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getImportURI()
+  public String getName()
   {
-    return importURI;
+    return name;
   }
 
   /**
@@ -83,12 +83,12 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setImportURI(String newImportURI)
+  public void setName(String newName)
   {
-    String oldImportURI = importURI;
-    importURI = newImportURI;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CcsEclipsePackage.IMPORT__IMPORT_URI, oldImportURI, importURI));
+      eNotify(new ENotificationImpl(this, Notification.SET, CcsEclipsePackage.IMPORT__NAME, oldName, name));
   }
 
   /**
@@ -101,8 +101,8 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     switch (featureID)
     {
-      case CcsEclipsePackage.IMPORT__IMPORT_URI:
-        return getImportURI();
+      case CcsEclipsePackage.IMPORT__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +117,8 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     switch (featureID)
     {
-      case CcsEclipsePackage.IMPORT__IMPORT_URI:
-        setImportURI((String)newValue);
+      case CcsEclipsePackage.IMPORT__NAME:
+        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +134,8 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     switch (featureID)
     {
-      case CcsEclipsePackage.IMPORT__IMPORT_URI:
-        setImportURI(IMPORT_URI_EDEFAULT);
+      case CcsEclipsePackage.IMPORT__NAME:
+        setName(NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +151,8 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
   {
     switch (featureID)
     {
-      case CcsEclipsePackage.IMPORT__IMPORT_URI:
-        return IMPORT_URI_EDEFAULT == null ? importURI != null : !IMPORT_URI_EDEFAULT.equals(importURI);
+      case CcsEclipsePackage.IMPORT__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
@@ -168,8 +168,8 @@ public class ImportImpl extends MinimalEObjectImpl.Container implements Import
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (importURI: ");
-    result.append(importURI);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }

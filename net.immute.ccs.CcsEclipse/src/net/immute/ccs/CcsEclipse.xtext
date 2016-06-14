@@ -1,9 +1,9 @@
-grammar net.immute.ccs.CcsEclipse with org.eclipse.xtext.common.Terminals
+grammar net.immute.ccs.CcsEclipse
 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 generate ccsEclipse "http://www.immute.net/ccs/CcsEclipse"
 
-RuleSet:
+RuleSet hidden(WS, ML_COMMENT, SL_COMMENT):
 	(context = Context?)
 	(rules += Rule)*
 	;
@@ -43,11 +43,22 @@ Property:
 	(modifiers+=Modifier*) name=ID '=' value=Value
 ;
 
-terminal HEXINT returns ecore::EInt: '0x' ('0'..'9'|'a'..'f'|'A'..'F')+;
+terminal ID: ('a'..'z'|'A'..'Z'|'_'|'$')('a'..'z'|'A'..'Z'|'_'|'$'|'0'..'9')*;
 // TODO interpolants
+terminal STRING	: 
+			'"' ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|'"') )* '"' |
+			"'" ( '\\' . /* 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' */ | !('\\'|"'") )* "'"
+		; 
+terminal ML_COMMENT: '/*' -> '*/';
+terminal SL_COMMENT: '//' !('\n'|'\r')* ('\r'? '\n')?;
+
+terminal WS: (' '|'\t'|'\r'|'\n')+;
+
+terminal HEXINT returns ecore::EInt: '0x' ('0'..'9'|'a'..'f'|'A'..'F')+;
 terminal NUMBER returns ecore::EBigDecimal:
     '-'? (('0'..'9')+ ('.' ('0'..'9')*)? | 
     '.' ('0'..'9')+) (('e' | 'E') ('+' | '-')? ('0'..'9')+)?;
+terminal NUM_ID: ('-'|'+'|'0'..'9')('a'..'z'|'A'..'Z'|'_'|'$'|'.'|'0'..'9')*;
     
 Boolean : 'true' | 'false';
 
@@ -56,6 +67,8 @@ Value:
 	| NUMBER
 	| STRING
 	| Boolean
+	| ID
+	| NUM_ID
 ;
 
 Constraint:
@@ -72,5 +85,5 @@ Vals: '.' Ident Vals*;
 
 StepSuffix: '/' SingleStep;
 
-Import: '@import' importURI=STRING;
+Import: '@import' name=STRING;
 

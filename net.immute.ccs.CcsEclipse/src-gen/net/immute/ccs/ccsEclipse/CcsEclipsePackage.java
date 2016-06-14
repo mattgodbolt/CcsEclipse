@@ -353,13 +353,13 @@ public interface CcsEclipsePackage extends EPackage
   int IMPORT = 7;
 
   /**
-   * The feature id for the '<em><b>Import URI</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int IMPORT__IMPORT_URI = 0;
+  int IMPORT__NAME = 0;
 
   /**
    * The number of structural features of the '<em>Import</em>' class.
@@ -639,15 +639,15 @@ public interface CcsEclipsePackage extends EPackage
   EClass getImport();
 
   /**
-   * Returns the meta object for the attribute '{@link net.immute.ccs.ccsEclipse.Import#getImportURI <em>Import URI</em>}'.
+   * Returns the meta object for the attribute '{@link net.immute.ccs.ccsEclipse.Import#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Import URI</em>'.
-   * @see net.immute.ccs.ccsEclipse.Import#getImportURI()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see net.immute.ccs.ccsEclipse.Import#getName()
    * @see #getImport()
    * @generated
    */
-  EAttribute getImport_ImportURI();
+  EAttribute getImport_Name();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -889,12 +889,12 @@ public interface CcsEclipsePackage extends EPackage
     EClass IMPORT = eINSTANCE.getImport();
 
     /**
-     * The meta object literal for the '<em><b>Import URI</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute IMPORT__IMPORT_URI = eINSTANCE.getImport_ImportURI();
+    EAttribute IMPORT__NAME = eINSTANCE.getImport_Name();
 
   }
 
